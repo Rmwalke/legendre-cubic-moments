@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "method": "standard-library exact integer polynomial and rational matrix arithmetic",
+  "historical_experiments_rerun": false,
+  "all_checks_passed": true,
+  "number_of_checks": 26,
+  "checks": [
+    {
+      "name": "quotient_u_plus_2",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": "(t-1)^2(t+2)=t^3-3t+2"
+    },
+    {
+      "name": "quotient_c4",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "quotient_discriminant",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "twist_a_cleared",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": "d*a(t(z))=-(1+z^3), d=-z^2/(z+1)"
+    },
+    {
+      "name": "twist_b_cleared",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": "d^2*b(t(z))=z^3"
+    },
+    {
+      "name": "inversion_twist_cleared",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": "d(1/z)=d(z)/z^3; this checks the scalar identity, not sheaf descent"
+    },
+    {
+      "name": "tame_chart_a",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "tame_chart_b",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "tame_chart_discriminant",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "tame_chart_scaling_discriminant",
+      "category": "exact_polynomial_identity",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "tame_chart_good_reduction_at_v_zero",
+      "category": "exact_residue_arithmetic",
+      "passed": true,
+      "explanation": "Delta(v=0)=-64, a 3-adic unit"
+    },
+    {
+      "name": "split_special_node_factorization",
+      "category": "exact_finite_field_polynomial",
+      "passed": true,
+      "explanation": "x^3+x^2+x=x(x-1)^2 over F3"
+    },
+    {
+      "name": "split_special_node_tangent_cone",
+      "category": "exact_residue_arithmetic",
+      "passed": true,
+      "explanation": "At x=1+X, tangent cone is y^2=X^2"
+    },
+    {
+      "name": "parabolic_rank_formula",
+      "category": "conditional_dimension_arithmetic",
+      "passed": true,
+      "explanation": "Assumes the stated local invariant dimensions and no global/dual invariants"
+    },
+    {
+      "name": "WD_geometric_Frobenius_relation",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": "F*N=N*F/3"
+    },
+    {
+      "name": "alternating_pairing",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "nondegenerate_pairing",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "Frobenius_similitude",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": "F^t*Omega*F=3^5*Omega"
+    },
+    {
+      "name": "monodromy_infinitesimal_pairing",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "nilpotent_power_ranks",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "unipotent_model_invariants",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "ramified_quadratic_twist_model_invariants",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "minus_inertia_has_no_one_eigenvalue",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "kernel_generator",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "invariant_line_Frobenius",
+      "category": "conditional_WD_matrix",
+      "passed": true,
+      "explanation": ""
+    },
+    {
+      "name": "conditional_conductor_exponents",
+      "category": "conditional_conductor_arithmetic",
+      "passed": true,
+      "explanation": "a=dim(V)-dim(V^I)+Swan; assumes Swan=0"
+    }
+  ],
+  "polynomial_coefficient_order": "ascending degree",
+  "conditional_WD_model": {
+    "F": [
+      [
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        81
+      ]
+    ],
+    "N": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "Omega": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "U_exp_N": [
+      [
+        1,
+        1,
+        "1/2",
+        "1/6"
+      ],
+      [
+        0,
+        1,
+        1,
+        "1/2"
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "N_power_ranks": [
+      3,
+      2,
+      1,
+      0
+    ],
+    "plus_inertia_invariant_dimension": 1,
+    "minus_inertia_invariant_dimension": 0,
+    "assumed_swan_plus_and_minus": 0,
+    "plus_P3_coefficients": [
+      1,
+      -3
+    ],
+    "minus_P3_coefficients": [
+      1
+    ],
+    "plus_conductor_exponent": 3,
+    "minus_conductor_exponent": 4
+  },
+  "scope_limit": "The polynomial identities are exact. The matrix/conductor results are conditional on the proposed geometric identification of W4+ with this tame Weil--Deligne model and W4- with its chi_-3 twist. This program does not certify nearby-cycle theorems, their hypotheses, the arithmetic sheaf identification, or that the matrix model is the actual local representation. Those require a separate written proof."
+}

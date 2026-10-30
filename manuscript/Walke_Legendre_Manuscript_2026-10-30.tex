@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,longtable,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Cubic twists of Legendre moments: cohomological descent and Frobenius trace formulas},pdfauthor={Rushikesh Murlidhar Walke},pdfsubject={Research preprint on cubic Legendre moments, local factors and conductors}}
+\setlength{\parindent}{1.2em}\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{3em}\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Cubic twists of Legendre moments}
+\fancyhead[R]{\small Research preprint}\fancyfoot[C]{\thepage}
+\newcommand{\Q}{\mathbb Q}\newcommand{\F}{\mathbb F}\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}\newcommand{\R}{\mathbb R}\newcommand{\PP}{\mathbb P}
+\newcommand{\Sym}{\operatorname{Sym}}\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Frob}{\operatorname{Frob}}\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\nt}{\mathrm{nt}}
+\newcommand{\Sw}{\operatorname{Sw}}\newcommand{\HT}{\operatorname{HT}}
+\newcommand{\GL}{\operatorname{GL}}\newcommand{\CH}{\operatorname{CH}}
+\newcommand{\sgn}{\operatorname{sgn}}\newcommand{\im}{\operatorname{im}}
+\newcommand{\et}{\mathrm{\acute et}}\newcommand{\Hpar}{H^1_!}
+\newcommand{\leg}[2]{\left(\frac{#1}{#2}\right)}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Numerical observation}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\title{Cubic twists of Legendre moments:\\cohomological descent and Frobenius trace formulas}
+\author{Rushikesh Murlidhar Walke\\\small Independent Researcher, Maharashtra, India\\\small Corresponding author: \href{mailto:Rushikesh@rmwalke.com}{\texttt{Rushikesh@rmwalke.com}}}
+\date{Research preprint --- 30 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct the parabolic cohomology representations attached to cubic
+twists of the second and fourth moments of the Legendre family. For the
+fourth moment, an explicit arithmetic involution gives two rational
+four-dimensional descents related by the quadratic character of
+$\Q(\sqrt{-3})$. We prove their alternating pairing and derive all
+good-prime Euler factors. Deligne's weight theorem gives good-prime
+purity of weight five. An explicit auxiliary-level construction realizes
+both descents by rational Chow projectors on a smooth projective fivefold;
+their Hodge numbers are $h^{5,0}=h^{0,5}=2$, with no other Hodge types.
+At inert primes a norm-one-torus calculation
+determines the trace, the boundary contribution and the sign matching
+the earlier finite-sum recipe. The cubic second-moment modular comparison
+uses explicit finite-check hypotheses and the supplied bounded exact
+certificate for the displayed rows and Sturm comparison.
+We compute inertia invariants and Swan conductors at both bad primes.
+The literal plus descent has conductor $432$, and its quadratic twist has
+conductor $1296$. A local-monodromy and Hodge--Tate argument proves strong
+absolute irreducibility for coefficient primes $\ell\ne3$.
+We retain the corrected hypergeometric normalization and distinguish these
+written local proofs from the remaining numerical special-value observations.
+The underlying cover is compared explicitly with existing literature;
+no general BSD consequence or literature-priority certification is asserted.
+\end{abstract}
+\noindent\textbf{Keywords:} Legendre family; character sums; Scholl representations; local monodromy; Artin conductors; parabolic cohomology.
+\begin{center}\small
+AI assistance and the scope of internal checking are disclosed in the revision note.\\
+This preprint has not undergone independent specialist peer review.
+\end{center}
+\newpage
+\setcounter{tocdepth}{1}
+\begingroup\small\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\newpage
+\input{sections/front.tex}
+\input{sections/related_work.tex}
+\input{sections/geometry.tex}
+\input{sections/cubic_comparison.tex}
+\input{sections/descent.tex}
+\input{sections/scholl_realization.tex}
+\input{sections/inert.tex}
+\input{sections/local_three.tex}
+\input{sections/local_two.tex}
+\input{sections/conductors.tex}
+\input{sections/irreducibility.tex}
+\input{sections/claim_map.tex}
+\input{sections/numerical_limits.tex}
+
+\appendix
+\input{sections/corrections.tex}
+\input{sections/periods.tex}
+\input{sections/publication_note.tex}
+\input{sections/bibliography.tex}
+\end{document}

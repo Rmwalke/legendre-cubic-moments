@@ -1,0 +1,17 @@
+# Fresh check outputs and Python cache
+results/
+__pycache__/
+*.py[cod]
+
+# LaTeX build intermediates
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Platform metadata
+.DS_Store
+Thumbs.db

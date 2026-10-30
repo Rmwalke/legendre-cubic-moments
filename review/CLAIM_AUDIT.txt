@@ -1,0 +1,172 @@
+CLAIM AND DEPENDENCY AUDIT
+30 October 2026
+Internal AI-assisted review; not external peer review or formal verification.
+
+1. IRREDUCIBILITY AUDIT AND INTEGRATION
+
+The proof in the preceding p2 research note is logically sound under its
+explicit Scholl/Hodge and local-at-3 inputs. Its rank-one character lemma
+is correctly restricted to G_Q and Q_ell-valued characters. The theorem
+of Tate in Serre, Chapter III, section 1.2, printed page III-7, identifies
+an abelian Hodge--Tate local representation with a locally algebraic one
+when inertia is semisimple. This was checked directly in the primary scan:
+https://www.math.mcgill.ca/darmon/courses/18-19/gs/serre-mcgill.pdf
+(PDF page index 98). A character has the required semisimplicity.
+Kronecker--Weber then proves that division by its Tate power leaves a
+finite-order global character. No claim of this form for arbitrary number
+fields is used.
+
+The single length-four Jordan block has a unique invariant subspace of
+each dimension. Consequently an absolutely invariant subspace descends
+to Q_ell as ker(N^r). Its determinant must have Tate exponent divisible
+by 5, whereas the local Frobenius flag forces exponents 1, 3, or 6.
+These are incompatible. For restriction to any finite extension, passage
+to its Galois closure makes conjugate subspaces stable under the same
+normal subgroup; the unique Jordan flag then makes the subspace globally
+stable. This validates the strong irreducibility corollary without
+extending the rank-one lemma to that number field.
+
+Integrated file: manuscript/sections/irreducibility.tex.
+Labels: sec:irreducibility; irr:rankone; irr:flag; irr:absolute; irr:strong.
+Bibliography key: SerreRankOne.
+Cross-reference inputs: thm:scholl-realization and sec:local-three.
+Scope: every ell != 3, including the original ell=2 realization.
+No claim for ell=3 is established by this argument.
+No additional numerical calculation is needed.
+
+2. CURRENT MATHEMATICAL CLAIMS AND THEIR DEPENDENCIES
+
+A. Exact coefficient sheaf, rank-four literal I eigenspaces, twist relation
+   W4- = W4+ tensor chi_-3, alternating pairing and reciprocal template.
+   Basis: existing geometry and descent sections; retained, not newly proved
+   by the local calculations. The literal inversion normalization matters.
+
+B. Good-prime exact Euler recipes and inert sign.
+   Basis: existing cohomological trace and boundary proofs.
+   At inert p: trace(W4+)=-S_p-1; trace(W4-)=S_p+1.
+   Historical rounded tables are not certified by this identification.
+
+C. Rational Chow/Scholl realization and Hodge type (5,0)^2+(0,5)^2.
+   Basis: the explicit auxiliary-level projector and comparison construction
+   already present in the v2 Scholl section. This supplies de Rham/Tate
+   exponents {0,0,5,5} for the irreducibility proof.
+
+D. Local at 3, every ell != 3.
+   W4+: single unipotent J4, successive Frobenius quotients 3,9,27,81;
+        d3=1, P3(T)=1-3T, Swan3=0, a3=3.
+   W4-: tame quadratic twist; d3=0, P3(T)=1, Swan3=0, a3=4.
+   Basis: explicit literal-plus quotient; Scholl local vanishing cycles;
+   actual rank-four global-to-local surjection; arithmetic Tate filtration;
+   then the ramified character chi_-3. The Frobenius sign is not inferred
+   from a fitted functional equation.
+
+E. Local at 2, every ell != 2.
+   Both: d2=0, P2(T)=1, Swan2=0, a2=4.
+   Basis: true closure eta^3=4(v^3+1), the complete semistable marked model,
+   tame comparison, distinction between arithmetic and geometric C3 actions,
+   ordinary/cubic Kloosterman tail vanishing, and equivariant nearby-cycle
+   plus normalization exact sequences. The constant 4 is indispensable.
+   Neither a node-free specialization nor the tail vanishing alone suffices.
+
+F. Conductors.
+   N(W4+)=2^4*3^3=432; N(W4-)=2^4*3^4=1296.
+   Basis: D + E + good-prime unramifiedness. For each ell != 2,3 this is
+   precisely the prime-to-ell Artin conductor. Each bad local factor and
+   exponent is computed directly for every coefficient prime different from
+   its residue characteristic. This proves the stated coefficient independence
+   of those quantities; it does not assert a complete strictly compatible
+   Weil--Deligne classification. At p=ell the usual p!=ell inertia formula
+   must not be applied to the ell-adic realization.
+
+G. Strong absolute irreducibility, every ell != 3.
+   Basis: C + D + Tate's rank-one theorem + the single-block flag argument.
+   It does not require E or the conductor calculation. Proper induction and
+   ordinary rank-two tensor-product decompositions are excluded by the
+   arguments included in that section. This does not classify all inner
+   twists or prove an automorphic identity.
+
+H. Cubic second-moment modular comparison.
+   Retain the existing exact finite hypotheses and bounded certificate scope.
+   This is a distinct rank-two statement, not automorphy of the rank-four
+   fourth-moment object. Orders four and six are not promoted by the cubic
+   comparison.
+
+3. REQUIRED UPDATES TO THE ORIGINAL v2 TEXT
+
+The paths and line numbers below refer to the original source copy under
+output/v2_zenodo/manuscript, not to the newly edited consolidated draft.
+
+- Main .tex abstract: replace the broad wording that bad factors and
+  conductors are numerical conjectures. Keep special values/analytic claims
+  as numerical or unproved where appropriate. Add the new local results and
+  the exact ell!=3 scope of irreducibility if summarized in the abstract.
+- sections/front.tex, scope paragraph around lines 101-104: bad factors,
+  conductor and general irreducibility are no longer wholly outside the
+  written results. Replace with precise local-prime and irreducibility scopes.
+  Remove the blanket sentence that conductor1296 is not in the main theorem
+  if the new theorem explicitly includes it.
+- sections/numerical_limits.tex, lines 21-38: distinguish original1296 model
+  (both local polynomials1) from the later432 twist (P3=1-3T). The prior
+  sentence asserting P2=P3=1 for both historical models is too broad.
+  The new proof settles the local data, independently of numerical fits.
+  Functional-equation sign+1 and central approximation2.2413552 remain
+  historical numerical observations, not consequences of the conductor proof.
+- sections/numerical_limits.tex, remaining-obligations item1 around82-95:
+  remove the request to compute d_p,P_p,Swan_p and conductor at2,3. Those
+  are now supplied. Full Weil--Deligne data/root number remain separate if
+  desired; do not turn that optional stronger objective into a hidden premise
+  of the completed local-factor/conductor calculation.
+- sections/numerical_limits.tex, item2 around96: replace blanket
+  irreducibility obligation with the proved ell!=3 statement and retain
+  ell=3 and automorphic identification as separate unproved claims.
+- sections/inert.tex, final paragraph around227: 'outside its scope' can
+  remain a limitation of the good-prime corollary, but point to the new local
+  sections so it cannot be read as a manuscript-wide unresolved statement.
+- sections/descent.tex around267 and345: these sentences correctly state
+  that reciprocity/purity alone do not establish bad data or motives. Retain
+  that logical limitation but add references to the separate new proofs.
+- sections/scholl_realization.tex around190: the projector construction
+  itself does not prove irreducibility. Preserve that distinction; point to
+  the later independent single-block argument.
+- sections/related_work.tex final paragraph: literature comparison alone
+  still supplies no conductor or automorphy theorem. Clarify that conductors
+  are instead derived internally in the new local sections. Do not promote
+  the existing adjacent quaternion-multiplication theorem.
+- sections/publication_note.tex: update the revision chronology and final
+  blanket 'remaining bad-prime' wording. Keep the records of older reviews
+  and computational logs explicitly historical. Do not state that the new
+  consolidated draft has been published or externally reviewed.
+- Any old p2/p3 status JSON or README bundled as an unchanged dependency:
+  explicitly identify it as historical. The earlier unresolved d2 and unknown
+  a2 claims have been superseded by the completed local calculation.
+
+4. NORMALIZATION MAP: THE TWO DIFFERENT USES OF 'PLUS'
+
+Literal manuscript W4+ means I=+1 and has inert trace -S_p-1,
+P3(T)=1-3T and conductor432.
+Literal manuscript W4- means I=-1 and has inert trace +S_p+1,
+P3(T)=1 and conductor1296.
+The older numerical 'plus-sign recipe' refers to the positive inert trace
++S_p+1. It therefore matches the literal W4- descent, NOT W4+.
+At split primes the two have the same traces, so the distinction cannot
+be resolved from split data alone. The conductor and local-at-3 statements
+must be attached to the literal inversion eigenspaces throughout.
+
+5. STILL NOT ESTABLISHED BY THIS CONSOLIDATION
+
+- External expert validation and formal proof verification.
+- Absolute/strong irreducibility for coefficient prime ell=3.
+- A complete local Weil--Deligne classification at2 and all local epsilon
+  factors, hence a proved global root number by that route.
+- Automorphic identification, analytic continuation and functional equation.
+- A theorem certifying the historical numerical central value or all stored
+  approximate Euler-coefficient tables, including tail/error bounds.
+- Rational period structures and an arithmetic special-value formula.
+- The separate order4/order6 geometric comparison inputs.
+- A classical elliptic BSD comparison, Mordell--Weil rank theorem, or BSD
+  leading-term theorem for a specified elliptic curve.
+- Exhaustive novelty/priority certification.
+
+A proof of local conductor data is not an implication to any of those
+unproved conclusions. No extra expensive computation is warranted merely
+to repeat already verified exact algebra during manuscript integration.

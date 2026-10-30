@@ -1,0 +1,116 @@
+\section{Numerical evidence, corrections and open questions}\label{sec:limits}
+Theorem~\ref{thm:main} identifies the \emph{exact good-prime recipe}.
+It does not turn each stored approximation to that recipe into exact data.
+The code supplement preserves the earlier correction package and its logs
+unchanged. No archived research program, prime scan, certificate generator
+or numerical $L$-function evaluator was executed for this consolidation.
+The previously supplied standalone implementation rechecked only the
+bounded cubic certificate and Sturm comparison in Section~\ref{sec:cubic};
+its results are retained separately in the supplied supplement. The local continuations used only the small exact algebra checks recorded
+in their supplements. No archived point-counting scan or numerical
+$L$-function experiment has been rerun for this consolidation.
+
+\subsection{Evidence retained from the earlier computations}
+The carried record contains direct exact small-prime counts, an exact
+finite modular-comparison certificate, rounded FFT-derived larger tables,
+and high-precision evaluations using those tables. These are different
+evidence classes. An exact consistency check on rounded input does not
+certify how the input was obtained. The proof of the reciprocal template
+also does not validate every historical value of its first two coefficients.
+
+The historical $1296$ model imposed $P_2(T)=P_3(T)=1$.
+The later $432$ twist in the retained N14/N15 record used
+$P_2(T)=1$ and $P_3(T)=1-3T$. The blanket statement in version 2
+that both experiments imposed $P_2=P_3=1$ was therefore too broad.
+The new local proofs establish these factors and conductor products for
+$W_4^-$ and $W_4^+$, respectively; they do not use the numerical fits.
+The historical phrase ``plus-sign recipe'' refers to inert trace $S_p+1$,
+which is the \emph{literal minus descent} $W_4^-$ of this manuscript.
+For that $1296$ model the recorded functional-equation sign is $+1$
+and the central value is approximately $2.2413552$. Those two statements
+remain numerical observations, not consequences of the local proofs.
+The candidate completion is
+\[
+ \Lambda(s)=N^{s/2}\Gamma_{\C}(s)^2\mathcal L(s),\qquad
+ \Gamma_{\C}(s)=2(2\pi)^{-s}\Gamma(s).
+\]
+The associated theta-kernel Mellin transform used in the code has the
+normalization $\widehat\Lambda=\Lambda/4$. Working precision and small
+finite-sum defects do not supply an interval enclosure or an infinite-tail
+bound. The historical gamma-factor shape agrees with the independent Hodge
+calculation in Section~\ref{sec:scholl}. The conductor is now independently established by the local arguments.
+The gamma-factor agreement and conductor calculation do not prove the
+functional-equation sign or analytic continuation.
+
+Likewise, a symmetrized evaluator
+\[
+ \sum_{n\le N}a_n\{G(s,n,t_0)+\epsilon G(6-s,n,1/t_0)\}
+\]
+has built-in symmetry at $t_0=1$. For $s=3$ and $\epsilon=-1$ it
+vanishes for any coefficient sequence. This is not an independent
+analytic-rank test. The historical N18 failure caused by comparing an
+approximately fifty-digit reference against a seventy-digit requirement
+is retained as a failure; other reported agreements are not promoted to
+certified analytic digits.
+
+\subsection{Two exact algebraic checks and their limits}
+\begin{lemma}[Reciprocal-quartic modulus criterion]\label{lem:weil}
+Let $P>0$, $c_1,c_2\in\R$,
+$D=c_1^2-4(c_2-2P)$ and $B=16P-c_1^2-D$.
+Every root of $X^4-c_1X^3+c_2X^2-Pc_1X+P^2$ has modulus
+$\sqrt P$ if and only if
+\[
+ D\ge0,\qquad B\ge0,\qquad B^2\ge4c_1^2D.
+\]
+\end{lemma}
+\begin{proof}
+Put $y=X+P/X$. The two $y$-values are the roots of
+$y^2-c_1y+c_2-2P$. The required condition is that they are real
+and both lie in $[-2\sqrt P,2\sqrt P]$, equivalently
+$D\ge0$ and $|c_1|+\sqrt D\le4\sqrt P$.
+Squaring with the nonnegative signs retained gives the stated test.
+\end{proof}
+This repairs the earlier floor-square-root validator; it tests specified
+coefficients. Good-prime purity of the exact geometric factors follows
+independently from Corollary~\ref{cor:descent-good-prime-purity};
+it does not certify any stored coefficient table.
+
+If the same quartic factors as
+$(X^2-aX+P)(X^2-bX+P)$, coefficient comparison gives
+$D=(a-b)^2$. A nonsquare rational $D$ excludes this model with
+$a,b\in\Q$. If $a,b$ are conjugate in a fixed quadratic field,
+every nonzero $D$ has that field's square class. Neither this limited
+obstruction nor empirical trace distributions establishes general
+irreducibility, rules out every inner twist, or determines the Sato--Tate group.
+The independent proof in Section~\ref{sec:irreducibility} now establishes
+strong absolute irreducibility for $\ell\ne3$; it does not rely on this test.
+
+\subsection{Remaining mathematical questions}
+The bad-prime factors and conductor exponents have been determined in
+Sections~\ref{sec:local-three}--\ref{sec:conductors}. Their auxiliary-prime
+scope is recorded there; they are no longer open obligations of this draft.
+The following questions remain separate.
+\begin{enumerate}
+\item The strong-irreducibility argument uses $\ell\ne3$. Its extension
+at coefficient prime $3$, a full bad-prime Weil--Deligne comparison, and
+precise Sato--Tate or inner-twist classifications are not established here.
+\item Identify any automorphic representation with all required
+hypotheses checked. The manuscript does not establish quaternion
+multiplication or transfer an adjacent automorphy theorem.
+\item Establish analytic continuation and the functional equation by a
+theorem, including its sign. A root-number calculation requires its own
+local epsilon-factor inputs; the conductor alone does not determine it.
+\item Fix rational period structures before interpreting critical
+values or determinant ratios arithmetically. The retained numerical
+central values are not certified analytic evaluations.
+\item For character orders $4,6$ in the older second-moment work,
+supply their separate geometric inputs. Their finite comparison rows do
+not follow from the cubic-only proof as all-prime theorems.
+\end{enumerate}
+These are limits of the present conclusions, not instructions to pursue
+all of them before this manuscript can be independently reviewed.
+The rank-four object is not the rank-two $H^1$ of an elliptic curve, even
+after a Tate twist. No comparison controlling the Mordell--Weil rank or
+BSD leading coefficient of a specified elliptic curve has been established
+here. A future motivic special-value formulation would require its own
+precise twist, arithmetic groups and comparison theorem.

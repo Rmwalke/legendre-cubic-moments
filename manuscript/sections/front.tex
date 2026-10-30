@@ -1,0 +1,140 @@
+\section{Introduction and statements}
+Character-twisted moments of the Legendre family give concrete finite sums
+whose cohomological interpretation depends on boundary terms and arithmetic
+normalizations. This paper treats cubic characters and the second and fourth
+moments. Its central purpose is an explicit construction of the associated
+representations and their Frobenius formulas, including the inert-prime sign. The consolidated local arguments now
+also determine the two bad-prime factors and conductor exponents.
+The exact finite-sum prescription underlying the numerical degree-four
+recipe in the earlier preprint \cite{WalkeV1} is thereby identified
+at good primes with a specified representation.
+
+\subsection{Notation and Frobenius convention}
+Put $K=\Q(\zeta_3)$, $E=\Q_2(\zeta_3)$ and
+$U=\PP^1\setminus\{0,1,\infty\}$. Let
+$\pi:\mathcal E\to U$ be the smooth projective Legendre family
+\[
+ \mathcal E_\lambda:y^2=t(t-1)(t-\lambda),\qquad
+ \mathcal V=R^1\pi_*E.
+\]
+Let $\mathcal L_\rho$ be either nontrivial character summand of the actual
+arithmetic cover $z^3=\lambda$. No additional constant Galois twist is
+allowed in this definition. For an integer $r\in\{2,4\}$ set
+\[
+ H_r=H^1_!(U_{\overline K},\Sym^r\mathcal V\otimes\mathcal L_\rho),
+ \qquad H^1_!=\operatorname{im}(H_c^1\longrightarrow H^1),
+ \qquad W_2=H_2,\quad V_4=H_4.
+\]
+Frobenius always means \emph{geometric Frobenius on actual cohomology}.
+Write $\tau$ for the character of $\Q_2(-1)$, so
+$\tau(\Frob_{\mathfrak p})=N\mathfrak p$ and
+$\tau=\chi_{\rm cyc}^{-1}$ in the usual convention on $\Q_2(1)$.
+The modular comparison uses the cohomological dual of the conventional
+arithmetic-Frobenius Deligne representation.
+
+For a good residue field of cardinality $q$ and $\lambda\ne0,1$, put
+\[
+ a_q(\lambda)=q+1-\#\mathcal E_\lambda(\F_q),\qquad
+ M_{3,j}(q)=\sum_{\lambda\in\F_q\setminus\{0,1\}}
+                  \rho(\lambda)a_q(\lambda)^j.
+\]
+Here $\rho$ is the trace character of the specified Kummer summand.
+When taking powers of one Frobenius, lift it by the finite-field norm.
+At an inert rational prime of $K$, $\F_{p^2}$ is the initial residue
+field; no nontrivial cubic character of $\F_p^\times$ is being lifted.
+Define
+\[
+ v(q)=-M_{3,4}(q)+3qM_{3,2}(q)+q^2-1.
+\]
+
+\begin{theorem}[Summary of the fourth-moment results]\label{thm:main}
+The representation $V_4$ has dimension four over $E$ and is unramified
+outside the primes over $2,3$. At every good prime of $K$,
+$\Tr(\Frob_{\mathfrak p}\mid V_4)=v(N\mathfrak p)$.
+There are explicit four-dimensional $\Q_2$-representations $W_4^+$ and
+$W_4^-$ of $G_\Q$, unramified outside $2,3$, whose restrictions to $G_K$
+after scalar extension are $V_4$, with
+\[
+ W_4^-\simeq W_4^+\otimes\chi_{-3}.
+\]
+Both have a perfect alternating pairing with values in $\Q_2(-5)$
+and are pure of weight five at every rational prime $p\ge5$.
+Each is the $2$-adic realization of a rational Chow motive cut out on a
+smooth projective fivefold, with Hodge type $(5,0)^2+(0,5)^2$;
+see Theorem~\ref{thm:scholl-realization}.
+For $p\ge5$, $p\equiv2\pmod3$, choose $d\in\F_p$ nonsquare,
+$r^2=d$ in $\F_{p^2}$, and a primitive cubic character $\rho$ there.
+Put
+\[
+ E'_x:Y^2=X(X^2-2xX+x^2-d),\quad a'_p(x)=p+1-\#E'_x(\F_p),
+\]
+\[
+ S_p=\sum_{x\in\F_p}\rho(x+r)
+       \bigl(a'_p(x)^4-3p\,a'_p(x)^2+p^2\bigr).
+\]
+Then $S_p\in\Z$ is independent of these choices and
+\[
+ \Tr(\Frob_p\mid W_4^+)=-S_p-1,\qquad
+ \Tr(\Frob_p\mid W_4^-)=S_p+1.
+\]
+For $W_4^-$, set $c_1(p)=v(p)$ at split primes and $c_1(p)=S_p+1$
+at inert primes, and set $c_2(p)=(c_1(p)^2-v(p^2))/2$ with the
+character convention above. Then
+\[
+ \det(1-\Frob_pT\mid W_4^-)
+ =1-c_1(p)T+c_2(p)T^2-p^5c_1(p)T^3+p^{10}T^4.
+\]
+\end{theorem}
+\begin{theorem}[Local data and strong irreducibility]\label{thm:main-local}
+Let $W_{4,\ell}^{\pm}$ be the realizations defined by the same rational
+projectors as $W_4^{\pm}$ in Theorem~\ref{thm:scholl-realization}.
+At $2$, for every $\ell\ne2$, both have zero inertia invariants and
+Swan conductor zero. At $3$, for every $\ell\ne3$, the plus descent
+has a one-dimensional invariant space with geometric Frobenius $3$,
+whereas the minus descent has no invariants; both Swan conductors vanish.
+Consequently the local Euler polynomials and Artin exponents are
+\[
+\begin{array}{c|cc|cc|c}
+ &P_2(T)&a_2&P_3(T)&a_3&N\\\hline
+W_4^+&1&4&1-3T&3&432\\
+W_4^-&1&4&1&4&1296
+\end{array}
+\]
+Here $N$ is the product of the local conductor powers, using a coefficient
+prime different from the residue characteristic for each local calculation.
+For every $\ell\ne2,3$, it is the prime-to-$\ell$ Artin conductor of
+$W_{4,\ell}^{\pm}$. The displayed local data are independent of $\ell$
+within their stated ranges.
+For every $\ell\ne3$, both realizations are absolutely irreducible and
+remain so after restriction to any finite number-field extension of $\Q$.
+\end{theorem}
+The local assertions are proved in Sections~\ref{sec:local-three} and
+\ref{sec:local-two}, the conductor deduction in Section~\ref{sec:conductors},
+and strong irreducibility in Section~\ref{sec:irreducibility}.
+The last assertion includes the original $2$-adic realizations; no
+irreducibility claim at coefficient prime $3$ is made here.
+
+The construction, pairing and inert calculation are proved in
+Sections~\ref{sec:geometry}, \ref{sec:descent}, \ref{sec:scholl} and \ref{sec:inert}.
+The cubic second-moment comparison is treated separately in
+Section~\ref{sec:cubic}; its modular conclusion uses the explicit exact
+finite checks stated and independently recomputed there. These rank-two and rank-four objects
+must not be conflated.
+
+\subsection{Scope of this revision}
+This consolidated research draft continues the version-2 preprint
+\cite{WalkeV2}, with its earlier predecessor \cite{WalkeV1} retained for
+provenance. It brings the local-at-$3$, dyadic tameness, dyadic invariant,
+and strong-irreducibility arguments into the same manuscript.
+The earlier blanket open obligations for these local data are superseded
+by Theorem~\ref{thm:main-local}. Section~\ref{sec:claims} records the
+current proof dependencies and unresolved questions. This draft has
+internal AI-assisted review; external specialist review remains outstanding.
+It does not certify the archived floating-point tables or promote their
+functional-equation sign and special values to theorems.
+
+The supplementary corrections retain known trace-formula consequences,
+the Jacobi-sum normalization, and an analytic period substitution. Those
+statements are explicitly distinguished from the main construction and
+from numerical special-value observations. No classical elliptic BSD rank
+or leading-term theorem is asserted.

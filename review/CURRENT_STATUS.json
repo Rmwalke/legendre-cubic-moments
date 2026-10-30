@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-30",
+  "state": "Consolidated research draft for author and external specialist review",
+  "manuscript": "manuscript/Walke_Consolidated_Local_Proofs_2026-10-30.pdf",
+  "pages": 49,
+  "new_integrated_sections": {
+    "local_at_3": {
+      "section": 8,
+      "start_page": 23
+    },
+    "local_at_2": {
+      "section": 9,
+      "start_page": 27
+    },
+    "conductors": {
+      "section": 10,
+      "start_page": 38
+    },
+    "strong_irreducibility": {
+      "section": 11,
+      "start_page": 39
+    },
+    "claims_and_dependencies": {
+      "section": 12,
+      "start_page": 41
+    },
+    "numerical_limits_and_remaining_questions": {
+      "section": 13,
+      "start_page": 41
+    }
+  },
+  "local_data": {
+    "plus": {
+      "P2": "1",
+      "a2": 4,
+      "P3": "1-3T",
+      "a3": 3,
+      "conductor_product": 432
+    },
+    "minus": {
+      "P2": "1",
+      "a2": 4,
+      "P3": "1",
+      "a3": 4,
+      "conductor_product": 1296
+    }
+  },
+  "coefficient_scopes": {
+    "at_2": "every ell != 2",
+    "at_3": "every ell != 3",
+    "strong_absolute_irreducibility": "every ell != 3, after restriction to every finite number-field extension",
+    "conductor_interpretation": "prime-to-ell Artin conductor for ell != 2,3; auxiliary coefficient different from residue characteristic for each local quantity"
+  },
+  "review_status": "Internal AI-assisted mathematical and integration review only; external expert and formal verification remain outstanding",
+  "publication_actions_this_task": {
+    "public_upload": false,
+    "journal_submission": false,
+    "message_to_external_person": false
+  },
+  "historical_numerical_programs_rerun": false,
+  "heavy_computation_performed": false,
+  "existing_local_check_reports": "Retained unchanged; no new mathematical execution claim",
+  "validation": {
+    "tex_compilation": "Three final stabilization passes, no warnings, missing references/citations, duplicate labels or overfull/underfull boxes",
+    "static_labels": 84,
+    "visual_review": "All 49 pages reviewed; final conductor clarification prompted renewed review of pages38\u201349; title/contents inspected separately"
+  },
+  "remaining_claims_file": "review/CURRENT_CLAIM_LEDGER.json",
+  "marathi_claims_file": "CURRENT_CLAIMS_MR.txt",
+  "original_public_records": "Historical references preserved; no external record changed"
+}

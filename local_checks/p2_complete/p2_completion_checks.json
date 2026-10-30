@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "name": "closure_equation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quartic_known_root_cleared",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quartic_other_root_cleared",
+      "passed": true,
+      "detail": "The other two roots follow by eta -> zeta*eta."
+    },
+    {
+      "name": "cubic_other_root_cleared",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "branch_factorization",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quartic_discriminant",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Fermat_Weierstrass_identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quaternion_I_square",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quaternion_J_square",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quaternion_anticommutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary_tetrahedral_C_order3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary_tetrahedral_normalizes_Q8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Q8_projector_idempotent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Q8_Sym4_invariant_dimension",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "C3_commutes_Q8_projector",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "C3_trace_on_Q8_invariants",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "C3_character_relation_on_Q8_invariants",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary_tetrahedral_Sym4_invariants",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Sym4_order4_trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Sym4_order3_trace",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "all_passed": true,
+  "scope": "Exact algebra only; geometric descent, nearby cycles, and tail vanishing require separate proofs."
+}

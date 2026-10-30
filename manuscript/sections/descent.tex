@@ -1,0 +1,396 @@
+\section{Arithmetic involution, descent and polarization}\label{sec:descent}
+
+We construct two four-dimensional representations over $\Q_2$ whose
+restrictions to $G_K$, after extending coefficients to $E$, are $V_4$.
+Throughout this section $\chi=\chi_{-3}$ is the quadratic character of
+$K/\Q$, and $\tau$ denotes the character of $\Q_2(-1)$.
+
+\subsection{The rational ambient representation}
+
+Over $\Q$, let
+\[
+ f:T=\PP^1_z\setminus\{0,\infty,\mu_3\}\longrightarrow U,
+ \qquad \lambda=z^3,
+ \qquad \mathcal A_0=\Sym^4(R^1\pi_*\Q_2).
+\]
+The divisor $\mu_3$ and the finite etale map $f$ are defined over $\Q$.
+Set
+\[
+ H=H^1_!(T_{\overline\Q},f^*\mathcal A_0),\qquad
+ A=a^*,\quad a(z)=\zeta_Kz,\qquad
+ e_{\mathrm{nt}}=\frac{2-A-A^2}{3},\quad
+ H_{\mathrm{nt}}=e_{\mathrm{nt}}H.
+\]
+Here $\zeta_K\in K$ is a chosen primitive cube root, and $A$ means
+pullback, with the identity identification $a^*f^*\mathcal A_0=f^*\mathcal A_0$.
+The operator $A$ is $\Q_2$-linear, although $a$ is defined over $K$.
+If $R$ denotes the Galois action on $H$, conjugation of the deck map gives
+\begin{equation}\label{eq:descent-deck-galois}
+ A^3=1,\qquad R(g)AR(g)^{-1}=A^{\chi(g)}.
+\end{equation}
+Consequently $e_{\mathrm{nt}}$ and its image are $G_\Q$-stable.
+
+Finite pushforward is exact, and the projection formula identifies
+$f_*f^*\mathcal A_0$ with $\mathcal A_0\otimes f_*\Q_2$.
+These assertions can be checked on the finite sums of geometric stalks;
+see also \cite[Proposition 59.55.2, tag 03QP]{StacksFinite}.
+Since $f$ is proper, the same identification applies to compactly
+supported cohomology and commutes with $H_c^1\to H^1$.
+Thus it also identifies their parabolic images. With the chosen
+coefficient root $\zeta_E\in E$, take $\mathcal L_\rho$ to be the
+$A=\zeta_E$ eigensheaf of $f_*E$, as in the preceding construction.
+It follows that
+\begin{equation}\label{eq:descent-eigenspaces}
+ H_{\mathrm{nt}}\otimes_{\Q_2}E
+   =V_{4,\rho}\oplus V_{4,\rho^{-1}},\qquad
+ \dim_{\Q_2}H_{\mathrm{nt}}=8.
+\end{equation}
+The dimension follows from the previously proved dimension four of
+each character summand. Both summands are unramified at primes of $K$
+above $p\ge5$. Since $K/\Q$ is unramified at such $p$, the inertia
+group of $\Q$ lies in $G_K$, so $H_{\mathrm{nt}}$ is also unramified there.
+
+\subsection{An actual coefficient involution}
+
+\begin{lemma}\label{lem:descent-involution}
+There is a $\Q_2$-linear operator $I$ on $H_{\mathrm{nt}}$ such that
+\[
+ I^2=1,\qquad IR(g)=R(g)I,\qquad IAI^{-1}=A^{-1}.
+\]
+It is induced by an arithmetic coefficient isomorphism over inversion
+$z\mapsto z^{-1}$ and respects the compact-support and boundary maps.
+\end{lemma}
+
+\begin{proof}
+Put $i(\lambda)=1/\lambda$. On the finite etale double cover
+$u^2=\lambda$ of $U$, the zero-preserving elliptic isomorphism
+\begin{equation}\label{eq:descent-elliptic-map}
+ \phi_u:\mathcal E_\lambda\longrightarrow\mathcal E_{1/\lambda},
+ \qquad (x,y)\longmapsto(x/\lambda,y/u^3)
+\end{equation}
+is verified by
+\[
+ (x/\lambda)(x/\lambda-1)(x/\lambda-1/\lambda)
+   =x(x-1)(x-\lambda)/\lambda^3=(y/u^3)^2.
+\]
+Replacing $u$ by $-u$ composes this map with $[-1]$, which acts as
+$+1$ on $\Sym^4R^1\pi_*\Q_2$. The two pullbacks therefore agree
+on the double-cover relation and descend to an isomorphism
+\[
+ \theta:i^*\mathcal A_0\longrightarrow\mathcal A_0
+\]
+over $\Q$; in fact all these maps are defined over $\Z[1/6]$.
+For the second inversion choose $1/u$. Directly on both coordinates,
+$\phi_{1/u}\circ\phi_u=\operatorname{id}$, whence
+\begin{equation}\label{eq:descent-coefficient-cocycle}
+ \theta\circ i^*\theta=\operatorname{id}.
+\end{equation}
+Choosing $-1/u$ gives the same identity on fourth symmetric powers.
+
+Let $b(z)=1/z$. Since $fb=if$, pullback of $\theta$ gives
+$\Theta:b^*f^*\mathcal A_0\to f^*\mathcal A_0$.
+Define $I=\Theta_*b^*$ on cohomology. The map $b$ extends to an
+automorphism of $\PP^1_z$ preserving its boundary as a set. Its
+pullback and the coefficient isomorphism therefore act on $H_c^1$,
+$H^1$, and the natural map between them; they act on the parabolic
+image and on the boundary exact sequence as well. Equation
+\eqref{eq:descent-coefficient-cocycle} gives $I^2=1$.
+Both $b$ and $\Theta$ are defined over $\Q$, so $I$ commutes with $R$.
+Finally $bab=a^{-1}$, while the coefficient map is pulled back from
+the $\lambda$-line and the deck coefficient maps are identities.
+This proves $IAI^{-1}=A^{-1}$ on coefficient systems and hence on
+cohomology. It also proves that $I$ preserves $H_{\mathrm{nt}}$ and
+exchanges the summands in \eqref{eq:descent-eigenspaces}.
+\end{proof}
+
+\subsection{The two descents and the quadratic twist}
+
+\begin{theorem}\label{thm:descent-rational}
+The spaces
+\[
+ W_4^+=H_{\mathrm{nt}}^{I=1},\qquad
+ W_4^-=H_{\mathrm{nt}}^{I=-1}
+\]
+are continuous four-dimensional $\Q_2$-representations of $G_\Q$,
+unramified outside $2,3$, and
+\[
+ (W_4^\pm|_{G_K})\otimes_{\Q_2}E\simeq V_4,
+ \qquad W_4^-\simeq W_4^+\otimes\chi.
+\]
+\end{theorem}
+
+\begin{proof}
+First consider extension of the base field with coefficients $E$.
+Let $V=\ker(A-\zeta_E)$ in $H_{\mathrm{nt}}\otimes E$, and put
+$\delta(g)=(1-\chi(g))/2$. For $g\notin G_K$, both $R(g)$ and $I$
+exchange the two eigenspaces. Hence
+\begin{equation}\label{eq:descent-extensions}
+ R_+(g)=I^{\delta(g)}R(g)|_V,\qquad
+ R_-(g)=(-I)^{\delta(g)}R(g)|_V
+\end{equation}
+preserve $V$. The commutation in Lemma~\ref{lem:descent-involution}
+and additivity of $\delta$ modulo two show that these maps are
+representations. Their restriction to $G_K$ is the original action.
+
+Coefficient descent is supplied by the displayed rational eigenspaces.
+Indeed
+\[
+ \Phi_\pm:V\longrightarrow W_4^\pm\otimes E,
+ \qquad v\longmapsto v\pm Iv
+\]
+are isomorphisms whose inverses are projection to $V$. For $g\notin G_K$,
+\[
+ R(g)(v\pm Iv)=\Phi_\pm(\pm IR(g)v);
+\]
+for $g\in G_K$ the intertwining is immediate. Thus these rational
+spaces realize exactly \eqref{eq:descent-extensions} and have dimension
+four. Continuity and the ramification assertion follow from $H_{\mathrm{nt}}$.
+
+For an explicit coefficient-descent datum, let
+$C=\operatorname{id}\otimes\sigma$, where
+$\sigma\in\Gal(E/\Q_2)$ sends $\zeta_E$ to $\zeta_E^{-1}$.
+This semilinear operator commutes with $A,I,R$ and exchanges the
+two eigenspaces. On $V$ the operators $D_+=IC$, $D_-=-IC$ are
+semilinear involutions commuting with the corresponding $R_\pm$.
+Under $\Phi_\pm$ they are ordinary coefficient conjugation. This
+checks the coefficient cocycle separately from base-field extension.
+
+Finally put $J=A-A^2$ on $H_{\mathrm{nt}}$. Since $A+A^2=-1$ there,
+\[
+ J^2=-3,\qquad IJ=-JI,\qquad R(g)JR(g)^{-1}=\chi(g)J.
+\]
+Thus $J$ is an invertible $\Q_2$-linear map from $W_4^+$ to $W_4^-$,
+intertwining the latter with $W_4^+\otimes\chi$.
+\end{proof}
+
+\begin{remark}
+The signs refer to the literal map \eqref{eq:descent-elliptic-map}:
+$W_4^+$ is its $+1$ eigenspace. Replacing $I$ by $-I$ gives $W_4^-$.
+This constructs two particular extensions without any irreducibility
+assumption or classification of all extensions.
+\end{remark}
+
+\subsection{Boundary action}
+
+The boundary lines above $\lambda=1$ have trivial arithmetic coefficient
+action. Formula \eqref{eq:descent-elliptic-map} extends regularly there,
+since $\lambda$ and $u$ are units; at $u=1$ it specializes to the
+identity. The choice $u=-1$ has the same effect on $\Sym^4$.
+Consequently $I$ acts on the three boundary lines by the permutation
+$z\mapsto z^{-1}$, with coefficient $+1$.
+The nontrivial deck boundary is therefore the augmentation subspace
+$B_{\mathrm{nt}}\subset\Q_2[\mu_3]$. The boundary contributions at
+$0,\infty$ are killed by $e_{\mathrm{nt}}$, equivalently because
+the two twisted eigensheaves have no inertia invariants there.
+Writing $C_{\mathrm{nt}}=e_{\mathrm{nt}}H_c^1(T_{\overline\Q},f^*\mathcal A_0)$,
+we obtain
+\begin{equation}\label{eq:descent-boundary-exact}
+ 0\longrightarrow B_{\mathrm{nt}}\longrightarrow C_{\mathrm{nt}}
+   \longrightarrow H_{\mathrm{nt}}\longrightarrow0.
+\end{equation}
+In $B_{\mathrm{nt}}$, the lines generated by
+$2[1]-[\zeta_K]-[\zeta_K^2]$ and $[\zeta_K]-[\zeta_K^2]$
+have $I$ eigenvalues $+1,-1$ and Galois characters $1,\chi$, respectively.
+Thus, for $C_\pm=C_{\mathrm{nt}}^{I=\pm1}$,
+\begin{equation}\label{eq:descent-boundary-traces}
+ \begin{aligned}
+ \Tr(\Frob_p\mid W_4^+)&=\Tr(\Frob_p\mid C_+)-1,\\
+ \Tr(\Frob_p\mid W_4^-)&=\Tr(\Frob_p\mid C_-)-\chi(p)
+ \end{aligned}
+ \qquad(p\ge5).
+\end{equation}
+In particular the second boundary contribution is $+1$ at inert primes.
+
+\subsection{Alternating pairing and reciprocity}
+
+\begin{proposition}\label{prop:descent-pairing}
+Each $W_4^\pm$ has a perfect alternating $G_\Q$-equivariant pairing
+with values in $\Q_2(-5)$. Its similitude character is $\tau^5$ and
+its determinant is $\tau^{10}$.
+\end{proposition}
+
+\begin{proof}
+The elliptic cup pairing $\langle\ ,\ \rangle$ on $R^1\pi_*\Q_2$
+is alternating, perfect, and valued in $\Q_2(-1)$. On $\mathcal A_0$ put
+\[
+ B(v_1v_2v_3v_4,w_1w_2w_3w_4)
+   =\sum_{\sigma\in S_4}\prod_{j=1}^4\langle v_j,w_{\sigma(j)}\rangle.
+\]
+This is symmetric with values in $\Q_2(-4)$. In a symplectic basis
+$e,f$, its monomial matrix is antidiagonal with entries
+$(-1)^j j!(4-j)!\langle e,f\rangle^4$, so it is perfect over $\Q_2$.
+The degree-one elliptic isomorphisms $\phi_u$ preserve cup product;
+hence $\theta$ preserves $B$.
+
+Poincare duality and the compact-support map give a perfect parabolic
+pairing $\Omega:H\times H\to\Q_2(-5)$
+\cite[Theorem 24.1]{Milne}; see also the support and trace formalism
+of \cite{SGA4}. To see perfection on the image, the two maps
+$H_c^1\to H^1$ for dual coefficient systems are adjoint up to the
+degree-one cup sign, and their kernels are the annihilators of the opposite
+images. The degree-one cup sign and symmetry of $B$ make $\Omega$
+alternating. Both $A$ and $I$ preserve it: their coefficient maps
+are isometries and their curve automorphisms have degree one, so
+preserve the trace map on $H_c^2$.
+
+The adjoint of $A$ is $A^{-1}$; thus $e_{\mathrm{nt}}$ is self-adjoint
+and its image has nondegenerate restricted pairing. Since $I$ is an
+involutive isometry, its two eigenspaces are orthogonal and each is
+nondegenerate. The restricted forms give the asserted equivariant
+pairings. Their multiplier is the character of $\Q_2(-5)$, namely
+$\tau^5$. The square of a nondegenerate alternating two-form in
+dimension four is a volume form, yielding $\det W_4^\pm=\tau^{10}$.
+\end{proof}
+
+\begin{corollary}\label{cor:descent-reciprocity}
+For $p\ge5$, the characteristic polynomial of geometric Frobenius
+on either constructed representation is
+\[
+ \det(X-\Frob_p\mid W_4^\pm)
+   =X^4-c_{1,\pm}(p)X^3+c_{2,\pm}(p)X^2
+       -p^5c_{1,\pm}(p)X+p^{10}.
+\]
+The analogous formula for $V_4$ at a good prime of $K$ uses its norm
+$q$ in place of $p$.
+\end{corollary}
+
+\begin{proof}
+The pairing identity $F^t\Omega F=p^5\Omega$ pairs eigenvalues with
+their quotients $p^5/\alpha$, and the determinant is $p^{10}$.
+These identities give the displayed coefficients. Restriction to
+$G_K$ and scalar extension transfer the pairing to $V_4$.
+\end{proof}
+
+\begin{remark}
+This argument establishes reciprocity without a purity premise. The
+coefficients of the displayed polynomials lie in $\Q_2$; a rational
+compatible-system assertion, Hodge numbers and bad-prime factors
+require their own arguments. Good-prime purity is proved next by a
+separate application of Deligne's weight theorem; the rational motivic
+realization and Hodge numbers are established in Section~\ref{sec:scholl},
+and the local factors in Sections~\ref{sec:local-three} and \ref{sec:local-two}.
+\end{remark}
+
+% Insert after the descent/pairing results; all referenced results then precede this.
+% Standard-theorem consequence, not a new general purity theorem.
+\subsection{Good-prime Frobenius purity}
+
+\begin{proposition}[Good-prime purity]\label{prop:good-prime-purity}
+For $r=2,4$, the representation $H_r$ is pure of weight $r+1$ at
+every prime $\mathfrak p\nmid6$ of $K$. More explicitly, if
+$q=N\mathfrak p$ and $\alpha$ is a geometric Frobenius eigenvalue
+on $H_r$, then $\alpha$ is algebraic over $\Q$ and
+$|\iota(\alpha)|=q^{(r+1)/2}$ for every complex embedding of its
+number field.
+\end{proposition}
+
+\begin{proof}
+Fix $\mathfrak p\nmid6$, and work on
+$U_0=\PP^1_{\F_q}\setminus\{0,1,\infty\}$. This is a smooth
+curve of finite type over $\F_q$, and the coefficient prime $2$
+is different from its characteristic. The specialized Legendre
+family is smooth and proper over $U_0$, so
+$\mathcal V_0=R^1\pi_*E$ is lisse. At any closed point $x$ of
+degree $d$, its geometric Frobenius eigenvalues are the two
+roots of $X^2-a_{q^d}(x)X+q^d$; the Weil theorem for elliptic
+curves gives algebraic eigenvalues of absolute value $q^{d/2}$
+under every complex embedding. Hence $\mathcal V_0$ is
+pointwise pure of weight one.
+
+The cover $z^3=\lambda$ is finite etale on $U_0$. Its chosen
+rank-one character summand is lisse and has finite monodromy,
+with Frobenius eigenvalues in $\mu_3$ at every closed point;
+it is therefore pointwise pure of weight zero. Thus
+$\mathcal G_{r,0}=\Sym^r\mathcal V_0\otimes\mathcal L_{\rho,0}$
+is lisse and pure of weight $r$. The claims hold after extending
+coefficients to $\overline{\Q}_2$ and for every embedding used
+to define weights. Finite coefficient extension and passage to
+the specified direct summand preserve these algebraicity and absolute-value assertions.
+
+Deligne's \emph{Weil II}, Corollary~3.3.6 \cite{DeligneWII}, states that for a
+smooth finite-type scheme and a lisse pure sheaf of weight $w$,
+the image of $H_c^i\to H^i$ is pure of weight $w+i$.
+Applying this result with $i=1$ proves that the special-fibre
+parabolic group is pure of weight $r+1$. Equivalently, on this
+curve one can apply Theorem~3.2.3 to
+$H^1(\PP^1_{\overline{\F}_q},j_*\mathcal G_{r,0})$.
+The specialization isomorphism of Section~\ref{sec:geometry}
+is Frobenius equivariant and identifies this image with $H_r$,
+so the asserted arithmetic purity follows. Neither argument
+requires irreducibility or semisimplicity of $H_r$.
+\end{proof}
+
+\begin{corollary}\label{cor:descent-good-prime-purity}
+Both $W_4^+$ and $W_4^-$ are pure of weight five at every rational
+prime $p\ge5$: each geometric Frobenius eigenvalue is algebraic
+and all its complex conjugates have absolute value $p^{5/2}$.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:descent-rational}, the restrictions of
+$W_4^\pm$ to $G_K$, after extending coefficients, are $H_4$.
+At a split prime $p$ the purity just proved applies to
+$\Frob_p$ itself. At an inert prime, $\Frob_p^2$ restricts to
+the geometric Frobenius at the degree-two prime of $K$.
+Thus, if $\beta$ is an eigenvalue of $\Frob_p$ on either
+$W_4^\pm$, then $\beta^2$ is algebraic and every complex
+conjugate has absolute value $(p^2)^{5/2}=p^5$.
+It follows that $\beta$ is algebraic and all its complex
+conjugates have absolute value $p^{5/2}$, as required.
+\end{proof}
+
+\begin{remark}
+This proposition concerns good-prime Frobenius weights of the
+specified $2$-adic representations. It does not by itself
+identify their Hodge numbers, construct rational Scholl
+projectors or a compatible system, determine bad-prime Euler
+factors or conductors, or prove automorphy or analytic
+continuation. The separate construction in Section~\ref{sec:scholl}
+supplies the specified rational Chow projectors and Hodge numbers.
+Sections~\ref{sec:local-three}--\ref{sec:conductors} independently determine
+the bad-prime Euler factors and conductors.
+\end{remark}
+
+
+\subsection{Projector compatibility on the smooth locus}
+\begin{lemma}\label{lem:open-projectors}
+Let $\mathcal F=\mathcal E\times_U T$ and
+$h:Z=\mathcal F^{\times_T4}\to T$. On relative cohomology set
+\[
+ e_{\rm odd}=\prod_{j=1}^4\frac{1-[-1]_j^*}{2},\qquad
+ e_{\rm alt}=\frac1{24}\sum_{\sigma\in S_4}\operatorname{sgn}(\sigma)\sigma^*,
+ \qquad e_4=e_{\rm odd}e_{\rm alt}.
+\]
+These are rational commuting idempotents and
+\[
+ e_4R^j h_*\Q_2=0\quad(j\ne4),\qquad
+ e_4R^4h_*\Q_2\simeq\Sym^4(R^1\pi_*\Q_2)|_T.
+\]
+The diagonal map induced by $\phi_u$ on $u^2=\lambda$ commutes with
+$e_4$ and descends on this summand to the literal coefficient map
+$\theta$ of Lemma~\ref{lem:descent-involution}. On parabolic cohomology,
+$P_\pm=e_{\rm nt}(1\pm I)/2$ are orthogonal rational idempotents
+with images $W_4^\pm$ and sum $e_{\rm nt}$.
+\end{lemma}
+\begin{proof}
+Elliptic inversion acts by $-1$ on $R^1$ and by $+1$ on $R^0,R^2$.
+Relative Kunneth therefore shows that $e_{\rm odd}$ selects exactly
+the fourfold tensor of $R^1$, in degree four. Permuting these four
+odd-degree factors introduces the Koszul sign. Consequently the signed
+permutation average becomes the ordinary symmetric tensor projector
+under Kunneth. This explains the sign used in Scholl's projector
+\cite[Section~1.1.2]{SchollMotives}.
+
+The diagonal elliptic isomorphism commutes with individual inversions
+and factor permutations. Changing $u$ to $-u$ composes it with
+simultaneous inversion on the four factors, acting by $(-1)^4=1$
+on the selected summand. Its descended map is therefore exactly the
+fourth symmetric power used to define $\theta$; the cocycle follows
+from $\phi_{1/u}\phi_u=1$. The deck map commutes with $e_4$.
+Since $IAI^{-1}=A^{-1}$, $I$ commutes with $e_{\rm nt}$, and the
+last assertions follow by multiplying the displayed idempotents.
+\end{proof}
+
+This lemma establishes the smooth-family compatibility. We now extend it
+to rational Chow projectors on a specified compactification, including the
+auxiliary-level translations and the parabolic boundary comparison.

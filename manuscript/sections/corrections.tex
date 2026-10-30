@@ -1,0 +1,113 @@
+\section{Known quadratic trace identities}\label{app:quadratic}
+Let $\chi$ be the quadratic character of $\F_p$, extended by zero, and put $T_j(p)=\sum_{\lambda\ne0,1}\chi(\lambda)a_p(\lambda)^j$. The following is a known-trace-formula corollary.
+\begin{theorem}\label{thm:quadratic}
+For every prime $p\ge5$,
+\[
+ T_4(p)=-c(p)-b(p)-3p\,a(p)-2p^2-3p-1,
+\]
+where $a=8.4.a.a=\eta(2z)^4\eta(4z)^4$,
+$b=4.6.a.a=\eta(2z)^{12}$, and
+$c=8.6.a.a=q+20q^3-74q^5-24q^7+\cdots$.
+\end{theorem}
+\begin{proof}
+Use the Ahlgren and Ahlgren--Ono trace formulas as stated in
+\cite[Theorem 2.3]{Grove}:
+\begin{align*}
+ -\Tr_{k+2}(\Gamma_0(4),p)&=3+\sum_{\lambda\ne0,1}G_{k+2}(a(\lambda),p),\\
+ -\Tr_{k+2}(\Gamma_0(8),p)&=4+\sum_{\gamma\ne0,1,-1}G_{k+2}(a(\gamma^2),p).
+\end{align*}
+Here $G_4(s,p)=s^2-p$ and $G_6(s,p)=s^4-3ps^2+p^2$.
+Put $U_k=\sum_{\lambda\ne0,1}a(\lambda)^k$ and
+$Q_k=\sum_{\gamma\ne0,1,-1}a(\gamma^2)^k$. Then
+$Q_k-U_k=T_k$, and $Q_0-U_0=-1$.
+The relevant spaces have bases
+\[
+ S_4(\Gamma_0(4))=0,\quad S_4(\Gamma_0(8))=\langle a\rangle,
+\quad S_6(\Gamma_0(4))=\langle b\rangle,
+\]
+\[
+ S_6(\Gamma_0(8))=\langle b(z),b(2z),c(z)\rangle.
+\]
+Subtracting the weight-four trace formulas gives
+$-a(p)=1+T_2(p)+p$, so $T_2=-a(p)-p-1$.
+Subtracting the weight-six formulas gives
+$-(b(p)+c(p))=1+T_4-3pT_2-p^2$.
+Substitution proves the formula.
+\end{proof}
+
+The identity is a consequence of established trace formulas. No new
+modularity or priority assertion is attached to this appendix.
+
+\section{The corrected hypergeometric normalization}\label{sec:hyp}
+Assume $p\ge5$, $p\equiv1\pmod3$. Let $\phi$ and $\rho$ be the quadratic and a primitive cubic character, and let $g$ and $J$ denote Gauss and Jacobi sums for a fixed nontrivial additive character. We use the normalized Gauss-sum definition
+\cite[Eq. (1.1)]{Grove}, with all multiplicative characters, including
+the trivial character, extended by zero at zero. Put
+\[
+ H(\lambda)=\frac1{1-p}\sum_\chi c(\chi)\chi(\lambda),
+ \qquad c(\chi)=\frac{g(\phi\chi)^2g(\bar\chi)^2}{g(\phi)^2}.
+\]
+Only nonzero arguments are used here; the separately defined value at zero is immaterial. For nonsingular $\lambda$, $a(\lambda)=\phi(-1)H(\lambda)$.
+Fix a generator $\omega$ of the multiplicative character group such that $\rho=\omega^{(p-1)/3}$ and $\phi=\omega^{(p-1)/2}$. The same $\omega$ is used to interpret the rational parameters of $H_p(A;1)$. Let
+\[
+ A=\left\{\tfrac12,\tfrac12,\tfrac13,\tfrac13;
+               1,1,\tfrac56,\tfrac56\right\},\qquad
+ J=J(\rho,\phi\bar\rho).
+\]
+\begin{lemma}\label{lem:norm}
+With this normalization,
+\begin{equation}\label{eq:correctnorm}
+ M_{3,2}(p)+1
+ =\frac1{p-1}\sum_\chi c(\chi)c(\bar\rho\bar\chi)
+ =-J^2 H_p(A;1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Since $\phi$ is nontrivial,
+$c(\chi)=J(\phi\chi,\bar\chi)^2$ by the Gauss--Jacobi identity.
+Expanding the Jacobi sums and summing over $\chi$ imposes
+$xy=(1-x)(1-y)$, equivalently $x+y=1$. Therefore
+\[
+ \sum_\chi c(\chi)=(p-1)\sum_x\phi(x(1-x))
+ =-(p-1)\phi(-1),
+\]
+so $H(1)=\phi(-1)$. Character orthogonality applied to $H(\lambda)^2$
+then gives the first equality of \eqref{eq:correctnorm}.
+
+The numerator of each summand for $H_p(A;1)$ is
+\[
+ g(\phi\chi)^2g(\rho\chi)^2g(\bar\chi)^2
+                  g(\phi\bar\rho\bar\chi)^2.
+\]
+Its normalizing denominator is
+$g(\phi)^2g(\rho)^2g(\varepsilon)^2g(\phi\bar\rho)^2$,
+where $g(\varepsilon)^2=1$. The convolution on the middle of
+\eqref{eq:correctnorm} has denominator $g(\phi)^4$ and the opposite
+overall sign, since $1-p=-(p-1)$. Their ratio is
+\[
+ -\left(\frac{g(\rho)g(\phi\bar\rho)}{g(\phi)}\right)^2=-J^2.
+\]
+This proves the normalization factor.
+\end{proof}
+
+For instance, choose $\omega(3)=e^{2\pi i/6}$ at $p=7$ and
+$\rho=\omega^2$. Then $J=2+\sqrt{-3}$, $J^2=1+4\sqrt{-3}$,
+and $M_{3,2}(7)+1=-15$. Hence
+$H_7(A;1)=15/(1+4\sqrt{-3})$, which is not $-15$.
+The v1 phrase identifying the convolution directly with the normalized
+$A$-value must therefore include the factor in \eqref{eq:correctnorm}.
+The underlying moment calculation is unchanged.
+
+Under the carried-certificate comparison of Section~\ref{sec:cubic}, the corrected modular relation is
+\[
+ J^2 H_p(A;1)=a_f(p)+p.
+\]
+For $B=\{\frac12,\frac12,\frac13,\frac23;1,1,1,1\}$, the
+published identity $H_p(B;1)=a_f(p)+\leg{3}{p}p$
+\cite[Theorem~2 and Table~1]{LTYZ} gives
+\[
+ J^2 H_p(A;1)=H_p(B;1)+\left(1-\leg{3}{p}\right)p.
+\]
+The datum $A$ also occurs in the EHMM literature at a different
+argument \cite{EHMM2}. A priority claim requires comparison of both
+the argument and the Jacobi twists. The algebra above supplies the normalization proof; numerical scripts are retained separately as historical checks.
+

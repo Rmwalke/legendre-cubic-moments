@@ -1,0 +1,284 @@
+\section{Local inertia and the Euler factors at 3}\label{sec:local-three}
+This section computes the arithmetic local representation of the literal
+rational descents fixed in Section~\ref{sec:descent}. It combines an explicit
+quotient with the local two-section vanishing-cycle calculation and a separate
+Frobenius computation. The proof does not use a numerical functional-equation fit.
+
+\subsection{Statement and normalization}
+Let $\ell\ne3$, let
+\[
+ T=\PP^1_z\setminus\{0,\infty,\mu_3\},\qquad
+ E_z:y^2=x(x-1)(x-z^3),\qquad
+ H_\ell=H^1_!(T_{\overline\Q},\Sym^4 R^1\pi_*\Q_\ell).
+\]
+Here $H^1_!=\im(H_c^1\to H^1)$, $A$ is pullback by $z\mapsto\zeta_3z$,
+and $e_\nt=(2-A-A^2)/3$. The literal inversion $I$ uses
+\[
+ z\mapsto z^{-1},\qquad (x,y)\mapsto(x/z^3,y/u^3),\quad u^2=z^3.
+\]
+The square-root sign disappears on the fourth symmetric power. Put
+$W_{4,\ell}^{\pm}=(e_\nt H_\ell)^{I=\pm1}$, as in \cite{WalkeV2}.
+We use geometric Frobenius, so $\Q_\ell(-1)$ has eigenvalue $3$ at $3$.
+The standing descent identities are
+\[
+ \dim W_{4,\ell}^{\pm}=4,\qquad
+ W_{4,\ell}^{-}\simeq W_{4,\ell}^{+}\otimes\chi_{-3}.
+\]
+They follow from the same finite-cover and involution construction for every
+$\ell$, without requiring compatibility at a bad prime.
+
+\begin{theorem}\label{p3:thm:local}
+For every $\ell\ne3$, the local quantities of these specified representations are
+\[
+\begin{array}{c|cccc}
+ &\dim(W_{4,\ell}^{\pm})^{I_3}&P_3^{\pm}(T)&\Sw_3(W_{4,\ell}^{\pm})&a_3(W_{4,\ell}^{\pm})\\\hline
+ +&1&1-3T&0&3\\
+ -&0&1&0&4
+\end{array}
+\]
+where $P_3^{\pm}(T)=\det(1-\operatorname{Frob}_3T\mid
+(W_{4,\ell}^{\pm})^{I_3})$.
+On $W_{4,\ell}^{+}$, inertia is unipotent with a single Jordan block of length
+four; on $W_{4,\ell}^{-}$ it is its ramified quadratic twist.
+If $N$ is the nonzero tame monodromy logarithm and $F$ is geometric
+Frobenius, then $FNF^{-1}=3^{-1}N$. On the successive one-dimensional
+quotients of $0\subset\ker N\subset\ker N^2\subset\ker N^3\subset V$
+for $V=W_{4,\ell}^+$, the Frobenius eigenvalues are $3,9,27,81$.
+\end{theorem}
+
+In particular, the original $2$-adic representation can be used directly at
+$3$. The argument also works at $\ell=5$ and yields the same displayed data.
+The dyadic calculation is treated separately below.
+
+\subsection{An exact quotient, including the inversion sign}
+Set $t=z+z^{-1}$ and consider
+\begin{equation}\label{p3:eq:family}
+ C_t:Y^2=X^3+(t-1)(t+2)X^2+(t+2)X.
+\end{equation}
+Write $a=(t-1)(t+2)$, $b=t+2$. Its invariants are
+\begin{align*}
+ c_4&=16(a^2-3b)=16(t+2)(t^3-3t-1),\\
+ \Delta&=16b^2(a^2-4b)=16(t+2)^3(t-2)(t+1)^2,\\
+ j&=\frac{256(t^3-3t-1)^3}{(t-2)(t+1)^2}.
+\end{align*}
+Over $\Q(z)$ put $d=-z^2/(z+1)$. Direct identities give
+\[
+ da=-(1+z^3),\qquad d^2b=z^3.
+\]
+Thus $E_z$ is precisely the quadratic twist of $C_t$ with coefficients
+$da,d^2b$. Over $v^2=d$, the map
+\[
+ \psi_z:E_z\longrightarrow C_t,\qquad(x,y)\longmapsto(x/d,y/v^3)
+\]
+induces a canonical fourth-symmetric-power isomorphism. Its two choices
+differ by $[-1]$, which acts trivially on that symmetric power.
+
+Crucially, $d(1/z)=d(z)/z^3$. Choosing $v'=v/u$ for the inverted parameter gives
+\[
+ \psi_{1/z}\circ\phi_u(x,y)=(x/d,y/v^3)=\psi_z(x,y).
+\]
+This proves compatibility with the \emph{literal} $I$ in the manuscript.
+The descent is the plus descent; it has no additional constant quadratic twist.
+
+Let $V=\PP^1_t\setminus\{2,-1,-2,\infty\}$ and
+$Z=\PP^1_z\setminus\{0,\infty,\mu_3,-1\}$.
+Then $Z\to V$ is a finite etale double cover, and the displayed isomorphism
+identifies its invariant coefficient system with
+$\mathcal F=\Sym^4R^1(C/V)_*\Q_\ell$.
+On the compact curves, finite pushforward followed by invariants identifies
+the ordinary middle-extension sheaves. This can be checked stalkwise:
+the stalk at a missing point is the invariant space of its punctured-trait
+monodromy. Finite pushforward and rational finite-group invariants are exact.
+Consequently
+\begin{equation}\label{p3:eq:plus}
+ H^1(\PP^1_{\bar\Q},j_*\mathcal F)\simeq H_\ell^{I=+1}.
+\end{equation}
+Adding back $z=-1$ on the original side makes no change to its parabolic
+cohomology, since its original coefficient sheaf is smooth there.
+
+\subsection{The rank and the extra branch point}
+The singular fibres of \eqref{p3:eq:family} in characteristic zero are
+\[
+\begin{array}{c|rrrr}
+ t&2&-1&-2&\infty\\\hline
+ \text{type}&I_1&I_2&\mathrm{III}&I_6\\
+ \dim\mathcal F^{I_t}&1&1&3&1
+\end{array}
+\]
+At infinity use $r=1/t$, $X'=r^2X$, $Y'=r^3Y$. The resulting coefficients
+are $1+r-2r^2$ and $r^3(1+2r)$; $c_4$ is a unit and $\Delta$ has order six.
+At $-2$, the orders of $c_4,\Delta$ are $1,3$, giving type III.
+Equivalently, the ramified preimage $z=-1$ has elliptic automorphism
+$(x,y)\mapsto(-x,iy)$. Its $H^1$ eigenvalues are $i,-i$, so the eigenvalues
+of its fourth symmetric power are $1,-1,1,-1,1$.
+This explains both the three-dimensional stalk at $-2$ and why that point
+must be included in the rank calculation.
+
+The Legendre geometric monodromy is $\mathrm{SL}_2$; finite-index pullback
+preserves its connected Zariski closure. The quotient identification therefore
+shows that neither $\mathcal F$ nor its dual has a geometric global invariant.
+The parabolic Euler-characteristic formula gives
+\[
+ \dim H^1(\PP^1,j_*\mathcal F)=(4-2)5-(1+1+3+1)=4.
+\]
+The already defined rank-four $W_{4,\ell}^{+}$ is a subspace of the right
+side of \eqref{p3:eq:plus}; equality of dimensions proves
+\begin{equation}\label{p3:eq:identification}
+ W_{4,\ell}^{+}=H^1_!(V_{\bar\Q},\mathcal F)
+\end{equation}
+with its full arithmetic action. This step does not use Hodge numbers or a
+numerical Frobenius comparison.
+
+\subsection{The collision at 3 and its local cycles}
+On $\mathcal X=\PP^1_{\Z_3}$ remove the four sections
+$D=\{2,-1,-2,\infty\}$ and let $j:\mathcal U\hookrightarrow\mathcal X$.
+The elliptic scheme \eqref{p3:eq:family} is smooth and proper over $\mathcal U$,
+since its discriminant is a unit there. Thus $\mathcal F$ is lisse on this
+entire open scheme for every $\ell\ne3$.
+
+The sections $t=2,-1$ meet at the special point $x$ with $t=-1\in\F_3$.
+Their intersection multiplicity is $v_3(2-(-1))=1$. The other two sections
+specialize to $1,\infty$, separately. Near $x$ the invariant $c_4$ is a unit
+and the discriminant is a unit times $(t-2)(t+1)^2$.
+At $x$ the nodal cubic is
+\[
+ Y^2=X^3+X^2+X=X(X-1)^2.
+\]
+The node $(1,0)$ has rational tangents $Y=\pm(X-1)$: the degeneration is
+split multiplicative. The two horizontal monodromies on $R^1$ have
+multiplicities one and two in the same Tate unipotent direction.
+
+We apply \emph{the local} theorem \cite[\S\S1.6--1.9]{SchollVanishing}, not its
+global semistable-family Theorem 2.15. The present family has an additive
+point at $-2$, so that global theorem's hypotheses should not be asserted.
+For the local theorem, the base curve is smooth, the two sections have
+intersection multiplicity one, the coefficient system is lisse off them,
+and Tate uniformization makes its local monodromy factor through the two
+Kummer characters with multiplicities $1,2$. These are exactly the required
+local hypotheses.
+
+Put $B=(R^1\Phi j_!\mathcal F)_x$. Scholl's calculation identifies the
+inertia action on $B$ with the rank-five fourth symmetric power of a
+nontrivial unipotent rank-two action. Its logarithm is proportional to
+$(1+2)N_0=3N_0$, and $B$ is a single unipotent block of length five.
+In particular wild inertia acts trivially.
+The local boundary sequence \cite[\S1.7]{SchollVanishing} gives
+\begin{equation}\label{p3:eq:ABC}
+ 0\longrightarrow A_x\longrightarrow B\longrightarrow C_x\longrightarrow0,
+ \qquad \dim A_x=1,\quad \dim C_x=4.
+\end{equation}
+Here $A_x$ is the cokernel of the diagonal map from the common invariant
+line to the two cusp invariant lines. It is the unique invariant line of $B$.
+Thus $C_x$ is a single unipotent block of length four.
+
+\subsection{The global-to-local surjection}
+This paragraph supplies the necessary bridge from local cycles to the
+specified global representation. It also avoids any assumption about the
+absence of other vanishing cycles at the additive point. In particular,
+we do not invoke the original deduction of Corollary 2.16 in Scholl's
+paper; its published correction is included in the reference
+\cite{SchollVanishing}.
+
+On the special open curve $\mathcal U_{\bar\F_3}$,
+$H_c^2(\mathcal U_{\bar\F_3},\mathcal F)=0$.
+Indeed pull back by the separable double cover $t=z+z^{-1}$.
+The exact quadratic-twist identities still hold in characteristic three.
+After taking $\Sym^4$, the resulting system is the Legendre system at $z^3$.
+The relative Frobenius isogeny from the Legendre curve at $z$ to that at $z^3$
+induces an isomorphism on $\ell$-adic $H^1$ for $\ell\ne3$.
+The Legendre geometric monodromy is $\mathrm{SL}_2$ in every odd
+characteristic \cite[Chapter 15, opening discussion]{Katz}; hence its
+fourth symmetric power and its dual have no global invariants. Pullback
+detects invariant sections, and Poincare duality gives the stated vanishing.
+
+Apply the nearby/vanishing-cycle triangle to $\mathcal G=j_!\mathcal F$
+on the proper curve $\mathcal X$. Since $\mathcal G$ is lisse on the smooth
+open, $R\Phi\mathcal G$ is supported on the finite special boundary.
+Its degree-one hypercohomology is therefore the direct sum of its
+degree-one stalks. The exact sequence contains
+\[
+ H_c^1(V_{\bar\Q_3},\mathcal F)\longrightarrow
+ \bigoplus_{y\in D_{\bar\F_3}}(R^1\Phi\mathcal G)_y
+ \longrightarrow H_c^2(\mathcal U_{\bar\F_3},\mathcal F)=0.
+\]
+Projection gives a surjection onto $B$. Naturality of the boundary maps
+and \eqref{p3:eq:ABC} show that the boundary subspace of $H_c^1$ maps into
+$A_x$. More explicitly, the two distant cusp stalks have zero contribution
+at $x$, while the two colliding invariant lines map through
+$(\Q_\ell\oplus\Q_\ell)/\operatorname{diag}\Q_\ell=A_x$ and onto it.
+Thus there is an induced
+surjection
+\[
+ H^1_!(V_{\bar\Q_3},\mathcal F)\longrightarrow C_x.
+\]
+Its source and target have dimension four, so it is an isomorphism.
+All constructions are natural over $\Q_3$, and $x$ is rational over $\F_3$;
+the isomorphism is equivariant for the full local Galois group.
+Together with \eqref{p3:eq:identification}, this proves that $W_{4,\ell}^{+}$
+has tame, unipotent inertia with a single length-four block.
+
+\subsection{Arithmetic Frobenius: fixing the sign and the Tate twist}
+Scholl's local theorem by itself specifies inertia, not the arithmetic
+Frobenius eigenvalue. We give the extra calculation here.
+Near the split Tate degeneration, $R^1$ has its natural filtration
+\[
+ 0\longrightarrow\Q_\ell\longrightarrow R^1
+ \longrightarrow\Q_\ell(-1)\longrightarrow0.
+\]
+The fourth symmetric power has five graded pieces
+$\Q_\ell(-j)$, $0\le j\le4$.
+They are unramified arithmetic coefficient lines extending over the local
+base. The split-node tangent calculation removes any torus splitting
+character. Alternatively a quadratic splitting character disappears on
+the even fourth power.
+
+For a constant unramified coefficient line $L$, the local vanishing cycles
+of extension by zero at two colliding, individually rational sections satisfy
+\[
+ R^1\Phi(j_!L)_x=\operatorname{coker}(L\xrightarrow{\rm diag}L\oplus L)
+ \simeq L,\qquad R^q\Phi(j_!L)_x=0\quad(q\ne1).
+\]
+This follows naturally from the constant-sheaf/closed-boundary exact
+sequence and smooth base change. Because both sections are separately
+rational, Frobenius does not exchange them. In particular no sign
+character and no extra Tate twist enter this formula.
+
+Apply the vanishing-cycle functor to the Tate filtration. The displayed
+concentration in degree one makes successive sequences short exact at this
+stalk. It yields an arithmetic filtration of $B$ with graded pieces
+\[
+ \Q_\ell,\ \Q_\ell(-1),\ \Q_\ell(-2),\ \Q_\ell(-3),\ \Q_\ell(-4).
+\]
+The boundary line $A_x$ is the first piece: it is the difference of the
+two split cusp invariant lines. Hence $C_x$ has graded pieces with
+$j=1,2,3,4$. Its first one-dimensional filtered piece is inertia invariant;
+the single length-four block has just one invariant line. Therefore
+\[
+ (W_{4,\ell}^{+})^{I_3}\simeq\Q_\ell(-1),\qquad P_3^+(T)=1-3T.
+\]
+This determines the positive sign arithmetically. It does not infer that
+sign from purity, polarization or a numerical functional equation.
+
+The same filtration determines the full ordered monodromy flag. Every
+filtered piece is inertia-stable, and a single nilpotent Jordan block
+has a unique invariant subspace of each dimension. Thus these pieces
+are exactly $\ker N^r$, with graded Frobenius eigenvalues $3^r$ for
+$r=1,2,3,4$. Geometric Frobenius acts on the tame inertia parameter by
+$3^{-1}$, so taking logarithms gives $FNF^{-1}=3^{-1}N$.
+
+\subsection{The minus descent and the conductor exponents}
+The extension $\Q_3(\sqrt{-3})/\Q_3$ is ramified of degree two, hence tame.
+Its character $\chi_{-3}$ is nontrivial on inertia and trivial on wild inertia.
+On the plus space all inertia operators are unipotent. Choose an inertia
+element on which $\chi_{-3}=-1$; its action on the minus space has all
+eigenvalues $-1$, so it fixes no nonzero vector. Consequently
+\[
+ (W_{4,\ell}^{-})^{I_3}=0,\qquad P_3^-(T)=1.
+\]
+Both spaces are tame, so both Swan conductors vanish. The Artin conductor
+formula \cite{Ulmer} is
+\[
+ a_3(V)=\dim V-\dim V^{I_3}+\Sw_3(V).
+\]
+It gives $a_3(W^+)=3$, $a_3(W^-)=4$, completing Theorem~\ref{p3:thm:local}.
+

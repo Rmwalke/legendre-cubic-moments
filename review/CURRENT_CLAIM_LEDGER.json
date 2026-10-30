@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-30",
+  "manuscript": "Walke_Consolidated_Local_Proofs_2026-10-30.tex",
+  "review_status": "Internal AI-assisted integration review; not external peer review or formal verification.",
+  "proved_claims": [
+    {
+      "id": "C01",
+      "result": "Two literal rank-four rational descents, with W4- = W4+ tensor chi_-3; the original cubic-character summand has rank four.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Original exposition uses ell=2; rational-projector realizations are supplied for every ell.",
+      "dependencies": [
+        "Parabolic dimension calculation",
+        "Literal arithmetic Kummer cover and inversion",
+        "Rational deck and inversion projectors"
+      ],
+      "proof_section_label": "sec:descent",
+      "limitations": "The normalization is the literal inversion eigenspace, not a historical numerical sign label."
+    },
+    {
+      "id": "C02",
+      "result": "Perfect alternating pairing with Tate target Q_ell(-5), determinant Tate exponent10, and reciprocal quartic template.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Original exposition ell=2; the rational cohomological projectors give corresponding auxiliary realizations.",
+      "dependencies": [
+        "C01",
+        "Cup product and self-adjoint projectors"
+      ],
+      "proof_section_label": "sec:descent",
+      "limitations": "This alone does not prove purity, automorphy, or the local Euler factors."
+    },
+    {
+      "id": "C03",
+      "result": "Exact good-prime Euler formulas, including inert trace(W4+)=-S_p-1 and trace(W4-)=S_p+1.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Displayed recipes use the original ell=2 representation at p>=5; auxiliary Frobenius statements require p!=ell.",
+      "dependencies": [
+        "C01",
+        "C02",
+        "Norm-one-torus descent",
+        "Boundary trace calculation"
+      ],
+      "proof_section_label": "sec:inert",
+      "limitations": "The exact formulas do not certify historical floating-point tables."
+    },
+    {
+      "id": "C04",
+      "result": "Good-prime purity of weight5.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Original ell=2 exposition at p>=5, with the motivic realizations and usual away-from-ell interpretation.",
+      "dependencies": [
+        "Deligne weight theorem",
+        "Integral specialization",
+        "C01"
+      ],
+      "proof_section_label": "sec:descent",
+      "limitations": "Independent of empirical reciprocal-polynomial tests."
+    },
+    {
+      "id": "C05",
+      "result": "Rational Chow/Scholl realization on a smooth projective fivefold; Hodge numbers h50=h05=2 and no other Hodge types.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Every ell-adic realization of the stated rational projectors; Betti and de Rham realizations included.",
+      "dependencies": [
+        "Auxiliary full-level12 cover",
+        "Explicit rational finite-group projectors",
+        "Scholl comparison construction"
+      ],
+      "proof_section_label": "sec:scholl",
+      "limitations": "The construction by itself is not an automorphic identification or an irreducibility proof."
+    },
+    {
+      "id": "C06",
+      "result": "At3: plus has one J4 unipotent monodromy block and ordered geometric Frobenius quotients3,9,27,81; d3=1,P3=1-3T,Swan3=0,a3=3. Minus has d3=0,P3=1,Swan3=0,a3=4.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Every ell!=3.",
+      "dependencies": [
+        "C01",
+        "C05",
+        "Literal-plus quotient family",
+        "Local vanishing-cycle calculation and global-to-local surjection",
+        "Arithmetic Frobenius flag",
+        "Tame ramified twist chi_-3"
+      ],
+      "proof_section_label": "sec:local-three",
+      "limitations": "The positive Frobenius3 sign is fixed arithmetically, not by a numerical fit."
+    },
+    {
+      "id": "C07",
+      "result": "At2: full rank10 parabolic cohomology has no inertia invariants; both rank-four descents have d2=0,P2=1,Swan2=0,a2=4.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Every ell!=2.",
+      "dependencies": [
+        "C01",
+        "C05",
+        "True closure eta^3=4(v^3+1)",
+        "Complete semistable marked model",
+        "Tameness comparison",
+        "Arithmetic main/node actions",
+        "Ordinary and cubic Kloosterman tail vanishing",
+        "Equivariant nearby-cycle and normalization sequences"
+      ],
+      "proof_section_label": "sec:local-two",
+      "limitations": "The closure constant and node terms are retained; tail vanishing alone is insufficient."
+    },
+    {
+      "id": "C08",
+      "result": "Conductor products N(W4+)=432 and N(W4-)=1296.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "For every ell!=2,3 these are precisely the prime-to-ell Artin conductors; local factors use coefficient primes different from residue characteristic.",
+      "dependencies": [
+        "C06",
+        "C07",
+        "Good-prime unramifiedness for p!=ell"
+      ],
+      "proof_section_label": "sec:conductors",
+      "limitations": "Does not assert that ordinary inertia invariants of a p-adic realization at p=ell compute its Euler factor."
+    },
+    {
+      "id": "C09",
+      "result": "Both descents are absolutely irreducible and remain so after restriction to every finite number-field extension.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "Every ell!=3, including ell=2.",
+      "dependencies": [
+        "C05",
+        "C06",
+        "Tate rank-one character theorem over Q",
+        "Unique single-Jordan-block invariant flag",
+        "Normality after passage to a Galois closure"
+      ],
+      "proof_section_label": "sec:irreducibility",
+      "limitations": "No assertion for coefficient prime3. Does not determine all inner twists or the Sato-Tate group."
+    },
+    {
+      "id": "C10",
+      "result": "Cubic second-moment modular comparison under the explicit finite-check hypotheses, supported by the retained bounded exact certificate.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "The separately defined rank-two cubic second-moment representation and the coefficient/convention scope stated in that section.",
+      "dependencies": [
+        "Geometric trace and determinant formulas",
+        "Stated comparison theorem",
+        "Seven exact comparison rows",
+        "Sturm bound24"
+      ],
+      "proof_section_label": "sec:cubic",
+      "limitations": "Not a rank-four automorphy theorem; does not extend the result to character orders4 or6."
+    },
+    {
+      "id": "C11",
+      "result": "Bad-prime Euler factors and Artin exponents are independent of the auxiliary coefficient prime within the stated ranges.",
+      "status": "written proof, internal review",
+      "coefficient_scope": "At2 every ell!=2; at3 every ell!=3.",
+      "dependencies": [
+        "C06",
+        "C07"
+      ],
+      "proof_section_label": "sec:conductors",
+      "limitations": "This is direct equality of the computed local factors/exponents, not a full bad-prime Weil-Deligne comparison."
+    }
+  ],
+  "pending_claims": [
+    {
+      "id": "P01",
+      "result": "Absolute or strong irreducibility at coefficient prime3.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "ell=3",
+      "dependencies_or_missing_inputs": [
+        "The proof C09 uses the away-from-ell monodromy calculation at3."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P02",
+      "result": "Full bad-prime Weil-Deligne comparison and classification, including treatment when coefficient and residue characteristics are equal.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "All relevant coefficient realizations",
+      "dependencies_or_missing_inputs": [
+        "C11 establishes only the stated factors and exponents."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P03",
+      "result": "Local epsilon factors and a proved global root number.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Not established",
+      "dependencies_or_missing_inputs": [
+        "Requires its own epsilon-factor data and normalization; conductor values alone do not determine the sign."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P04",
+      "result": "Rank-four automorphic identification.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Not established",
+      "dependencies_or_missing_inputs": [
+        "No applicable quaternion-multiplication or alternative automorphy hypotheses have been verified."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P05",
+      "result": "Analytic continuation and functional equation.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Not established",
+      "dependencies_or_missing_inputs": [
+        "Requires an independent theorem; numerical symmetry is not a proof."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P06",
+      "result": "Rational period structures and arithmetic special-value formulas.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Not established",
+      "dependencies_or_missing_inputs": [
+        "Requires specified rational comparison structures and arithmetic interpretation."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P07",
+      "result": "Certified historical central values and every approximate coefficient table.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Historical numerical evidence only",
+      "dependencies_or_missing_inputs": [
+        "Requires exact input certification and rigorous numerical error/tail bounds."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P08",
+      "result": "Geometric comparison inputs for older character-order4 and6 second-moment claims.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Outside cubic theorem",
+      "dependencies_or_missing_inputs": [
+        "Separate geometry is required."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P09",
+      "result": "A classical elliptic BSD comparison, Mordell-Weil rank theorem, or leading-term theorem for a specified elliptic curve.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Not established",
+      "dependencies_or_missing_inputs": [
+        "The rank-four motive has not been identified with the rank-two elliptic object or the required arithmetic comparison."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P10",
+      "result": "Complete Sato-Tate and inner-twist classification.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Not established",
+      "dependencies_or_missing_inputs": [
+        "Strong irreducibility and limited factorization obstructions do not supply these classifications."
+      ],
+      "discussion_section_label": "sec:limits"
+    },
+    {
+      "id": "P11",
+      "result": "External specialist validation, formal verification, and exhaustive novelty certification.",
+      "status": "not established in this manuscript",
+      "coefficient_scope": "Review and provenance status",
+      "dependencies_or_missing_inputs": [
+        "Current work records internal AI-assisted review only."
+      ],
+      "discussion_section_label": "sec:limits"
+    }
+  ],
+  "normalization": {
+    "literal_plus": {
+      "inversion_eigenvalue": 1,
+      "inert_trace": "-S_p-1",
+      "P3": "1-3T",
+      "conductor": 432
+    },
+    "literal_minus": {
+      "inversion_eigenvalue": -1,
+      "inert_trace": "S_p+1",
+      "P3": "1",
+      "conductor": 1296
+    },
+    "historical_plus_sign_recipe": "The positive inert trace S_p+1 corresponds to literal W4-, not W4+."
+  },
+  "numerical_observations": [
+    {
+      "model": "historical1296 model / literal W4-",
+      "recorded_sign": 1,
+      "recorded_central_value_approx": "2.2413552",
+      "status": "historical numerical observations; not established by the local proofs"
+    }
+  ]
+}

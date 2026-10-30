@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite the Zenodo preprint in preferred-citation when referring to this research."
+type: software
+title: "Cubic twists of Legendre moments: manuscript sources and exact local checks"
+authors:
+  - family-names: "Walke"
+    given-names: "Rushikesh Murlidhar"
+url: "https://doi.org/10.5281/zenodo.23795811"
+preferred-citation:
+  type: article
+  title: "Cubic twists of Legendre moments: cohomological descent and Frobenius trace formulas"
+  authors:
+    - family-names: "Walke"
+      given-names: "Rushikesh Murlidhar"
+  doi: "10.5281/zenodo.23795811"
+  url: "https://doi.org/10.5281/zenodo.23795811"
+  year: 2026
+  month: 10
+  date-released: "2026-10-30"
+  version: "3.0"
+  notes: "Zenodo preprint, version 3. Submitted to JTNB; receipt acknowledged. Not an accepted journal publication."

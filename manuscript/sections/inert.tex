@@ -1,0 +1,229 @@
+\section{Inert Frobenius traces and good Euler factors}\label{sec:inert}
+
+Retain the Legendre family $\mathcal E_\lambda$, its cubic cover
+$f:T\to U$, and the operators $A$ and $I$ from
+Sections~\ref{sec:geometry} and~\ref{sec:descent}.
+Thus $A$ is pullback by $z\mapsto\zeta_3z$, while $I$ is induced by
+$z\mapsto z^{-1}$ and the fourth symmetric power of
+\[
+ \phi_u:\mathcal E_\lambda\longrightarrow\mathcal E_{1/\lambda},
+ \qquad(t,y)\longmapsto(t/\lambda,y/u^3),\qquad u^2=\lambda.
+\]
+In particular, $I^2=1$, $IAI^{-1}=A^{-1}$, and $I$ commutes with
+Galois. Write $H_{\nt}$ for the eight-dimensional nontrivial deck
+summand and $W_4^\pm=H_{\nt}^{I=\pm1}$. Frobenius on cohomology
+always means geometric Frobenius.
+
+Fix a prime $p\geq5$ with $p\equiv2\pmod3$. Choose a nonsquare
+$d\in\F_p^\times$, a root $r\in\F_{p^2}$ of $r^2=d$, and a
+primitive cubic character $\rho:\F_{p^2}^\times\to\mu_3$.
+For $x\in\F_p$ set
+\begin{align*}
+ \nu_x&=x+r,&
+ E'_{x,d}&:\quad Y^2=X(X^2-2xX+x^2-d),\\
+ a'_p(x)&=p+1-\#E'_{x,d}(\F_p),&
+ P_4(a,p)&=a^4-3pa^2+p^2,
+\end{align*}
+and define
+\begin{equation}\label{eq:inert-sum}
+ S_p=\sum_{x\in\F_p}\rho(x+r)P_4(a'_p(x),p).
+\end{equation}
+Every fibre in this sum is smooth: its three roots $0,x+r,x-r$
+are distinct. Character values can be regarded in $\Q(\zeta_3)$
+and then embedded in the coefficient field $E=\Q_2(\zeta_3)$.
+
+\begin{theorem}\label{thm:inert-trace}
+The sum $S_p$ is an integer independent of $d$, the sign of $r$,
+and the primitive cubic character. At every such prime,
+\begin{equation}\label{eq:inert-traces}
+ \Tr(\Frob_p\mid W_4^+)=-S_p-1,
+ \qquad
+ \Tr(\Frob_p\mid W_4^-)=S_p+1.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+We realize the operator $I\Frob_p$ by an actual variety and sheaf
+over $\F_p$, so that the ordinary trace formula applies.
+Let
+\[
+ C=\ker\!\left(N_{\F_{p^2}/\F_p}:
+       \operatorname{Res}_{\F_{p^2}/\F_p}\mathbb G_m
+       \longrightarrow\mathbb G_m\right).
+\]
+This torus has equation $a^2-db^2=1$. Over $\F_{p^2}$, the
+coordinate $z=a+rb$ identifies $C$ with $\mathbb G_m$.
+Since $r^p=-r$, arithmetic Frobenius on geometric points is
+\begin{equation}\label{eq:torus-point-frobenius}
+ z\longmapsto z^{-p}.
+\end{equation}
+Indeed $(a-rb)^p=a^p+rb^p$. Put $U'=C\setminus\{1\}$ and
+$T'=C\setminus C[3]$. The cube map $h:T'\to U'$ is finite
+\'{e}tale of degree three. Its deck group $C[3]$ is constant over
+$\F_p$, because $\zeta^{-p}=\zeta$ for $\zeta\in\mu_3$.
+Over $\F_{p^2}$ the map is the original cover $z^3=\lambda$.
+The parameter
+\begin{equation}\label{eq:torus-parameter}
+ \lambda=\frac{x+r}{x-r},\qquad
+ x=r\frac{\lambda+1}{\lambda-1}
+\end{equation}
+identifies $U'$ with $\mathbb A^1_{\F_p}\setminus V(x^2-d)$.
+Thus $U'(\F_p)=\F_p$ in this parameter. The removed point
+$\lambda=1$ corresponds to $x=\infty$; the other geometric
+punctures are $x=r,-r$.
+
+Let $\mathcal K_{\nt}$ be the rank-two augmentation summand of
+$h_*\Q_2$. The elliptic curves $E'_{x,d}$ form an elliptic scheme
+$\pi':\mathcal E'\to U'$, and we use the lisse sheaf
+\begin{equation}\label{eq:inert-twisted-sheaf}
+ \mathcal B=\Sym^4(R^1\pi'_*\Q_2)\otimes\mathcal K_{\nt}.
+\end{equation}
+We now check the coefficient descent on the whole family.
+Over $\F_{p^2}$ write $a=x-r$, $\nu=x+r$, so that
+$\lambda=\nu/a$ and $\bar a=\nu$. On the finite \'{e}tale
+cover $s^2=a$ there is an elliptic isomorphism
+\[
+ \alpha:\mathcal E'\longrightarrow\mathcal E_\lambda,
+ \qquad (X,Y)\longmapsto(X/a,Y/s^3).
+\]
+Replacing $s$ by $-s$ composes this map with $[-1]$; hence its
+fourth symmetric power descends to $U'_{\F_{p^2}}$.
+On a common square-root cover choose $\bar s$ with
+$\bar s^2=\bar a=\nu$ and put $u=\bar s/s$. Then $u^2=\lambda$
+and the maps of families satisfy
+\begin{equation}\label{eq:inert-family-cocycle}
+ \phi_u\circ\alpha(X,Y)
+  =(X/\nu,Y/\bar s^3)=\bar\alpha(X,Y).
+\end{equation}
+This is exactly the compatibility of the induced pullbacks with
+the coefficient map defining $I$. All square-root choices disappear
+on $\Sym^4$. Effective \'{e}tale descent, applied at finite
+coefficient levels and then to their compatible inverse system,
+identifies \eqref{eq:inert-twisted-sheaf} with the inversion twist
+of the original coefficient system \cite{StacksDescent}.
+Its geometric Frobenius on cohomology is $IF$, where
+$F=\Frob_p$ on the original cohomology: the arithmetic descent
+uses the involution $I$, and $I^{-1}=I$ and $IF=FI$.
+In particular, at a rational point the elliptic coefficient trace is
+exactly $P_4(a'_p(x),p)$. This follows from the eigenvalue sum
+$\alpha^4+\alpha^3\beta+\alpha^2\beta^2+\alpha\beta^3+\beta^4$
+with $\alpha+\beta=a'_p(x)$ and $\alpha\beta=p$; no additional
+scalar occurs.
+
+For the Kummer coefficient, fix $x\in\F_p$, choose $v^3=\nu_x$,
+and take the lift $z=v^{1-p}$ of $\lambda$. Then
+$z^3=\nu_x^{1-p}=\nu_x/\bar\nu_x$. The arithmetic point map
+\eqref{eq:torus-point-frobenius} takes $z$ to $\kappa z$, where
+\begin{equation}\label{eq:inert-kummer-weight}
+ \kappa=z^{-p-1}=v^{p^2-1}
+        =\nu_x^{(p^2-1)/3}\in\mu_3.
+\end{equation}
+The result is independent of the cube root $v$.
+For the pullback eigenspace of functions specified by
+$g(\zeta_3z)=\zeta_E g(z)$, geometric Frobenius acts by pullback
+under this arithmetic point permutation and has eigenvalue
+$\iota(\kappa)$, where $\iota(\zeta_3)=\zeta_E$. Thus we may take
+$\rho(\nu)=\iota(\nu^{(p^2-1)/3})$; the other nontrivial line
+has inverse eigenvalue. The local trace of $\mathcal B$ is therefore
+\begin{equation}\label{eq:inert-local-trace}
+ \bigl(\rho(x+r)+\rho(x+r)^{-1}\bigr)P_4(a'_p(x),p).
+\end{equation}
+This computation distinguishes arithmetic action on points from
+geometric action on cohomology.
+
+Put $\mathcal A_0=\Sym^4R^1\pi_*\Q_2$ and
+$C_{\nt}=e_{\nt}H_c^1(T_{\overline{\F}_p},f^*\mathcal A_0)$,
+where $e_{\nt}=(2-A-A^2)/3$.
+Finite \'{e}tale pushforward identifies this with the corresponding
+compactly supported cohomology on the base \cite{StacksFinite}.
+The geometric groups in degrees zero and two vanish by
+Section~\ref{sec:geometry}, and twisting preserves those vanishings.
+The trace formula \cite{StacksTrace} and
+\eqref{eq:inert-local-trace} give
+\[
+ \Tr(IF\mid C_{\nt})=-(S_p+\bar S_p).
+\]
+The boundary calculation of Section~\ref{sec:geometry} gives
+\[
+ 0\longrightarrow B_{\nt}\longrightarrow C_{\nt}
+   \longrightarrow H_{\nt}\longrightarrow0,
+ \qquad B_{\nt}=\Q_2[\mu_3]_{\nt}.
+\]
+The coefficient line at $\lambda=1$ has Frobenius eigenvalue $1$,
+and the coefficient action of $I$ there is $+1$.
+Both $F$ and $I$ permute $\mu_3$ by inversion. Hence $IF$ is the
+identity on this two-dimensional boundary, and
+\begin{equation}\label{eq:inert-parabolic-trace}
+ \Tr(IF\mid H_{\nt})=-(S_p+\bar S_p)-2.
+\end{equation}
+Moreover, $FAF^{-1}=A^{-1}$, so $F$ exchanges the two nontrivial
+$A$ eigenspaces and $\Tr(F\mid H_{\nt})=0$.
+The projectors $(1\pm I)/2$ now give
+\[
+ \Tr(F\mid W_4^+)=-\frac{S_p+\bar S_p}{2}-1,
+ \qquad
+ \Tr(F\mid W_4^-)=\frac{S_p+\bar S_p}{2}+1.
+\]
+
+It remains to establish integrality and independence of choices.
+The character $\rho$ is trivial on $\F_p^\times$, because
+$3\nmid p-1$. Under $x\mapsto-x$ we have
+$\nu_{-x}=-\bar\nu_x$ and hence
+$\rho(\nu_{-x})=\rho(\nu_x)^{-1}$.
+The curve $E'_{-x,d}$ is the quadratic twist by $-1$ of $E'_{x,d}$;
+therefore $a'_p(-x)=\chi_p(-1)a'_p(x)$, where $\chi_p$ is the
+quadratic character. Since $P_4$ is even, $S_p=\bar S_p$.
+As $S_p\in\Z[\zeta_3]$, it follows that $S_p\in\Z$ and the
+trace identities follow. If $d'=c^2d$ and $r'=cr$, relabel
+$x'=cx$. The character weight is unchanged, and $E'_{cx,d'}$
+is the quadratic twist by $c$ of $E'_{x,d}$, again invisible to
+$P_4$. Every two nonsquares differ by such a square.
+Changing the sign of $r$ or replacing $\rho$ by its inverse
+conjugates the sum and therefore also leaves it unchanged.
+\end{proof}
+
+For the good Euler factors, let
+\[
+ v(q)=-M_{3,4}(q)+3qM_{3,2}(q)+q^2-1
+\]
+be the $V_4$ trace established in Section~\ref{sec:geometry}.
+Whenever $q$ is a higher power of the residue field of a fixed
+prime, the cubic character in these moments is its norm lift.
+
+\begin{corollary}\label{cor:good-euler-factors}
+For every rational prime $p\geq5$, put
+\[
+ c_1(p)=
+ \begin{cases}
+  v(p),&p\equiv1\pmod3,\\
+  S_p+1,&p\equiv2\pmod3,
+ \end{cases}
+ \qquad
+ c_2(p)=\frac{c_1(p)^2-v(p^2)}{2}.
+\]
+Then the good Euler polynomial of $W_4^-$ is
+\begin{equation}\label{eq:good-euler-polynomial}
+ \det(1-\Frob_pT\mid W_4^-)
+ =1-c_1(p)T+c_2(p)T^2-p^5c_1(p)T^3+p^{10}T^4.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+At split primes, either extension restricts to $V_4$ and has trace
+$v(p)$. At inert primes Theorem~\ref{thm:inert-trace} gives the
+stated first trace. In both cases
+$\Tr(\Frob_p^2\mid W_4^-)=v(p^2)$: at a split prime this uses
+the norm-lifted character from the chosen residue field $\F_p$;
+at an inert prime $\F_{p^2}$ is the initial residue field.
+Newton's identity gives $c_2(p)$. The perfect alternating pairing
+of Section~\ref{sec:descent}, with Frobenius multiplier $p^5$,
+gives determinant $p^{10}$ and the coefficient $-p^5c_1(p)$
+of $T^3$.
+\end{proof}
+
+Thus the exact finite-sum prescription with inert first trace $S_p+1$
+is the good-prime Euler prescription of $W_4^-$. This statement
+does not verify numerical implementations or floating-point tables.
+The separate local proofs in Sections~\ref{sec:local-three} and
+\ref{sec:local-two} supply the factors at $2$ and $3$. An identification
+of completed analytic $L$-functions remains outside the established scope.

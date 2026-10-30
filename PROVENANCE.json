@@ -1,0 +1,33 @@
+{
+  "prepared_date": "2026-10-30",
+  "purpose": "GitHub-ready packaging of existing public research materials",
+  "canonical_preprint_doi": "10.5281/zenodo.23795811",
+  "preprint_version": "3.0",
+  "public_source_archive": {
+    "filename": "Walke_Legendre_Source_and_Supplement_2026-10-30.zip",
+    "bytes": 3010267,
+    "sha256": "0aa61db0470e480cc24c153036d44df49db6ec9c1c83ae7527eb5d05c14b8dc3"
+  },
+  "manuscript_pdf": {
+    "filename": "Walke_Legendre_Manuscript_2026-10-30.pdf",
+    "bytes": 629151,
+    "sha256": "ae20cad11a7739e1a1257143b6b7e700e9726af3e5fc577ed47dae38b7d5e894"
+  },
+  "source_archive_files_extracted_unchanged": 35,
+  "original_manifest_entries_verified": 34,
+  "mathematical_source_changed": false,
+  "mathematical_scripts_executed_for_packaging": false,
+  "heavy_computation_executed": false,
+  "new_proof_validation_claimed": false,
+  "new_software_license_granted": false,
+  "repository_documentation_added": [
+    "README.md",
+    "REPRODUCIBILITY.md",
+    "RIGHTS.md",
+    "CITATION.cff",
+    "CITATION.bib"
+  ],
+  "publication_status_as_of": "2026-10-30",
+  "journal_status": "Submitted to JTNB; receipt acknowledged. External peer review and acceptance not confirmed.",
+  "historical_records": "Preserved unchanged; README.md supplies the later submission status."
+}

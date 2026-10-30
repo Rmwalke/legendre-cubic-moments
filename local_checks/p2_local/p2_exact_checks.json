@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-30",
+  "standard_library_only": true,
+  "historical_experiments_rerun": false,
+  "arithmetic": "exact rational functions via polynomial coefficients and exact F2 polynomials",
+  "all_checks_passed": true,
+  "number_of_checks": 41,
+  "checks": [
+    {
+      "name": "three_division_polynomial",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rational_flex_point",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rational_flex_tangent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rational_flex_inflection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Tate_a1_scaling",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Tate_a3_scaling",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Tate_discriminant_factor",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cubic_cover_compatibility",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "A_q_to_v",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "B_q_to_v",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "generic_Tate_discriminant",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "preimage_z_one",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "complete_cubic_cusp_divisor",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "degree_four_cover_derivative",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "zero_node_a3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "infinity_node_a3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "infinity_node_a1_divided_by_pi_squared",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mu_node_a3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mu_node_a1_divided_by_pi_squared",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "zero_tail_a3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "zero_tail_integral_a1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "infinity_tail_a3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "infinity_tail_integral_a1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "infinity_tail_integral_a3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mu_tail_integral_a1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mu_tail_integral_a3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ordinary_tail_discriminant_mod2",
+      "passed": true,
+      "detail": "Delta=u^6(u^3+1)^6"
+    },
+    {
+      "name": "mu_tail_discriminant_mod2",
+      "passed": true,
+      "detail": "a1=r^2,a3=1 gives Delta=(r^3+1)^2"
+    },
+    {
+      "name": "node_discriminant_unit",
+      "passed": true,
+      "detail": "a1=0,a3=1"
+    },
+    {
+      "name": "main_supersingular_discriminant_unit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "generic_v_cusp_count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "generic_Fermat_cusp_count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tail_cusp_count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "generic_fibre_Euler_multiplicity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "special_fibre_Euler_multiplicity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "determinant_obstruction_rank_1",
+      "passed": true,
+      "detail": "Local exponent 1; allowed Hodge sums [0, 5]"
+    },
+    {
+      "name": "determinant_obstruction_rank_2",
+      "passed": true,
+      "detail": "Local exponent 3; allowed Hodge sums [0, 5, 10]"
+    },
+    {
+      "name": "determinant_obstruction_rank_3",
+      "passed": true,
+      "detail": "Local exponent 6; allowed Hodge sums [5, 10]"
+    },
+    {
+      "name": "chi_minus3_unramified_quadratic_at2",
+      "passed": true,
+      "detail": "X^2+X+1 has no F2 root and derivative 1 modulo 2"
+    },
+    {
+      "name": "rational_cover_mod2_numerator",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rational_cover_mod2_denominator",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "scope_limit": "These identities check the formulas, numerical divisor counts and the finite determinant obstruction conditional on the stated p3/Hodge inputs. They do not certify exhaustion of charts, gluing of models, nearby cycles, the semistable-monodromy theorem, or its application. No inertia invariant dimension, P2, or Artin conductor exponent is computed by this script."
+}

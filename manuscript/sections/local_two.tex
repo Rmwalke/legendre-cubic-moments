@@ -1,0 +1,867 @@
+\section{The local factor and conductor exponent at 2}\label{sec:local-two}
+Let $\ell\ne2$ and retain the rational descents defined by the literal
+cubic deck operation and inversion. On
+$T=\PP^1_z\setminus\{0,\infty,\mu_3\}$ let
+$f:\mathcal E\to T$ be the family $y^2=x(x-1)(x-z^3)$, and put
+\[
+ \mathcal H_\ell=H^1_!(T_{\overline\Q},\Sym^4R^1f_*\Q_\ell),
+ \qquad W_{4,\ell}^{\pm}=(e_{\nt}\mathcal H_\ell)^{I=\pm1}.
+\]
+The following argument uses one arithmetic Galois cover for the complete
+calculation. The semistable-model criterion supplies tameness; the main,
+tail and node terms then determine the inertia invariants.
+
+\begin{theorem}[Dyadic local data]\label{p2:thm:dyadic-local-data}
+For every coefficient prime $\ell\ne2$,
+\[
+ \mathcal H_\ell^{I_2}=0,\qquad
+ \Sw_2(\mathcal H_\ell)=0.
+\]
+Consequently both specified rank-four descents satisfy
+\[
+ d_{2,\ell}^{\pm}=0,\qquad P_{2,\ell}^{\pm}(T)=1,\qquad
+ \Sw_2(W_{4,\ell}^{\pm})=0,\qquad a_2(W_{4,\ell}^{\pm})=4.
+\]
+\end{theorem}
+The proof occupies the remainder of this section. It retains the
+arithmetic action on the cover and on its coefficient system separately.
+The identity $W^-_{4,\ell}=W^+_{4,\ell}\otimes\chi_{-3}$ is consistent
+with the equal dyadic data: $\chi_{-3}$ is unramified at $2$ and has
+Frobenius value $-1$ there.
+
+\subsection{The exact Galois closure and its arithmetic action}
+Fix an auxiliary prime $\ell\ne2$, put $K_0=\Q_2(\zeta)$, where
+$\zeta^3=1\ne\zeta$, and let $L=K_0(\pi)$ with $\pi^3=2$.
+Choose an arithmetic inertia lift $\sigma$ of the generator of
+$\operatorname{Gal}(L/K_0)$ with $\sigma(\pi)=\zeta\pi$.
+The following computations concern actual geometric deck transformations
+and this arithmetic automorphism separately.
+
+\subsubsection{The constant in the cubic closure}
+Set $h=v^3$, $D=2h+1$, and $z=v(h+2)/D$.  The polynomial
+\[
+ f_z(X)=X^4-2zX^3+2X-z
+\]
+factors after adjoining $v$ as
+\[
+ f_z(X)=(X-v)\left(X^3-\frac{3v}{D}X^2
+                 -\frac{3v^2}{D}X+\frac{h+2}{D}\right).
+\]
+Adjoin $\eta$ satisfying
+\begin{equation}\label{p2:eq:closure-constant}
+ \eta^3=4(v^3+1).
+\end{equation}
+The other three roots are exactly
+\begin{equation}\label{p2:eq:closure-roots}
+ v_i=\frac{v-\zeta^i\eta^2/2-\zeta^{-i}v^2\eta}{D},
+ \qquad i=0,1,2.
+\end{equation}
+Indeed, after the substitution $X=Y+v/D$, the cubic has coefficients
+\[
+ p=-\frac{6v^2(h+1)}{D^2},\qquad
+ q=\frac{2(h+1)(2h^2+h+1)}{D^3}.
+\]
+The two Cardano terms $u=-\eta^2/(2D)$ and $w=-v^2\eta/D$
+satisfy $uw=-p/3$ and $u^3+w^3=-q$.
+The discriminant is
+\[
+ \operatorname{disc}(f_z)=-432(z^3-1)^2
+                         =-3\bigl(12(z^3-1)\bigr)^2.
+\]
+Consequently $K_0(v,\eta)$ is the splitting field over $K_0(z)$:
+it contains the four roots and has degree $4\cdot3=12$, since
+$v^3+1$ has simple zeros and is not a cube in $K_0(v)$.
+Its group is $A_4$.  Over $\Q_2(z)$ the group is $S_4$ and the
+constant extension is exactly $K_0$.  For example, the smooth cubic
+has the rational point $(v,\eta)=(-1,0)$, so its function field is
+geometrically integral and introduces no additional constants.
+
+The smooth projective closure is an elliptic curve, with the displayed
+point as origin.  Explicitly,
+\[
+ x=\frac{3\eta}{v+1},\qquad y=\frac{9(1-v)}{v+1}
+ \quad\Longrightarrow\quad y^2=x^3-27.
+\]
+The normal Klein four subgroup of $A_4$ consists of translations by
+the four two-torsion points of this elliptic curve.  The quotient
+generator is
+\[
+ c:(v,\eta)\longmapsto(v,\zeta\eta).
+\]
+One can verify the translation assertion directly: translation by
+$(3,0)$ sends $x$ to $3(x+6)/(x-3)$ and $y$ to
+$-27y/(x-3)^2$; the resulting $v$ is $v_0$ in
+\eqref{p2:eq:closure-roots}.  Conjugation by $c$ gives the other two
+nontrivial translations.
+
+\subsubsection{Why the deck action is the projective three-torsion action}
+For the Legendre family with $\lambda=z^3$, put
+\[
+ \alpha(v)=\frac{(v^3+2)^2}{3(2v^3+1)}.
+\]
+Direct substitution gives
+\[
+ 3\alpha^4-4(1+\lambda)\alpha^3+6\lambda\alpha^2-\lambda^2=0.
+\]
+Thus $\alpha$ is the $x$-coordinate of a nonzero point of order three,
+or equivalently one of the four lines in the two-dimensional
+$\mathbf F_3$-space of three-torsion.  The rational map $v\mapsto\alpha$
+has degree six, whereas $v\mapsto z$ has degree four.  Therefore
+$\alpha\notin\overline\Q_2(z)$: otherwise the degree six would be a
+multiple of four.  The subgroup $C_3$ fixing $v$ is maximal in $A_4$,
+so this already implies
+\[
+ \overline\Q_2(z,\alpha)=\overline\Q_2(v).
+\]
+The normal closures are equal.  Hence the $A_4$ cover just constructed
+is precisely the splitting cover of the four projective three-torsion
+lines, with their faithful permutation action.  Quadratic twists do
+not change these lines and act trivially on $\operatorname{Sym}^4$.
+
+\subsection{The semistable marked model of the true splitting cover}
+Use the splitting cover and notation of the preceding subsection:
+\[
+\eta^3=4(v^3+1),\qquad e=\eta/\pi^2,\qquad
+e^3=v^3+1,\qquad \pi^3=2,
+\]
+over $L=\Q_2(\zeta_3,\pi)$. Write $h=v^3$.
+For completeness, the coordinate changes are explicit. Put
+\[
+ q=\frac{v^3+2}{v^3-1},\qquad
+ \lambda=z^3=\frac{q^3(q+2)}{(q-1)(q+1)^3},\qquad
+ \alpha=\frac{q^2}{q^2-1}
+       =\frac{(v^3+2)^2}{3(2v^3+1)}.
+\]
+After quadratically twisting the Legendre curve by $\alpha$, the rational
+three-torsion point and its tangent slope are
+\[
+ X_0=\alpha^2,\qquad
+ Y_0=\frac{q^5}{(q-1)^3(q+1)^4},\qquad
+ M_0=\frac{q(q^2+q+1)}{(q-1)(q+1)^2}.
+\]
+Translation by this flex gives $y^2+2M_0xy+2Y_0y=x^3$.
+Scale first by $q/((q-1)(q+1))$ and then by $\pi$.
+The resulting equation is
+\begin{equation}\label{p2:eq:complete-tate}
+y^2+\pi^2 A(v)xy+B(v)y=x^3,
+\qquad
+A=\frac{3(h^2+h+1)}{(h-1)(2h+1)},\quad
+B=\frac{(h+2)^2}{(h-1)(2h+1)}.
+\end{equation}
+The quadratic twist disappears on $\Sym^4R^1$. Throughout this section,
+scaling by $k$ means $x=k^2x'$, $y=k^3y'$, so that $(a_1,a_3)$ changes
+to $(a_1/k,a_3/k^3)$.
+
+The discriminant before pulling back to $e$ is
+\[
+\Delta=\frac{3^6h^2(h+1)^2(h+2)^6}{(h-1)^6(2h+1)^6}.
+\]
+On the $v$-line, the fourteen cusp fibres are $I_6$ at $v=0,\infty$ and
+at the three roots of each of $h=-2$, $2h+1=0$, and $h=1$; the three
+fibres at $h=-1$ are $I_2$. At either pole divisor $h=1$ or $2h+1=0$,
+scaling by the inverse of its local parameter makes $a_1$ a unit,
+$a_3$ vanish to order two, and the discriminant have order six.
+Thus these poles do not conceal additive fibres.
+The cubic cover $e^3=h+1$ ramifies at the three $I_2$ points, changing
+them to $I_6$, and is unramified at all other cusps. Consequently all
+36 cusp fibres on the true splitting cover are $I_6$.
+
+The projective Fermat curve $C:e^3=v^3+1$ has good reduction at 2.
+Its marked cusp sections form exactly nine clusters in the special fibre:
+three over $v=0$, three at infinity, and three over $e=0$.
+Use respectively $v$, $w=1/v$, and $e$ as local parameters. In each
+cluster the four sections have parameter zero and three parameters whose
+cubes are $\pm2$. The complementary coordinate is a unique power series
+by Hensel's lemma, its derivative being three times a unit.
+Blow up the nine disjoint ideals $(\text{parameter},\pi)$.
+The resulting proper regular model $\mathcal B/\mathcal O_L$ has one
+smooth genus-one main component and nine rational tails, all of
+multiplicity one. Every tail has four disjoint cusp sections and meets
+the main component at a fifth point. All 36 sections meet the smooth
+locus of the special fibre and avoid the nine nodes.
+
+This is the stable model of the curve with its full cusp divisor: each
+rational tail has five special points. Uniqueness of the stable marked
+model extends the deck group $G=A_4$ and the semilinear arithmetic action
+$\sigma$ to $\mathcal B$. It also shows that the explicit blowups do not
+depend on choices of labels within a cusp orbit.
+
+\subsubsection{Good models over the nine nodes}
+The following equations are obtained directly from
+\eqref{p2:eq:complete-tate}. Their denominators are units in the indicated
+node neighbourhoods.
+
+At each node over zero put $vr=\pi$ and scale by $k=v^2$. Then
+\[
+a_1=r^2A(v),\qquad
+a_3=\frac{(1+r^3)^2}{(v^3-1)(2v^3+1)}.
+\]
+At each infinity node put $w=1/v$, $wr=\pi$, and scale by $k=1/w$.
+The coefficients become
+\[
+a_1=\frac{3r^2(1+w^3+w^6)}{(1-w^3)(1+r^3)},\qquad
+a_3=\frac{(1+2w^3)^2}{(1-w^3)(1+r^3)}.
+\]
+At each node over $e=0$ put $er=\pi$, $h=e^3-1$, and scale by $k=1/e$.
+Since $h-1=e^3-2=e^3(1-r^3)$, the coefficients are
+\[
+a_1=\frac{3r^2(h^2+h+1)}{(1-r^3)(2h+1)},\qquad
+a_3=\frac{(h+2)^2}{(1-r^3)(2h+1)}.
+\]
+At the closed point of every node they reduce to $(a_1,a_3)=(0,1)$.
+The Tate discriminant $a_3^3(a_1^3-27a_3)$ is therefore a unit.
+These are smooth elliptic models over the node rings themselves, not
+only good models over the generic points of the components.
+
+\subsubsection{Integral lifts on all three kinds of tails}
+Write $U=u^3$. At a zero tail put $v=\pi u$ and scale
+\eqref{p2:eq:complete-tate} by $k=\pi^2$. One obtains
+\[
+a_1=\frac{3(4U^2+2U+1)}{(2U-1)(4U+1)},\qquad
+a_3=\frac{(U+1)^2}{(2U-1)(4U+1)}.
+\]
+At an infinity tail put $w=\pi u$ and scale by
+$k=1/(\pi(U+1))$. The integral lift is
+\[
+a_1=\frac{3(1+2U+4U^2)}{1-2U},\qquad
+a_3=\frac{(1+4U)^2(U+1)^2}{1-2U}.
+\]
+At an $e=0$ tail put $e=\pi u$, so $h=2U-1$, and scale by
+$k=1/(\pi(U-1))$. This gives
+\[
+a_1=\frac{3(h^2+h+1)}{2h+1},\qquad
+a_3=\frac{(U-1)^2(h+2)^2}{2h+1}.
+\]
+Every displayed denominator is a unit along its finite special tail.
+All three lifts reduce to the same ordinary elliptic family
+\begin{equation}\label{p2:eq:common-tail}
+E_u:\quad y^2+xy+(u^3+1)^2y=x^3,
+\qquad \Delta=u^6(u^3+1)^6.
+\end{equation}
+It has four $I_6$ fibres, at $u=0$ and the three points $u^3=1$;
+their $a_1$ is a unit. At the attaching point $u=\infty$, scaling by
+$u^2$ gives good reduction, agreeing with the node charts.
+
+On the main component, away from its nodes, scale
+\eqref{p2:eq:complete-tate} by $v^2/e$. Its reduction is the constant
+supersingular curve $E_0:y^2+y=x^3$. The node charts extend this good
+reduction at all attaching points. The nine tails account for exactly
+$9\cdot4=36$ fibres of type $I_6$, agreeing with the full generic cusp
+divisor. Thus no horizontal collision or extra discriminant component
+remains. The ratios of the main scale to the three node scales are
+$1/e$, $1/(we)$, and $v^2$. The ratios of the three tail scales to
+their node scales are $u^{-2}$, $u/(u^3+1)$, and $u/(u^3-1)$.
+All are units on their respective overlaps; the latter two node charts
+exclude the vanishing of their displayed denominators. These explicit
+coordinate transitions glue the Weierstrass line bundle and cubic models.
+At a horizontal cusp, $c_4$ is a unit and the exact discriminant divisor
+is $\Delta=\text{unit}\cdot t^6$, with $t$ a local equation of its
+section. The nodal deformation is therefore etale locally
+$xy=\text{unit}\cdot t^6$; the unit can be absorbed in one coordinate.
+The resulting
+coefficient system has good reduction at every vertical node and
+multiplicative reduction precisely along the 36 disjoint horizontal
+sections. The functorial proper semistable/logarithmic cohomology
+construction is consequently equivariant for $G$ and $\sigma$.
+
+\subsection{From the charts to arithmetic tameness}
+
+\begin{lemma}[Tameness from a semistable marked elliptic model]
+\label{p2:lem:p2-log-bridge}
+Let $K$ be a finite extension of $\mathbf Q_p$, let $L/K$ be a finite
+ tamely ramified extension, and fix a prime $\ell\ne p$.  Let $U/K$ be
+ a smooth geometrically connected curve, let $f:E\to U$ be an elliptic
+ scheme, and put $\mathcal V=R^1f_*\mathbf Q_\ell$.
+Suppose that there is a finite \'etale morphism $g:U'\to U_L$ of degree
+ $d>0$ and an elliptic scheme $f':E'\to U'$ with
+\[
+ \operatorname{Sym}^4R^1f'_*\mathbf Q_\ell
+   \simeq g^*\operatorname{Sym}^4\mathcal V.
+\]
+Suppose in addition that $U'$ has a proper semistable marked model
+ $(\mathcal C,\mathcal D)/\mathcal O_L$ with the following properties.
+\begin{enumerate}
+\item The reduced horizontal divisor $\mathcal D$ is a disjoint union
+ of \'etale sections in the smooth locus of $\mathcal C$, and
+ $U'=\mathcal C_L\setminus\mathcal D_L$.
+\item The elliptic scheme $E'$ extends to a proper flat family
+ $\mathcal E\to\mathcal C$ which is smooth over
+ $\mathcal C\setminus\mathcal D$.  In particular it is smooth at
+ every node of the vertical fibre of $\mathcal C$.
+\item Along $\mathcal D$ the family is semistable multiplicative:
+ \'etale locally its singularities have equations
+ $xy=t^m$ for some $m\ge1$, where $t=0$ defines a section of
+ $\mathcal D$.  An invertible factor on the right is allowed.
+\end{enumerate}
+Then wild inertia acts trivially on
+ $H^1(U_{\overline K},\operatorname{Sym}^4\mathcal V)$, and hence
+ on its parabolic subspace
+\[
+ H^1_!(U_{\overline K},\operatorname{Sym}^4\mathcal V)
+ :=\operatorname{im}\bigl(H^1_c(U_{\overline K},
+ \operatorname{Sym}^4\mathcal V)\longrightarrow
+ H^1(U_{\overline K},\operatorname{Sym}^4\mathcal V)\bigr).
+\]
+The same conclusion holds for every Galois-stable direct summand or
+ subquotient of these representations.
+\end{lemma}
+
+\begin{proof}
+Give $S=\operatorname{Spec}\mathcal O_L$ its standard divisorial log
+ structure and $\mathcal C$ the log structure defined by its reduced
+ vertical fibre together with $\mathcal D$.  This is a fine and
+ saturated log-smooth curve over $S$.  Give $\mathcal E$ the log
+ structure defined by the inverse image of this boundary, taking
+ its fine and saturated toric model where necessary.  The stated
+ node charts show that $\mathcal E\to\mathcal C$ is log smooth.
+Here no condition $p\nmid m$ is needed for $xy=t^m$: the toric
+ relation is $e_x+e_y=m e_t$, and the group cokernel relative to
+ $\mathbf Z e_t$ is free, generated by $e_x=-e_y$.
+An invertible factor can be absorbed in $x$ or $y$.  At a vertical
+ base node the elliptic family is smooth, so its log chart is just
+ the smooth pullback of $uv=\varpi$.  Thus composition gives a
+ proper fine and saturated log-smooth model over $S$.
+
+Form the fourfold fibre product in the category of fine and
+ saturated log schemes,
+\[
+ \mathcal X=\mathcal E\mathbin{\times^{\mathrm{fs}}_{\mathcal C}}
+ \mathcal E\mathbin{\times^{\mathrm{fs}}_{\mathcal C}}
+ \mathcal E\mathbin{\times^{\mathrm{fs}}_{\mathcal C}}\mathcal E.
+\]
+Log smoothness is stable under this base change and composition.
+The underlying scheme of $\mathcal X$ is proper over $S$: its
+ toric saturation is finite over the ordinary proper fibre product.
+The locus where the log structure is trivial is exactly
+\[
+ X^\circ=E'\times_{U'}E'\times_{U'}E'\times_{U'}E'.
+\]
+In particular it is an open subset of the generic fibre. The
+ horizontal-boundary theorem \cite[Corollary~8.4.3, p.~310]{Illusie}
+ applies to the trivial-log open of this proper log-smooth fine and
+ saturated model. The original nearby-cycle and comparison statements are
+ \cite[Variant~3.4.1, Proposition~4.2 and Remark~4.2.1]{Nakayama}.
+Consequently wild inertia of $L$ is trivial on
+ $H^q(X^\circ_{\overline L},\mathbf Z/\ell^n)$ for every $q,n$,
+ and hence on its $\mathbf Q_\ell$ cohomology.  One must use the
+ horizontal-boundary statement here; the generic log structure on
+ the proper compactification is not trivial.
+
+For completeness, the required coefficient cohomology is an
+ explicit summand of ordinary degree-five cohomology of
+ $X^\circ$.  Write $F:X^\circ\to U'$ and
+ $\mathcal V'=R^1f'_*\mathbf Q_\ell$.  Let $\iota_i$ be inversion
+ on factor $i$, and let $S_4$ permute the four factors.  The commuting
+ idempotents
+\[
+ e_{\rm odd}=\prod_{i=1}^4\frac{1-\iota_i^*}{2},\qquad
+ e_{\rm sym}=\frac1{4!}\sum_{\sigma\in S_4}
+                 \operatorname{sgn}(\sigma)\sigma^*,\qquad
+ e=e_{\rm odd}e_{\rm sym}
+\]
+are defined over $L$.  In relative K\"unneth cohomology,
+ $e_{\rm odd}$ retains only the tensor of four degree-one factors.
+Thus it kills $R^bF_*\mathbf Q_\ell$ for $b\ne4$ and has image
+ $(\mathcal V')^{\otimes4}$ for $b=4$.  A transposition of two
+ degree-one factors contributes the Koszul sign $-1$; the sign in
+ $e_{\rm sym}$ therefore makes its action on this tensor power
+ the ordinary symmetrizer.  It follows that
+\[
+ eR^bF_*\mathbf Q_\ell=
+ \begin{cases}
+ \operatorname{Sym}^4\mathcal V',&b=4,\\
+ 0,&b\ne4.
+ \end{cases}
+\]
+Applying this projector to the Leray spectral sequence leaves
+ only this one row.  Its canonical edge identification is
+\[
+ eH^5(X^\circ_{\overline L},\mathbf Q_\ell)
+   \simeq H^1(U'_{\overline L},
+                    \operatorname{Sym}^4\mathcal V').
+\]
+All maps are Galois equivariant, so the right-hand side is tame.
+
+Finally the finite \'etale pullback and trace maps satisfy
+\[
+ \operatorname{Tr}_g\circ g^*=d\,\mathrm{id}
+ \quad\text{on}\quad
+ H^1(U_{\overline K},\operatorname{Sym}^4\mathcal V).
+\]
+After dividing the trace by $d$, pullback is a split injection
+ into the tame coefficient cohomology just obtained.  The
+ parabolic image is a Galois-stable subspace of ordinary
+ cohomology.  Since $L/K$ is tamely ramified, its wild inertia
+ subgroup equals the wild inertia subgroup of $K$ under the
+ usual embedding $G_L\subset G_K$.  This proves all assertions.
+\end{proof}
+
+
+\begin{corollary}[Wild inertia on the cubic Legendre group]
+\label{p2:cor:true-cover-swan}
+For every $\ell\ne2$, the full parabolic group $\mathcal H_\ell$ and
+both specified descents $W_{4,\ell}^{\pm}$ have zero Swan conductor at $2$.
+\end{corollary}
+\begin{proof}
+Apply Lemma~\ref{p2:lem:p2-log-bridge} to the true splitting cover
+\[
+ z=\frac{v(v^3+2)}{2v^3+1},\qquad e^3=v^3+1,
+ \qquad L=\Q_2(\zeta_3,\pi),\quad \pi^3=2.
+\]
+This constant extension has ramification index three and is tame.
+If $h=v^3$, then
+\[
+ z^3-1=\frac{(h-1)^3(h+1)}{(2h+1)^3},\qquad
+ \frac{dz}{dv}=\frac{2(v^3-1)^2}{(2v^3+1)^2}.
+\]
+The degree-four rational map ramifies only over the original cusps.
+The Fermat projection ramifies at $v^3=-1$, which also maps into
+$z^3=1$; it is unramified at the three points above infinity.
+Removing all preimages of $\{0,\infty,\mu_3\}$ therefore gives a finite
+etale degree-twelve cover. Its compactification has genus one and
+its removed divisor has the 36 points already accounted for above.
+The displayed integral charts and gluing maps verify each model
+hypothesis of the lemma: separated etale horizontal sections, good
+elliptic reduction at the nine vertical nodes, and horizontal
+singularities $xy=\text{unit}\cdot t^6$. The twist parameter $\alpha=(h+2)^2/(3(2h+1))$ is invertible away
+from these cusps, so it introduces no additional singular locus on
+the generic open. The fourth symmetric power removes this quadratic
+twist. The lemma proves tameness
+of the full ordinary coefficient cohomology, hence of its parabolic
+subspace and the two rational projected summands.
+\end{proof}
+\subsection{Geometric deck action and arithmetic inertia}
+\subsubsection{The good main component and two different order-three actions}
+Set
+\[
+ e=\eta/\pi^2,\qquad e^3=v^3+1.
+\]
+This Fermat model is smooth and proper over $\mathcal O_L$ and has
+supersingular genus-one special fibre $\overline C$.  In particular
+$\overline C[2](\overline{\mathbf F}_2)$ has just its origin.
+The translations by two-torsion extend to this good model and
+specialize to the identity.  Thus $K_4$ fixes the entire main
+component pointwise.  In contrast, both $c$ and $\sigma$ act on its
+base by $e\mapsto\zeta e$; for $\sigma$ this follows from
+$\sigma(\eta)=\eta$ and $\sigma(\pi^2)=\zeta^2\pi^2$.
+
+Their actions on the elliptic coefficient are different.  The exact
+Tate equation derived above is
+\[
+ E^*: y_*^2+\pi^2 A(v)x_*y_*+B(v)y_*=x_*^3,
+\quad
+ A=\frac{3(h^2+h+1)}{(h-1)(2h+1)},\quad
+ B=\frac{(h+2)^2}{(h-1)(2h+1)}.
+\]
+It was obtained by a scale $\pi$ after transformations defined over
+$K_0(v)$, up to the harmless quadratic twist.  Hence
+\[
+ c:(x_*,y_*)\mapsto(x_*,y_*),\qquad
+ \sigma:(x_*,y_*)\mapsto(\zeta x_*,y_*).
+\]
+On the main component use the further scale $k=v^2/e$, and write
+$X=x_*/k^2$, $Y=y_*/k^3$.  Its special equation is the constant curve
+\[
+ E_0:Y^2+Y=X^3.
+\]
+For instance its $a_3$ before reduction is
+$B(h+1)/h^2$, which reduces to one.  Transport of coordinates gives
+the exact special-fibre actions
+\begin{equation}\label{p2:eq:two-C3-actions}
+ \begin{array}{c|cc}
+ &\overline C&E_0\\\hline
+ c&e\mapsto\zeta e&(X,Y)\mapsto(\zeta^2X,Y)\\
+ \sigma&e\mapsto\zeta e&(X,Y)\mapsto(X,Y).
+ \end{array}
+\end{equation}
+Possible signs from a choice of a square root in the preliminary
+quadratic twist disappear on the fourth symmetric power.
+
+The quotient of $\overline C$ by $e\mapsto\zeta e$ is the rational
+$v$-line.  Since three is invertible in the $\ell$-adic coefficient
+field, finite-map trace gives
+\[
+ H^1(\overline C,\Q_\ell)^{\sigma}=0.
+\]
+Thus, by \eqref{p2:eq:two-C3-actions}, the entire main component term
+\[
+ H^1(\overline C,\Q_\ell)\otimes
+       \operatorname{Sym}^4H^1(E_0,\Q_\ell)
+\]
+has no $\sigma$-invariants.  This remains true for its $A_4$-invariant
+part and for every subsequent projector.  The conclusion uses both
+the base and coefficient actions, not the coefficient action alone.
+
+\subsubsection{The projective quaternion action on the constant coefficient}
+The full $A_4$ action on projective three-torsion remains faithful
+after reduction: on a good elliptic model, three-torsion is finite
+etale and its four projective lines remain distinct.  Since $K_4$
+fixes the main base pointwise, its action on the constant elliptic
+coefficient is therefore faithful in $\operatorname{Aut}(E_0)/\{\pm1\}$.
+All these are zero-preserving elliptic isomorphisms.  Their projective
+ambiguity is exactly the quadratic-twist sign already removed in
+$\operatorname{Sym}^4$.
+
+For completeness, the inverse image of this $K_4$ is the quaternion
+group $Q_8$.  Its eight automorphisms are
+\[
+ (X,Y)\longmapsto(X+r,Y+r^2X+t),\qquad
+ r\in\mathbf F_4,\quad t^2+t=r^3.
+\]
+For $r\ne0$ their squares are $[-1]:(X,Y)\mapsto(X,Y+1)$.
+The order-three automorphism $(X,Y)\mapsto(\zeta^2X,Y)$ permutes
+the three nonidentity elements of the projective $K_4$.  Together
+these generate the binary tetrahedral group $Q_8\rtimes C_3$.
+
+Let $M=\operatorname{Sym}^4 H^1(E_0,\Q_\ell)$.  The quaternion
+character calculation gives
+\begin{equation}\label{p2:eq:Q8-sym4}
+ \dim M^{K_4}=\dim M^{Q_8}=2,\qquad
+ M^{Q_8\rtimes C_3}=0.
+\end{equation}
+Indeed the traces on $\operatorname{Sym}^4$ are $5$ on the two
+central elements and $1$ on the six elements of order four.  On
+each of the sixteen remaining binary tetrahedral elements the
+trace is $-1$.  Averaging gives $(10+6)/8=2$ and
+$(10+6-16)/24=0$.  More precisely, if $c_0$ is either generator
+of the quotient $C_3$, then
+\[
+ \operatorname{Tr}(c_0\mid M^{Q_8})
+ =\frac18\sum_{q\in Q_8}\operatorname{Tr}(c_0q\mid M)=-1.
+\]
+Together with the absence of fixed vectors this shows that its
+characteristic polynomial on $M^{K_4}$ is $X^2+X+1$, so its
+eigenvalues are $\zeta,\zeta^2$.
+This calculation is valid for every $\ell\ne2$, including $\ell=3$,
+because coefficients have characteristic zero.
+
+\subsubsection{Arithmetic action on the two node orbits}
+The three attaching points over $z=0$ are $v=0$, $e^3=1$;
+the three over $z=\infty$ are the three values of $e/v$ at infinity.
+In each case $c$ and $\sigma$ permute these three points in the same
+cycle.  The stabilizer in $A_4$ is $K_4$.  Use the good node scale
+$k=v^2$ at zero and $k=1/w$ at infinity, where $w=1/v$.
+These scales contain neither $e$ nor $\pi$.  Thus $c$ acts trivially
+on the displayed elliptic node coordinates, whereas $\sigma$ acts
+by $(X,Y)\mapsto(\zeta X,Y)$.
+
+Identifying the $A_4$-invariant direct sum over either three-point
+orbit with $M^{K_4}$ at one point, the arithmetic action is therefore
+the coefficient action of $c^{-1}\sigma$.  It is the order-three
+rotation $(X,Y)\mapsto(\zeta X,Y)$.  By \eqref{p2:eq:Q8-sym4}, neither
+of these two two-dimensional node terms has arithmetic invariants.
+Their duals and Tate twists have the same property, since the
+$\ell$-adic Tate character is unramified at two.
+
+At each of the remaining three main attaching points $e=0$, the
+whole geometric $A_4$ is the stabilizer.  Its projective action is
+the full tetrahedral action above, so its node coefficient invariant
+space is zero by \eqref{p2:eq:Q8-sym4}.  The main degree-zero constant
+coefficient invariant space is zero for the same reason.
+
+Thus every main and node term surviving geometric descent has no
+arithmetic eigenvalue one. The tail calculation and the exact
+cohomological passage below complete the invariant calculation.
+\subsection{The descended ordinary tails}
+The degree-four tail quotient can be read from the exact rational map.
+At zero, $v=\pi u$ gives
+\[
+\frac{z}{\pi^4}=\frac{u(u^3+1)}{4u^3+1}
+\quad\longmapsto\quad Z=u^4+u.
+\]
+This is the translation quotient by $K_4=(\F_4,+)$. Since
+$\lambda=z^3=16Z^3$, the reduced Legendre $j$-invariant is $1/Z^6$.
+Infinity is its inversion counterpart.
+
+At a tail over a cube root of unity, use $e=\pi u$ and $h=2u^3-1$.
+The exact identity
+\[
+\lambda-1=\frac{(h-1)^3(h+1)}{(2h+1)^3}
+\]
+gives
+\[
+T=\frac{\lambda-1}{16}
+=\frac{u^3(u^3-1)^3}{(4u^3-1)^3}
+\quad\longmapsto\quad (u^4+u)^3.
+\]
+This is the degree-twelve quotient by the affine group
+$A_4=(\F_4,+)\rtimes\F_4^\times$. Its reduced $j$-invariant is $1/T^2$.
+The ordinary characteristic-two family
+\[
+\mathcal K_t:\quad y^2+xy=x^3+tx
+\]
+has $j=1/t^2$. Hence the two descended fourth-symmetric-power systems
+are respectively its cubic pullback $t=Z^3$ and its ordinary version
+$t=T$. Ordinary elliptic curves with the same $j$ differ by a quadratic
+twist; this ambiguity disappears on $\Sym^4$.
+Over the ordinary generic point, the zero-preserving automorphism group
+is $\{\pm1\}$. Thus the identification is compatible with the descended
+fourth-symmetric-power action, independently of the choice of elliptic
+isomorphism.
+
+These identifications include middle extensions at the missing points.
+Indeed finite pushforward on the compact quotient curves is exact, and
+finite-group invariants over $\Q_\ell$ are exact. The invariant pushforward
+of a middle-extension coefficient system is the middle extension of its
+generic descent, as may also be checked on the local inertia-invariant
+stalks. This applies to the wildly ramified special translation quotients
+as well: it uses characteristic-zero coefficients, not tameness of those
+finite maps. Thus the component parabolic cohomology after deck descent
+is exactly that of the displayed ordinary or cubic Kloosterman system.
+The cited Kloosterman calculation gives zero for both of these parabolic
+$\Sym^4$ groups, accounting for every descended tail middle term.
+\subsection{Vanishing of the descended tail terms}
+
+\begin{lemma}[The characteristic-two Kloosterman tails]
+\label{p2:lem:p2-kl-tails}
+Let $k=\overline{\mathbf F}_2$, let $\ell\ne2$, and let
+ $f:E\to\mathbf G_{m,k}$ be the elliptic scheme
+\[
+ E_t:\quad y^2+xy=x^3+tx.
+\]
+Put $\mathcal F=\operatorname{Sym}^4R^1f_*\mathbf Q_\ell$, and
+ let $[3]:\mathbf G_m\to\mathbf G_m$ send $Z$ to $Z^3$.
+Then
+\[
+ H^1_!(\mathbf G_m,\mathcal F)=0,
+ \qquad H^1_!(\mathbf G_m,[3]^*\mathcal F)=0.
+\]
+For the first sheaf the Swan conductor at infinity and the
+ dimensions of the inertia-invariant spaces at $0,\infty$ are
+ $(1,1,0)$; for the second they are $(3,1,2)$.
+\end{lemma}
+
+\begin{proof}
+On the open set $x\ne0$, put $u=y/x$.  The elliptic equation becomes
+ $u^2+u=x+t/x$, the Artin--Schreier cover defining the rank-two
+ Kloosterman sheaf $\mathrm{Kl}_2$ in characteristic two.
+The involution $u\mapsto u+1$ is elliptic inversion.  The two
+ omitted points $x=0$ and the point at infinity are fixed by this
+ involution, so their boundary cohomology is invariant.  Taking
+ the odd part of the compact-support exact sequence identifies
+ $R^1f_*\mathbf Q_\ell$ with $\mathrm{Kl}_2$.  This also fixes
+ the trace convention: its Frobenius trace is minus the usual
+ Kloosterman sum.  The elliptic realization is recorded in
+ Haessig~\cite{Haessig}, proof of Theorem~2.2, citing Schoof--van der Vlugt,
+ Proposition~3.1(4).
+
+We use the characteristic-two local calculation of Yun~\cite{Yun},
+ \S4.3.1 and Lemmas~4.3.3--4.3.4.  The image of inertia at
+ infinity on $\mathrm{Kl}_2$ is the binary tetrahedral group
+ $2.A_4$, with lower ramification filtration
+\[
+ D_0=2.A_4,\quad D_1=Q_8,\quad D_2=D_3=\{\pm1\},
+ \quad D_4=1.
+\]
+In the fourth symmetric power this gives
+ $\operatorname{Swan}_\infty(\mathcal F)=1$ and
+ $\mathcal F^{I_\infty}=0$.  At zero, the local monodromy is a
+ single unipotent block, so $\dim\mathcal F^{I_0}=1$.
+The global geometric monodromy is $\mathrm{SL}_2$; therefore
+ $H^0(\mathbf G_m,\mathcal F)=H^2_c(\mathbf G_m,\mathcal F)=0$.
+The Grothendieck--Ogg--Shafarevich formula and the boundary
+ exact sequence consequently give
+\[
+ \dim H^1_!(\mathbf G_m,\mathcal F)
+ =\operatorname{Swan}_\infty(\mathcal F)
+  -\dim\mathcal F^{I_0}-\dim\mathcal F^{I_\infty}=1-1-0=0.
+\]
+
+The cubic pullback kills the tame quotient $(2.A_4)/Q_8$ of
+ the local image at infinity, leaving image $Q_8$.
+On $\operatorname{Sym}^4$, its invariant plane is generated by
+ $x^4+y^4$ and $x^2y^2$.  Tame pullback multiplies the Swan
+ conductor by three.  Thus the corresponding local data are
+ $\operatorname{Swan}_\infty=3$, invariant dimension $1$ at zero,
+ and invariant dimension $2$ at infinity.  A finite-index
+ restriction still has geometric Zariski closure $\mathrm{SL}_2$,
+ so the global $H^0$ and $H^2_c$ again vanish.  The same formula
+ now reads $3-1-2=0$.
+\end{proof}
+
+\begin{remark}
+The lemma applies to the ordinary tail $t=(\lambda-1)/16$ and
+ to the cubic tails $\lambda=16Z^3$ supplied by the explicit
+ Legendre coordinate changes, after quadratic twists are removed
+ by $\operatorname{Sym}^4$.  The statement concerns parabolic
+ cohomology of these characteristic-two families.  Identifying
+ their contributions to the original dyadic inertia invariants
+ still requires the component and node maps of the semistable
+ model; the vanishing alone is not a local-factor calculation.
+\end{remark}
+\subsection{Equivariant nearby cycles and parabolic descent}
+
+We apply the preceding calculations to the proper marked semistable
+model $\mathcal B/\mathcal O_L$ of the actual splitting cover
+$\eta^3=4(v^3+1)$. Its main component is $C:e^3=v^3+1$, where
+$e=\eta/\pi^2$. Write $G=A_4$ for the geometric deck group,
+$c:e\mapsto\zeta e$ for the indicated geometric order-three operation,
+and $\sigma(\pi)=\zeta\pi$ for the arithmetic descent operation.
+The two operations on the coefficient are those computed in the
+arithmetic-action calculation above; they must not be identified.
+
+The marked model has a genus-one main component and nine rational tails,
+each with four marked cusp sections. It is a stable marked curve.
+Consequently the deck and arithmetic descent operations extend to it
+by uniqueness of the stable marked model. Let $\mathcal D$ be the union
+of the horizontal cusp sections, and write
+\[
+ j:\mathcal B\setminus\mathcal D\hookrightarrow\mathcal B,
+ \qquad
+ \mathcal F=\operatorname{Sym}^4R^1f_*\mathbf Q_\ell,
+ \qquad \mathcal J=j_*\mathcal F.
+\]
+Here $f$ is the good elliptic family on the indicated open, supplied by
+the integral charts. We assert equivariance for $\mathcal F$, not for
+an arbitrary choice of the preliminary quadratic twist of the elliptic
+family. On the generic open, $\mathcal F$ is canonically the pullback
+of the original fourth symmetric-power coefficient. Its deck and
+arithmetic identifications extend to the lisse sheaf on
+$\mathcal B\setminus\mathcal D$: restriction of lisse sheaves to a
+dense open of a normal scheme is fully faithful. They then extend to
+$\mathcal J$ by functoriality of $j_*$. In particular the following
+sequences carry the actual $G$ and arithmetic actions.
+
+\subsubsection{The local nearby-cycle calculation}
+
+Let $\mathcal B_a$ denote the normalized special-fibre components, and
+let $\mathcal J_a$ be their coefficient middle extensions across their
+horizontal cusps. For each of the nine vertical nodes $x$, put
+$H_x=\mathcal F_x$ and set
+\[
+ \mathcal N=\bigoplus_{x\text{ a vertical node}}H_x.
+\]
+The good elliptic charts at the nodes are essential here. The
+semistable-curve calculation gives
+\begin{equation}\label{p2:eq:complete-p2-nearby}
+ R^0\Psi(\mathcal J_{\bar\eta})=\mathcal J_{\bar s},\qquad
+ R^1\Psi(\mathcal J_{\bar\eta})
+     =\bigoplus_x(H_x(-1))_x,\qquad
+ R^q\Psi(\mathcal J_{\bar\eta})=0\quad(q>1).
+\end{equation}
+At a vertical node the coefficient is lisse on the full ring
+$uv=\pi$. Thus the assertion is the constant-sheaf node calculation
+tensored with $H_x$; see \cite[Corollary~8.4.4]{Illusie} for that
+semistable specialization of the nearby-cycle formula.
+
+There are no extra vertical vanishing cycles at the horizontal cusps.
+The base is smooth there, the marked section is a relative smooth
+divisor, and the elliptic family is multiplicative with local parameter
+$q=t^6$ times a unit. After strict henselization the branches split and
+the unit has every prime-to-$2$ root. The coefficient therefore has its
+usual tame unipotent monodromy in $t$, and its horizontal invariant
+sheaf $\mathcal F^{I_t}$ is lisse over the trait.
+More precisely, \cite[Expose~XIII, Lemmas~2.1.10--2.1.11]{SGA7}
+gives base change for $Rj_*\mathcal F$ and
+$R\Phi(j_!\mathcal F)=0$ for a lisse sheaf tamely ramified along a
+relative normal-crossings divisor. Apply also smooth local acyclicity
+to the invariant sheaf on the section. The exact sequence
+\[
+ 0\longrightarrow j_!\mathcal F\longrightarrow j_*\mathcal F
+ \longrightarrow i_*\mathcal F^{I_t}\longrightarrow0
+\]
+then gives $R\Phi(j_*\mathcal F)=0$ at that section. The statements
+apply at finite prime-to-$2$ coefficient levels and then to
+$\mathbf Q_\ell$ coefficients. Away from the cusps and vertical nodes,
+ordinary smooth local acyclicity applies. These observations prove
+\eqref{p2:eq:complete-p2-nearby} and identify the restrictions of
+$\mathcal J_{\bar s}$ with the component middle extensions.
+
+Proper base change and the five-term nearby-cycle sequence yield
+\begin{equation}\label{p2:eq:complete-p2-five-term}
+ 0\longrightarrow H^1(\mathcal B_{\bar s},\mathcal J_{\bar s})
+ \longrightarrow H^1(\mathcal B_{\bar\eta},\mathcal J_{\bar\eta})
+ \longrightarrow\mathcal N(-1)
+ \longrightarrow H^2(\mathcal B_{\bar s},\mathcal J_{\bar s}).
+\end{equation}
+For the proper comparison, see
+\cite[Expose~XIII, \S2.1.8, especially (2.1.8.9)]{SGA7}.
+We only use that the quotient of the second term by the first embeds
+in $\mathcal N(-1)$; surjectivity onto the node module is unnecessary.
+
+For normalization $\nu:\coprod_a\mathcal B_a\to\mathcal B_{\bar s}$,
+lissity at the nodes gives
+\[
+ 0\longrightarrow\mathcal J_{\bar s}
+ \longrightarrow\nu_*\bigoplus_a\mathcal J_a
+ \longrightarrow\bigoplus_x(H_x)_x\longrightarrow0.
+\]
+The last map is the difference of the two restrictions. Orient every
+edge from the unique genus-one main component toward its tail. Both
+$G$ and $\sigma$ preserve this orientation, so there is no additional
+sign in their action on the node module. The cohomology sequence gives
+\begin{equation}\label{p2:eq:complete-p2-normalization}
+ \bigoplus_a H^0(\mathcal B_a,\mathcal J_a)
+ \longrightarrow\mathcal N
+ \longrightarrow H^1(\mathcal B_{\bar s},\mathcal J_{\bar s})
+ \longrightarrow\bigoplus_a H^1(\mathcal B_a,\mathcal J_a)
+ \longrightarrow0.
+\end{equation}
+Both sequences are equivariant. Taking $G$-invariants is exact over
+$\mathbf Q_\ell$, also when $\ell=3$.
+
+\subsubsection{Finite descent, including the wild special-tail quotients}
+
+We recall why taking the indicated stabilizer invariants on a special
+tail computes its descended middle cohomology even when the quotient
+is wildly ramified at the attaching point. Let
+$q:Y\to X=Y/H$ be any of the finite special-tail quotient maps.
+On the dense open where the coefficient descends, let $F_X$ be the
+descended sheaf and let $j_Y,j_X$ be the respective open immersions.
+Finite pushforward and exactness of rational $H$-invariants give
+\[
+ \bigl(q_*j_{Y*}q^*F_X\bigr)^H=j_{X*}F_X.
+\]
+This can be checked directly on sections: extension by $j_*$ and
+finite pushforward commute, and invariant sections on the finite
+cover are precisely sections downstairs. Hence
+\[
+ H^1(Y,j_{Y*}q^*F_X)^H=H^1(X,j_{X*}F_X).
+\]
+No tameness of $q$ at the omitted point is required. In the present
+case the maps on the open tails are the displayed separable quotients
+$Z=u^4+u$ and $T=(u^4+u)^3$. Their ramification at infinity is thus
+handled by the middle extension, not discarded. The same argument
+justifies generic finite Galois descent of parabolic cohomology.
+
+The preceding component and group calculations now supply exactly the
+following inputs:
+\begin{enumerate}
+\item The main-component cohomology has no $\sigma$-eigenvalue $1$:
+$\sigma$ acts on its Fermat-base $H^1$ with the two nontrivial cubic
+characters and acts trivially on the constant elliptic coefficient.
+\item All descended tail middle-cohomology groups vanish, by their
+identification with the ordinary and cubic-pullback Kloosterman
+families and the stated local-monodromy calculation.
+\item $\mathcal N^G$ consists of the two two-dimensional node spaces
+over $0$ and $\infty$. Each has arithmetic eigenvalues
+$\zeta,\zeta^2$; the three other node spaces vanish after $G$-invariants.
+The Tate twist $(-1)$ is unramified at $2$.
+\end{enumerate}
+Consequently neither $\mathcal N^G$ nor
+$(\bigoplus_a H^1(\mathcal B_a,\mathcal J_a))^G$ has eigenvalue $1$.
+Equation~\eqref{p2:eq:complete-p2-normalization} gives the same conclusion
+for $H^1(\mathcal B_{\bar s},\mathcal J_{\bar s})^G$.
+Equation~\eqref{p2:eq:complete-p2-five-term} then gives it for
+$H^1(\mathcal B_{\bar\eta},\mathcal J_{\bar\eta})^G$.
+Absence of an eigenvalue passes to subspaces, quotients and extensions,
+so no degeneration assertion or vanishing of graph monodromy is used.
+
+Finally, $H^1$ of the coefficient middle extension on a proper smooth
+curve is canonically its parabolic cohomology. Generic finite Galois
+descent therefore identifies the last $G$-invariant group with the full
+original cubic-Legendre parabolic representation. An inertia-invariant
+vector would be fixed by the chosen arithmetic inertia lift $\sigma$,
+which has no eigenvalue $1$ here. Both specified rank-four summands
+thus have zero inertia invariants. Combining this with Corollary~\ref{p2:cor:true-cover-swan} gives, for every $\ell\ne2$,
+\[
+ d_{2,\ell}^+=d_{2,\ell}^-=0,\qquad
+ P^+_{2,\ell}(T)=P^-_{2,\ell}(T)=1,\qquad
+ a_2(W^+_{4,\ell})=a_2(W^-_{4,\ell})=4.
+\]
+
+
+This proves Theorem~\ref{p2:thm:dyadic-local-data}. In particular the
+arithmetic constant in the splitting cover is retained throughout;
+replacing $\eta^3=4(v^3+1)$ by a geometrically isomorphic equation
+without tracking that constant would not determine this inertia action.

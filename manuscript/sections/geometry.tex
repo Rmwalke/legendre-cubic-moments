@@ -1,0 +1,322 @@
+\section{Geometry and trace formulas over K}\label{sec:geometry}
+
+Fix compatible primitive cube roots in
+\(K=\Q(\zeta_3)\) and \(E=\Q_2(\zeta_3)\), and put
+\(\mathcal O=\Z_2[\zeta_3]\),
+\(S=\operatorname{Spec}\mathcal O_K[1/6]\), and
+\(U=\PP^1_S\setminus\{0,1,\infty\}\).
+Let \(\pi:\mathcal E\to U\) be the smooth projective Legendre elliptic
+scheme, with its zero section and affine equation
+\[
+ \mathcal E_\lambda:\quad y^2=x(x-1)(x-\lambda),
+ \qquad \mathcal V=R^1\pi_*E.
+\]
+The cubic torsor \(f:T\to U\), \(z^3=\lambda\), has deck
+transformation \(a(z)=\zeta_3z\). We use pullback as the deck action.
+Let \(\mathcal L_\rho\) be the \(\zeta_3\)-eigensheaf of \(a^*\)
+in \(f_*E\). This definition fixes the arithmetic normalization;
+in particular no constant Galois twist is inserted. For \(r\in\{2,4\}\)
+set
+\[
+ \mathcal G_r=\Sym^r\mathcal V\otimes\mathcal L_\rho,
+ \qquad
+ H_r=H^1_!(U_{\bar K},\mathcal G_r)
+ :=\operatorname{im}\bigl(H_c^1(U_{\bar K},\mathcal G_r)
+                  \longrightarrow H^1(U_{\bar K},\mathcal G_r)\bigr).
+\]
+Thus \(W_2=H_2\) and \(V_4=H_4\). The subscript records the symmetric
+power, and is distinct from the order three of the Kummer character.
+
+All Frobenius operators below are geometric. Write \(\tau\) for the
+character of \(E(-1)\), so \(\tau(\Frob_{\mathfrak p})=N\mathfrak p\).
+For a prime \(\mathfrak p\nmid6\), put \(q=N\mathfrak p\) and let
+\(\rho_q:\F_q^\times\to E^\times\) be the trace character of the
+specified eigensheaf. For even \(k\) define
+\[
+ a_q(\lambda)=q+1-\#\mathcal E_\lambda(\F_q),\qquad
+ M_{3,k}(q)=\sum_{\lambda\in\F_q\setminus\{0,1\}}
+                  \rho_q(\lambda)a_q(\lambda)^k.
+\]
+The singular parameters are excluded throughout these moment sums.
+
+\begin{theorem}\label{thm:common-geometry}
+For \(r=2,4\), the representation \(H_r\) is continuous of dimension
+\(r\) over \(E\), and is unramified outside the primes of \(K\) above
+\(2,3\). There is an exact sequence of \(G_K=\Gal(\bar K/K)\)-representations
+\begin{equation}\label{eq:common-full-sequence}
+ 0\longrightarrow E\longrightarrow H_c^1(U_{\bar K},\mathcal G_r)
+ \longrightarrow H^1(U_{\bar K},\mathcal G_r)
+ \longrightarrow E(-(r+1))\longrightarrow0.
+\end{equation}
+Both middle spaces have dimension \(r+1\), and their common parabolic
+image is \(H_r\). At every \(\mathfrak p\nmid6\),
+\begin{align}
+ \Tr(\Frob_{\mathfrak p}\mid W_2)
+   &=-M_{3,2}(q)-q-1,\label{eq:trace-W2}\\
+ \Tr(\Frob_{\mathfrak p}\mid V_4)
+   &=-M_{3,4}(q)+3qM_{3,2}(q)+q^2-1.
+   \label{eq:trace-V4}
+\end{align}
+These assertions include the degree-two prime ideals of \(K\).
+\end{theorem}
+
+\subsection{Local monodromy and the arithmetic boundary}
+
+At \(\lambda=0,1\), the discriminant
+\(16\lambda^2(1-\lambda)^2\) has valuation two, while
+\(c_4=16(\lambda^2-\lambda+1)\) is a unit. Thus the fibres are
+multiplicative, with nontrivial unipotent inertia on \(\mathcal V\).
+At infinity, the substitutions \(t=1/\lambda\), \(x=\lambda X\),
+\(y=\lambda^2Y\) give
+\[
+ Y^2=tX(X-1)(X-t).
+\]
+This is the ramified quadratic twist of the multiplicative family at
+\(t=0\). The geometric inertia types on \(\mathcal V\) at
+\(0,1,\infty\) are consequently \(J_2(1),J_2(1),J_2(-1)\);
+see also \cite[Chapter~15]{Katz}.
+
+For clarity, the symmetric-power calculation is made over the
+characteristic-zero field \(E\). In a local basis choose
+\(N(e)=0\), \(N(h)=ce\), \(c\ne0\), for the unipotent logarithm.
+The induced logarithm satisfies
+\[
+ N_r(e^{r-j}h^j)=jc\,e^{r-j+1}h^{j-1},\qquad
+ N_r^r(h^r)=r!c^re^r\ne0.
+\]
+It therefore has one block of length \(r+1\). Since \(r\) is even,
+the scalar \(-1\) at infinity disappears. No assertion that \(r!\)
+is an integral unit is needed. With compatible tame generators the
+Kummer scalars at zero and infinity are a primitive cube root \(\eta\)
+and \(\eta^{-1}\), respectively. Hence
+\begin{center}
+\begin{tabular}{c|c|c|c}
+ point & \(\mathcal V\) & \(\mathcal G_r\) &
+          \(\dim_E\mathcal G_r^{I}\)\\ \hline
+ \(0\) & \(J_2(1)\) & \(\eta J_{r+1}(1)\) & \(0\)\\
+ \(1\) & \(J_2(1)\) & \(J_{r+1}(1)\) & \(1\)\\
+ \(\infty\) & \(J_2(-1)\) & \(\eta^{-1}J_{r+1}(1)\) & \(0\)
+\end{tabular}
+\end{center}
+The same calculation holds in every good geometric fibre. The integral
+tameness argument below verifies that no Swan terms occur there.
+
+\begin{lemma}\label{lem:arithmetic-boundary}
+The inertia invariant and coinvariant lines at \(\lambda=1\) are
+arithmetically
+\[
+ \mathcal G_r^{I_1}\simeq E,
+ \qquad (\mathcal G_r)_{I_1}\simeq E(-r).
+\]
+In particular geometric Frobenius acts on the invariant line by \(1\),
+both over \(K\) and at every good residue field.
+\end{lemma}
+
+\begin{proof}
+Put \(v=x-1\) in the singular fibre at \(\lambda=1\). Its equation
+\(y^2=(1+v)v^2\) has the two rational tangents \(y=\pm v\), so its
+multiplicative reduction is split. The Tate torsion sequence, followed by
+inverse limit and duality, gives the cohomological sequence
+\[
+ 0\longrightarrow E\longrightarrow\mathcal V
+      \longrightarrow E(-1)\longrightarrow0
+\]
+on the local punctured trait; see \cite[pp.~18--19]{Tate}.
+Its nontrivial unipotent inertia fixes the first line. In its \(r\)-th
+symmetric power, the invariant line is the \(r\)-th power of this
+trivial line, whereas the coinvariant quotient is the \(r\)-th power
+of the quotient \(E(-1)\). Finally the torsor fibre over \(1\) is
+\(\mu_3\). It is rational over \(K\) and over each residue field at
+\(\mathfrak p\nmid6\), so its chosen character line is arithmetically
+trivial. Tensoring by that line gives both assertions.
+\end{proof}
+
+\subsection{Cohomology and the two boundary terms}
+
+In this subsection cohomology is first taken over \(\bar K\); the same
+arguments apply over good algebraically closed residue fields.
+The absence of \(I_0\)-invariants implies
+\(H^0(U,\mathcal G_r)=0\). It also implies
+\(H^0(U,\mathcal G_r^\vee(1))=0\), since a constant Tate twist is
+trivial on geometric inertia. A lisse section on a connected nonproper
+smooth curve cannot have proper support unless it is zero. Poincare
+duality \cite[Theorem~24.1]{Milne} therefore gives
+\begin{equation}\label{eq:common-vanishing}
+ H_c^0(U,\mathcal G_r)=H_c^2(U,\mathcal G_r)=0.
+\end{equation}
+Comparison with the complex thrice-punctured sphere, which retracts
+onto a graph with one vertex and two loops, gives ordinary Euler
+characteristic \(-(r+1)\) for a rank-\((r+1)\) local system.
+Duality gives the same compact-support Euler characteristic. The
+specialization below transports the dimensions to the good fibres.
+In particular
+\(\dim_E H_c^1(U,\mathcal G_r)=r+1\).
+
+Let \(j:U_{\bar K}\hookrightarrow\PP^1_{\bar K}\), and let
+\(i_1\) be the inclusion of the point \(1\). Lemma~\ref{lem:arithmetic-boundary}
+and the local invariant table give an exact sequence of ordinary etale
+sheaves
+\[
+ 0\longrightarrow j_!\mathcal G_r\longrightarrow j_*\mathcal G_r
+     \longrightarrow i_{1*}E\longrightarrow0.
+\]
+Its cohomology sequence and the vanishing of \(H^0(U,\mathcal G_r)\)
+give
+\begin{equation}\label{eq:common-left-boundary}
+ 0\longrightarrow E\longrightarrow H_c^1(U,\mathcal G_r)
+   \longrightarrow H^1(\PP^1,j_*\mathcal G_r)\longrightarrow0.
+\end{equation}
+The edge map for Leray injects
+\(H^1(\PP^1,j_*\mathcal G_r)\) into \(H^1(U,\mathcal G_r)\).
+The composite of this injection with
+\eqref{eq:common-left-boundary} is the natural compact-support map.
+It follows that
+\[
+ H^1(\PP^1,j_*\mathcal G_r)=H_r,
+ \qquad \dim_EH_r=r.
+\]
+These identifications and exact sequences are Galois equivariant.
+
+To determine the right boundary, the same sheaf sequence and
+\eqref{eq:common-vanishing} imply
+\(H^2(\PP^1,j_*\mathcal G_r)=0\). Leray now gives a surjection from
+\(H^1(U,\mathcal G_r)\) onto
+\(\bigoplus_{s=0,1,\infty}H^1(I_s,\mathcal G_r)\), with kernel
+\(H_r\). At \(0,\infty\), the operator \(T_s-1\) is invertible,
+so the corresponding local groups vanish. At \(1\), tame inertia
+cohomology identifies the local group with
+\[
+ H^1(I_1,\mathcal G_r)
+   \simeq (\mathcal G_r)_{I_1}(-1)
+   \simeq E(-(r+1)).
+\]
+The additional twist comes from the dual of the tame factor
+\(\Z_2(1)\); geometric Frobenius acts on this factor of the local
+cohomology by \(q\). Combining these observations proves
+\eqref{eq:common-full-sequence}, including its final surjectivity, and
+\(\dim_EH^1(U,\mathcal G_r)=r+1\).
+
+\subsection{Integral tame specialization}
+
+We give the specialization argument explicitly because \(U\) is not
+proper. The eigensheaf has an integral lattice
+\(\mathcal L_{\rho,\mathcal O}\): the order-three projector is
+integral since \(3\) is invertible in \(\mathcal O\). Put
+\[
+ \mathcal G_{r,\mathcal O}
+  =\bigl(\Sym^r(R^1\pi_*\Z_2)\otimes_{\Z_2}\mathcal O\bigr)
+       \otimes_{\mathcal O}\mathcal L_{\rho,\mathcal O},
+ \qquad \mathcal G_{r,m}=\mathcal G_{r,\mathcal O}/2^m.
+\]
+The finite monodromy of \(\mathcal G_{r,m}\) factors through the image
+of a subgroup of
+\(\operatorname{GL}_2(\Z/2^m)\times\mu_3\), whose order is
+\[
+ 18\cdot2^{4(m-1)}.
+\]
+Thus for every residue characteristic \(p\ge5\), wild pro-\(p\)
+inertia at a boundary point acts trivially. In characteristic zero there
+is no wild inertia. This verifies relative tameness in the fibrewise
+discrete-valuation sense of \cite[Expose~XIII, Definition~2.1.1]{SGA1}.
+The sheaves are already lisse on \(U\).
+
+Apply \cite[Expose~XIII, Corollary~2.9]{SGA1} to
+\(\PP^1_S\), its relative normal-crossing boundary consisting of the
+three disjoint sections, and the additive coefficient sheaf
+\(\mathcal G_{r,m}\). The compactification is smooth, proper, and of
+finite presentation. The coefficient sheaf is finite, locally constant,
+constructible, relatively tame, and \(2\)-primary, with \(2\)
+invertible on \(S\). The theorem supplies local constancy and
+base change in degrees at most one. The same argument applies to the
+integral dual coefficient systems and their Tate twists; their additional
+finite cyclotomic factors have \(2\)-power order.
+
+On a geometric fibre, the finite \(H^0\) groups form a
+Mittag--Leffler system. The continuous-cohomology comparison
+\cite[Sections~18--21]{Milne} consequently gives
+\[
+ H^1(U,\mathcal G_r)
+   =\left(\varprojlim_m H^1(U,\mathcal G_{r,m})\right)
+       \otimes_{\mathcal O}E.
+\]
+The finite-level specialization isomorphisms therefore pass to the
+\(E\)-adic groups. This argument does not require finite-level
+cohomology to be free.
+
+For compact supports we use relative duality, rather than applying
+smooth proper base change to the open curve. The morphism \(g:U\to S\)
+is smooth, separated, compactifiable, and of relative dimension one;
+\(S\) is quasi-compact and quasi-separated, and every \(2^m\) is
+invertible on it. The relative trace and smooth-duality theorems
+\cite[Expose~XVIII, Theorem~2.9, Var.~2, and Theorem~3.2.5]{SGA4}
+apply. Their base-change compatibility, followed by passage to \(E\),
+identifies
+\[
+ H_c^1(U,\mathcal G_r)
+       \simeq H^1(U,\mathcal G_r^\vee(1))^\vee
+\]
+compatibly with specialization. Moreover the natural transformation
+\(Rg_!\to Rg_*\) is compatible with these base-change maps.
+Accordingly the specialization square with horizontal maps
+\(H_c^1\to H^1\) commutes, and both vertical maps are isomorphisms.
+Taking images over \(E\) gives an isomorphism of the parabolic
+cohomology groups, equivariant for residue-field Galois action.
+
+The compatible finite systems give a continuous representation factoring
+through \(\pi_1(S)\). Their parabolic image is a stable subquotient,
+so \(H_r\) is unramified outside \(2,3\). At a good prime its
+Frobenius is identified with the Frobenius of the special-fibre
+parabolic group. This proves precisely the specialization needed for
+the arithmetic trace calculation.
+
+\subsection{The two trace formulas}
+
+Let \(\alpha,\beta\) be the geometric Frobenius eigenvalues of a
+smooth Legendre fibre over \(\F_q\). Thus
+\(\alpha+\beta=a_q(\lambda)\) and \(\alpha\beta=q\). The
+symmetric-power recurrence gives
+\[
+ \Tr(\Frob_\lambda\mid\Sym^2\mathcal V)
+      =a_q(\lambda)^2-q,
+ \qquad
+ \Tr(\Frob_\lambda\mid\Sym^4\mathcal V)
+      =a_q(\lambda)^4-3qa_q(\lambda)^2+q^2.
+\]
+The compact-support trace formula \cite{StacksTrace}, the vanishings
+\eqref{eq:common-vanishing}, and the arithmetic boundary sequence
+\eqref{eq:common-left-boundary} therefore give
+\[
+ \Tr(\Frob_q\mid H_r)
+   =-\sum_{\lambda\ne0,1}
+          \Tr(\Frob_\lambda\mid\mathcal G_{r,\lambda})-1.
+\]
+Since \(\sum_{\lambda\ne0,1}\rho_q(\lambda)=-1\), this is
+\eqref{eq:trace-W2} for \(r=2\), and \eqref{eq:trace-V4} for
+\(r=4\). The final \(-1\) is the trace of the actual boundary
+line, not a correction inferred from its dimension. The preceding
+specialization identifies these special-fibre traces with the
+\(G_K\)-representations in Theorem~\ref{thm:common-geometry}, completing
+its proof.
+
+For powers of a fixed Frobenius, the character on \(\F_{q^d}^\times\)
+must be \(\rho_q\circ N_{\F_{q^d}/\F_q}\). With this convention the
+same formulas compute \(\Tr(\Frob_{\mathfrak p}^{d}\mid H_r)\).
+At an inert rational prime \(p\equiv2\pmod3\), the initial residue
+field is \(\F_{p^2}\); its cubic character is not a nontrivial norm
+lift from \(\F_p\). These formulas determine the trace over \(K\)
+and do not yet choose a trace at \(p\) for an extension to \(G_\Q\).
+
+Parameter inversion gives
+\(a_q(1/\lambda)=\chi_q(\lambda)a_q(\lambda)\), because the two
+elliptic curves differ by the indicated quadratic twist. For even
+\(k\), changing variables in the moment consequently yields
+\[
+ M_{3,k}(q;\rho_q)=M_{3,k}(q;\rho_q^{-1})\in\Z.
+\]
+Indeed the sum is a cyclotomic integer fixed by conjugation. This
+character independence does not itself supply coefficient descent.
+
+Section~\ref{sec:descent} places both cubic eigenspaces in an ambient
+\(\Q_2\)-representation \(H_{\mathrm{nt}}\), constructs the
+arithmetic inversion operator \(I\), and uses it to define the two
+extensions \(W_4^\pm\) to \(G_\Q\).

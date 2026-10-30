@@ -1,0 +1,160 @@
+\section{Strong irreducibility from local monodromy}\label{sec:irreducibility}
+\paragraph{Conventions and inputs.}
+Fix a coefficient prime $\ell\ne3$. Write $G_\Q=\Gal(\overline\Q/\Q)$ and
+$\tau_\ell$ for the character of $\Q_\ell(-1)$, so that
+$\tau_\ell(\Frob_p)=p$ for geometric Frobenius at $p\ne\ell$.
+To avoid opposite Hodge--Tate sign conventions, call $h$ a \emph{Tate
+exponent} when a Hodge--Tate summand is $\C_\ell(-h)$.
+Thus $\Q_\ell(-1)$ has Tate exponent $1$.
+
+The inputs for $V=W_{4,\ell}^+$ are:
+\begin{enumerate}
+\item $V$ has dimension four over $\Q_\ell$, is unramified outside a finite
+set, and is de Rham at $\ell$.
+\item Its Tate exponents are $\{0,0,5,5\}$. These follow from the specified
+smooth projective Scholl realization of
+Theorem~\ref{thm:scholl-realization}, its rational projector and the Hodge
+numbers $h^{5,0}=h^{0,5}=2$, using de Rham and Hodge--Tate comparison.
+\item At $3$, inertia is unipotent with a monodromy logarithm $N$ having
+one Jordan block of length four. With $F$ geometric Frobenius,
+\[
+ FNF^{-1}=3^{-1}N,
+\]
+and the eigenvalues on the successive quotients of
+$0\subset\ker N\subset\ker N^2\subset\ker N^3\subset\ker N^4=V$
+are $3,9,27,81$, respectively.
+\end{enumerate}
+The third input is the full arithmetic conclusion of
+Section~\ref{sec:local-three}, not an inference from the conductor alone. The same construction gives
+$W_{4,\ell}^-=W_{4,\ell}^+\otimes\chi_{-3}$.
+
+\begin{lemma}[Rank-one characters over $\Q$]\label{irr:rankone}
+Let $\delta:G_\Q\to\Q_\ell^\times$ be a continuous character, unramified
+outside a finite set, and Hodge--Tate at $\ell$ with Tate exponent $m$.
+Then $\delta=\epsilon\tau_\ell^m$ for a finite-order character $\epsilon$.
+\end{lemma}
+\begin{proof}
+Tate's theorem identifies a Hodge--Tate abelian local representation with
+a locally algebraic one when its inertia action is semisimple. A character
+automatically satisfies the latter condition. The precise primary reference
+is Serre \cite[Chapter~III, \S1.2, Theorem (Tate), printed p.~III-7;
+proof in the Appendix to Chapter~III]{SerreRankOne}; the definition in \S1.1
+identifies the local algebraic power. In the present $\Q_\ell$-valued
+rank-one case, it follows that $\delta\tau_\ell^{-m}$ has finite image
+on inertia at $\ell$.
+
+Put $\epsilon=\delta\tau_\ell^{-m}$. By Kronecker--Weber, an abelian
+character of $G_\Q$ is a continuous character of
+$\widehat\Z^\times=\prod_p\Z_p^\times$. Outside a finite set its
+restrictions to the unit factors are trivial, by the unramified hypothesis.
+For each remaining $p\ne\ell$, its restriction to $\Z_p^\times$ has
+finite image: its open pro-$p$ subgroup maps into $\Q_\ell^\times$,
+whose compact subgroups have an open pro-$\ell$ subgroup, so that image
+is finite. At $\ell$ finiteness was just proved. Thus the entire image is
+contained in the product of finitely many finite groups, and is finite.
+The exponent $m$ is the stated Tate exponent, since finite characters
+have Tate exponent zero.
+\end{proof}
+
+\begin{lemma}[The single-block flag]\label{irr:flag}
+Let $k$ be a field of characteristic zero and let $N$ on $k^4$ have one
+nilpotent Jordan block. Its invariant subspaces are exactly
+$\ker N^r$ for $0\le r\le4$.
+\end{lemma}
+\begin{proof}
+As a $k[t]$-module, with $t$ acting as $N$, this space is
+$k[t]/(t^4)$. Its submodules are the ideals $(t^j)/(t^4)$,
+equivalently the displayed kernels. This proof remains valid after
+arbitrary scalar extension.
+\end{proof}
+
+\begin{theorem}\label{irr:absolute}
+Under the stated inputs, both $W_{4,\ell}^+$ and $W_{4,\ell}^-$ are
+absolutely irreducible for every $\ell\ne3$.
+\end{theorem}
+\begin{proof}
+It suffices to treat $V=W_{4,\ell}^+$. Suppose
+$0\ne U\subsetneq V\otimes_{\Q_\ell}\overline\Q_\ell$ is a
+$G_\Q$-stable subspace, of dimension $r\in\{1,2,3\}$.
+Its finitely many basis coordinates belong to a finite coefficient
+extension, so there is no issue of defining a continuous representation
+over an infinite coefficient field. There is in fact a stronger descent
+argument in this case.
+
+Some inertia element at $3$ acts as $\exp(cN)$ with $c\ne0$.
+Since its logarithm is a finite polynomial in $\exp(cN)-1$, stability
+under that element makes $U$ stable under $N$. Lemma~\ref{irr:flag}
+gives
+\[
+ U=(\ker N^r)\otimes_{\Q_\ell}\overline\Q_\ell.
+\]
+Set $U_0=\ker N^r\subset V$. This is defined over $\Q_\ell$ and is
+$G_\Q$-stable: extension of scalars makes every $\rho(g)$ preserve it,
+and the original matrices are $\Q_\ell$-linear. Hence its determinant
+$\delta=\det(U_0)$ is a $\Q_\ell$-valued character.
+
+The category of de Rham representations is closed under subobjects,
+quotients and exterior powers; its comparison functor is exact and
+strict for the filtrations. Thus $U_0$ and $\delta$ are de Rham, the Tate
+exponents of $U_0$ form a submultiset of $\{0,0,5,5\}$, and the
+Tate exponent $m$ of $\delta$ is their sum. In particular
+\[
+ m\in5\Z.
+\]
+For clarity, the dimension part of closure under subobjects follows already
+from left exactness of $D_{\mathrm{dR}}$ and
+$\dim D_{\mathrm{dR}}(M)\le\dim M$: apply this to $U_0$, $V$ and
+$V/U_0$, with equality for $V$. The usual strictness of de Rham
+comparison supplies the asserted filtered submultiset statement.
+
+The character $\delta$ is unramified outside a finite set, so
+Lemma~\ref{irr:rankone} gives $\delta=\epsilon\tau_\ell^m$.
+Since $U_0$ has unipotent inertia at $3$, its determinant is unramified
+there, as is $\epsilon$. On the other hand the explicitly ordered
+monodromy flag gives
+\[
+ \delta(\Frob_3)=3^{1+2+\cdots+r}=3^{r(r+1)/2}.
+\]
+Therefore
+\[
+ \epsilon(\Frob_3)=3^{r(r+1)/2-m}.
+\]
+The left side is a root of unity. A rational integer power of $3$
+is a root of unity only when its exponent is zero. Consequently
+$m=r(r+1)/2$. For $r=1,2,3$ these values are $1,3,6$, respectively,
+none of which belongs to $5\Z$. This contradiction proves absolute
+irreducibility of $V$. Tensoring with the one-dimensional character
+$\chi_{-3}$ preserves absolute irreducibility and proves the minus case.
+\end{proof}
+
+\begin{corollary}[Restriction to finite extensions]\label{irr:strong}
+For every finite extension $L/\Q$, the restrictions of either
+$W_{4,\ell}^\pm$ to $G_L$ are absolutely irreducible, for $\ell\ne3$.
+\end{corollary}
+\begin{proof}
+It suffices again to treat the plus representation. If a proper nonzero
+subspace $U$ is stable under $G_L$, replace $L$ by a finite Galois
+extension containing it and put $H=G_L\triangleleft G_\Q$.
+The intersection $H\cap I_3$ has finite index in $I_3$, hence its image
+under the nonzero tame monodromy parameter still contains a nonzero
+element. Consequently every $H$-stable subspace is $N$-stable.
+Normality makes every $gU$ also $H$-stable, and all have dimension $r$.
+By Lemma~\ref{irr:flag}, all equal $\ker N^r$ after scalar extension.
+Thus $U$ is $G_\Q$-stable, contradicting Theorem~\ref{irr:absolute}.
+\end{proof}
+
+\paragraph{Limits and consequences.}
+The argument uses the written Scholl/Hodge and local-at-$3$ results as
+inputs; it does not re-prove their constructions. It makes no assertion
+for the coefficient prime $\ell=3$, since the local monodromy calculation
+above uses $\ell\ne3$. No conjecture of semisimplicity is used.
+Proper induction from a smaller-dimensional representation over a finite
+extension is excluded by Corollary~\ref{irr:strong}. An ordinary tensor
+product of two rank-two continuous $\ell$-adic representations over finite
+coefficient extensions is also excluded:
+after a finite local extension its monodromy operator would have form
+$N_1\otimes1+1\otimes N_2$, with $N_i^2=0$, hence its cube would be
+zero, whereas the actual $N^3$ is nonzero. These exclusions are independent
+of the dyadic calculation in Section~\ref{sec:local-two} and do not
+establish automorphy or determine the Sato--Tate group.
+

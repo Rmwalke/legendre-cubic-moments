@@ -1,0 +1,49 @@
+\section{Conductor products and coefficient-prime scope}\label{sec:conductors}
+For a realization $V_\ell$ and a prime $p\ne\ell$, use
+\[
+ P_p(V_\ell,T)=\det(1-\Frob_pT\mid V_\ell^{I_p}),\qquad
+ a_p(V_\ell)=\dim V_\ell-\dim V_\ell^{I_p}+\Sw_p(V_\ell).
+\]
+The local proofs are carried out directly with arbitrary coefficient prime
+different from the residue characteristic. They give
+\[
+\begin{array}{c|ccc|ccc}
+ &d_2&\Sw_2&a_2&d_3&\Sw_3&a_3\\\hline
+ W_{4,\ell}^+&0&0&4&1&0&3\\
+ W_{4,\ell}^-&0&0&4&0&0&4
+\end{array}
+\]
+with the $p$-column interpreted only for $\ell\ne p$. At $3$ the invariant
+line of the plus descent has geometric Frobenius eigenvalue $3$.
+Thus $P_2^+=P_2^-=P_3^-=1$ and $P_3^+=1-3T$.
+
+For $p\ge5$ and $\ell\ne p$, good-prime unramifiedness follows by the
+relative tame-specialization argument of Section~\ref{sec:geometry}.
+To justify its coefficient change explicitly, use the integral sheaf on
+the full cubic cover before applying rational projectors. At boundary points of both generic and special geometric fibres,
+the Tate-module description gives prime-to-$p$ unipotent local
+monodromy; at infinity the additional quadratic twist is also tame.
+The cubic Kummer cover is tame since $p\ne3$. Thus every finite
+$\ell$-power coefficient level is relatively tame. The same specialization,
+duality and parabolic-image comparison then applies, and rational
+projectors pass to its summands. This uses the local Tate descriptions,
+not a claim that the order of $\GL_2(\Z/\ell^n)$ is prime to $p$.
+Hence, for every $\ell\ne2,3$,
+\[
+ N^{(\ell)}(W_{4,\ell}^+)=\prod_{p\ne\ell}p^{a_p}=2^4\,3^3=432,
+ \qquad
+ N^{(\ell)}(W_{4,\ell}^-)=2^4\,3^4=1296.
+\]
+Equivalently these are the conductor products obtained by choosing an
+auxiliary coefficient prime away from each residue characteristic.
+Independence of the displayed bad-prime factors and exponents follows
+from the explicit calculations, without invoking a general bad-prime
+compatibility theorem. No assertion about the usual inertia invariants
+of the $p$-adic realization at $p=\ell$ is being substituted for an
+away-from-$\ell$ Euler factor. Nor does this calculation identify the
+entire Weil--Deligne representation in all coefficient characteristics.
+
+The numerical conductors formerly proposed for the two recipes therefore
+agree with the conductor products of the specified descents. This does
+not establish the functional-equation sign, analytic continuation, or
+the accuracy of the historical central-value computation.

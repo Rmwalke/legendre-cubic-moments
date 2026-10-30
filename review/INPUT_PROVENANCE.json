@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30",
+  "source_policy": "Only files available in this conversation workspace were used.",
+  "inputs": [
+    {
+      "workspace_relative_path": "output/v2_zenodo/manuscript/Walke_Consolidated_v2_Review_Draft.tex",
+      "sha256": "69672227e0442af3ece0a44d84578b9aa396090ebd131a101dc34a89512f67e0"
+    },
+    {
+      "workspace_relative_path": "output/v2_zenodo/Walke_Legendre_v2_Source_and_Supplement_2026-10-29.zip",
+      "sha256": "bd19f7bd50a151a1fe6b805e99aee473214b4d880f3c1e35c13ff9d35efc1060"
+    },
+    {
+      "workspace_relative_path": "output/p3_local/P3_Local_Inertia_Proof_2026-10-30.tex",
+      "sha256": "a89a784c9ab9badbe2bf9dfd3bb39a4a83b39919a56e038bf3bda257529cff03"
+    },
+    {
+      "workspace_relative_path": "output/p2_local/p2_tameness_bridge.tex",
+      "sha256": "2167d00d4a2428b3ca81027051911980e66d0fda7591f4f51b1dfaa7bd462fd9"
+    },
+    {
+      "workspace_relative_path": "output/p2_local/irreducibility_section.tex",
+      "sha256": "3a6be200771469ec1f108755fc9e2ed3440cfc57cc556d6b93137fff7e3c3750"
+    },
+    {
+      "workspace_relative_path": "output/p2_complete/closure_section.tex",
+      "sha256": "d08465de9088c315719d82663acb2d4391b6019a5976e32a0f74d109c7bce788"
+    },
+    {
+      "workspace_relative_path": "output/p2_complete/cohomology_section.tex",
+      "sha256": "fb28889f6ad4a18fd868b1835d1b3abc250b07f1a4580bc98a951c807c7ab267"
+    },
+    {
+      "workspace_relative_path": "output/p2_complete/geometry_section.tex",
+      "sha256": "583b9cf0fb0d446a05b3a5cb8e089b6bc423251ba13bb78e1bded5f8bc3cccff"
+    },
+    {
+      "workspace_relative_path": "output/p2_complete/tails_section.tex",
+      "sha256": "71e458caa28ff56babe9f28055870d0f2cb0795b650fb28bc549b97d2c12a129"
+    }
+  ],
+  "preserved_historical_archive_sha256": "bd19f7bd50a151a1fe6b805e99aee473214b4d880f3c1e35c13ff9d35efc1060",
+  "new_computation": "Document integration, static consistency and PDF build/render only; existing exact checks retained without a new run claim."
+}

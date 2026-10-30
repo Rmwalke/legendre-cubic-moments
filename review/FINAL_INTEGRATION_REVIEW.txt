@@ -1,0 +1,95 @@
+FINAL CLAIM-INTEGRATION REVIEW
+30 October 2026
+
+Status: clean internal AI-assisted integration review. No material scope
+or normalization contradiction was found in the actual assembled sources.
+This is not external peer review, formal proof verification, a publication
+approval, or a novelty assessment.
+
+Reviewed actual new sources:
+- Main manuscript abstract, date, review note and input order.
+- front.tex, including Theorem thm:main-local and its scope paragraph.
+- conductors.tex and claim_map.tex.
+- numerical_limits.tex and publication_note.tex.
+- Updated scope passages of related_work.tex, descent.tex, inert.tex,
+  and scholl_realization.tex.
+- Integrated irreducibility.tex, whose detailed argument and primary
+  rank-one citation were audited earlier in CLAIM_AUDIT.txt.
+
+Findings:
+1. The main local theorem distinguishes ell!=2 at2 and ell!=3 at3.
+   Its irreducibility assertion is explicitly ell!=3 and includes the
+   original ell=2 realization. No irreducibility assertion at ell=3
+   appears in the new summary.
+2. N=432 for literal W4+ and N=1296 for literal W4- are correctly presented
+   as conductor products, and for ell!=2,3 as the prime-to-ell Artin
+   conductor. The original ell=2 unramifiedness wording is not silently
+   generalized to all auxiliary primes without the p!=ell restriction.
+3. Independence of the computed factors and Artin exponents is expressly
+   distinguished from a full Weil--Deligne comparison. Equal coefficient
+   and residue characteristic inertia invariants are not substituted for
+   away-from-ell Euler factors.
+4. Historical positive-trace recipe S_p+1 is correctly matched with the
+   literal minus descent. The incorrect old blanket statement that both
+   conductor models used P3=1 has been replaced by the precise original1296
+   and later432 descriptions.
+5. Historical sign+1 and central approximation2.2413552 remain numerical
+   observations. No automatic root number, functional equation or analytic
+   continuation is claimed from the conductor calculation.
+6. Inherited limitations of the pairing, purity, literature comparison
+   and projector construction are retained as limitations of those
+   arguments, with references to the later local or irreducibility proofs.
+   They no longer read as manuscript-wide unresolved statements.
+7. The current claim map lists the major dependencies and the exact
+   coefficient-prime scopes. It differentiates the separate rank-two cubic
+   modular comparison from the rank-four object and retains the bounded
+   computational-certificate scope.
+8. The revision record correctly describes a new research draft and
+   distinguishes retained historical logs from current claims. It does
+   not imply a public upload, journal submission or external endorsement.
+
+The current machine-readable ledger is CURRENT_CLAIM_LEDGER.json.
+Its proved claims are labelled 'written proof, internal review'; pending
+claims are separate. This review does not claim that finite algebra checks
+certify geometric model construction or the cohomological theorems.
+
+Packaging condition: the revision record says the final package contains
+the unchanged earlier source/supplement archive and retained local exact
+scripts/reports. The packaging step must preserve those promised inputs.
+Compile/reference checks and visual review of pages1-37 are separate
+integration checks. The final visual review of pages38-49 is recorded below.
+
+
+AUXILIARY-PRIME GOOD-REDUCTION CLARIFICATION
+
+Rechecked the final conductors.tex paragraph after its revision. The
+argument now uses the integral sheaf on the full cubic cover, Tate-module
+monodromy at the boundary on both generic and special geometric fibres,
+the tame quadratic twist at infinity, and the tame degree-three cover
+for p>=5. Thus finite ell-power levels are relatively tame for ell!=p;
+the cited specialization and parabolic-cohomology comparison apply before
+rational projectors are taken. This avoids the incorrect generalization
+that the order of GL2(Z/ell^n) is always prime to p. No further scope defect
+was found in this revised argument. This remains internal proof review.
+
+VISUAL PDF REVIEW ADDENDUM
+
+Inspected every page38 through49 of the final 49-page PDF after the
+auxiliary-prime clarification and final rerender, using each individual
+tmp/consolidated_local_review/page-XX.png. All12 reviewed pages pass.
+No clipping, overlapping text/equations, blank or empty headings, missing
+reference markers, or unreadable glyphs were observed.
+
+- Page38: final local-at-2 conclusion and revised conductor argument fit.
+- Pages39-40: irreducibility section and proof continuations fit cleanly.
+- Page41: the complete claim table fits the text width; all coefficient
+  scopes are legible. The following numerical section has body text.
+- Pages42-43: numerical qualifications and remaining tasks are clear;
+  the appendix transition has body text and no empty heading.
+- Pages44-46: trace identities, normalization, analytic substitution and
+  sign correction have legible equations and complete page continuations.
+- Page47: revision record, review-status note and reference start fit.
+- Pages48-49: all reference entries and URLs wrap within the margins.
+
+Headers, footers and page numbers are consistent. No manuscript edit was
+required. This addendum supersedes the previous-render visual review.

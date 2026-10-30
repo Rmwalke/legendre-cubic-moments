@@ -1,0 +1,305 @@
+\section{Rational Scholl realization and Hodge numbers}\label{sec:scholl}
+Write $\zeta=\zeta_K$. In this section $\pi$ also denotes the pullback
+of the Legendre family to the displayed open base.
+For any prime $\ell$, put
+\[
+ H_\ell=H^1_!(T_{\overline\Q},\Sym^4 R^1\pi_*\Q_\ell),\qquad
+ W_{4,\ell}^{\pm}=(e_{\nt}H_\ell)^{I=\pm1},
+\]
+using the same literal deck and inversion maps as in
+Section~\ref{sec:descent}. At $\ell=2$ these are the already constructed
+$W_4^\pm$, without a change of sign or a Tate twist.
+
+\begin{theorem}[Rational Scholl realization]\label{thm:scholl-realization}
+There are a smooth projective, possibly disconnected fivefold $X/\Q$
+and orthogonal idempotents
+$p_\pm\in\CH^5(X\times_\Q X)\otimes\Q$ such that for every prime $\ell$
+\[
+ p_\pm H^j_{\et}(X_{\overline\Q},\Q_\ell)=0\quad(j\ne5),\qquad
+ p_\pm H^5_{\et}(X_{\overline\Q},\Q_\ell)\simeq W_{4,\ell}^\pm.
+\]
+The corresponding Betti realization is compatible with Betti--etale
+comparison and has $h^{5,0}=h^{0,5}=2$, with all other Hodge numbers zero.
+Thus $(X,p_\pm,0)$ are rational Chow motives realizing the normalized
+descents. The construction does not require irreducibility.
+\end{theorem}
+The following construction proves the theorem. Its use of Scholl's
+standard projector theorem is separated from the explicit cover, rational
+descent and sign computations for the present family.
+
+\subsection{A semistable auxiliary surface}
+Use the finite etale double cover
+\[
+S=\PP^1_s\setminus\{0,\infty,\mu_6\}\longrightarrow T,
+\qquad z=s^2,\qquad \lambda=s^6.
+\]
+On $S$ the elliptic family is $E_s:y^2=x(x-1)(x-s^6)$. Its Weierstrass
+invariants are
+\[
+\Delta=16s^{12}(1-s^6)^2,\qquad c_4=16(1-s^6+s^{12}).
+\]
+In characteristic zero, these give an $I_{12}$ fibre at $s=0$ and an $I_2$
+fibre at each of the six roots of $s^6=1$. At infinity put
+$t=1/s$, $X=t^6x$, $Y=t^9y$; the equation becomes
+$Y^2=X(X-1)(X-t^6)$, giving another $I_{12}$ fibre.
+The minimal regular model is therefore semistable, with no other singular
+fibres. Its nonconstant $j$-invariant makes the family strictly nonconstant.
+
+Now take the \emph{full frame torsor}
+\[
+S'=\operatorname{Isom}_S((\Z/12\Z)^2,E[12])\longrightarrow S.
+\]
+It includes all frames, not just one fixed Weil-pairing component and not
+frames modulo their sign. It is a finite etale torsor under
+$G=\GL_2(\Z/12\Z)$, defined over $\Q$, although it can be disconnected.
+Let $\overline S'$ be its smooth projective normalization over $\PP^1_s$,
+and let $\overline E'\to\overline S'$ be the minimal regular elliptic model.
+Write $\pi':\overline E'|_{S'}\to S'$ for its smooth restriction, and
+$\omega'$ for the Hodge line bundle on $\overline S'$.
+
+\textbf{Why level 12 meets every component.} Around a geometric $I_m$ cusp,
+the local monodromy on a full level-12 frame is conjugate to
+\[
+\begin{pmatrix}1&m\\0&1\end{pmatrix}\pmod {12}.
+\]
+Its order is $e=12/\gcd(12,m)$, the geometric ramification index of $S'$.
+After base change and minimal regularization the fibre is $I_{me}$.
+Here $m=12$ or $2$, so $me=12$ in both cases. In the Tate description,
+the points represented by $q^{a/12}\zeta_{12}^b$ meet all twelve components
+of an $I_{12}$ fibre. The tautological frame makes these points sections.
+Thus the constant group $V=(\Z/12\Z)^2$ extends into the smooth locus and
+meets every geometric fibre component. Any splitting needed in this local
+description can be checked after a finite extension; the torsor itself is rational.
+
+These facts verify the two geometric hypotheses of Scholl \cite[Section~2.2]{SchollVanishing}.
+On each geometric component one can first enlarge its number field of
+constants, apply that result, and then retain the entire finite disjoint union.
+No connected-component choice is needed for the rational construction.
+
+Form $(\overline E')^4_{\overline S'}$ and apply Scholl's canonical resolution;
+call the result $X$. It has dimension five. The resolution blows up the
+intrinsic strata determined by how many elliptic coordinates are nodes
+\cite[Section~3.0]{SchollMotives}. The nodal local models suffice \cite[Section~2.10]{SchollVanishing}. Consequently every
+family isomorphism considered below preserves its centers and lifts to $X$.
+
+
+\subsection{Literal automorphisms and the sign relation}
+On the family over $S$, define
+\[
+\begin{aligned}
+a(s,x,y)&=(\zeta^2s,x,y),& d(s,x,y)&=(-s,x,y),\\
+b(s,x,y)&=(s^{-1},x/s^6,y/s^9),& c(s,x,y)&=(s,x,-y).
+\end{aligned}
+\]
+Use the same maps diagonally on four fibre coordinates. The order-three
+choice $a(s)=\zeta^2s$ covers the required $z\mapsto\zeta z$.
+For $b$, the chosen square root is exactly $u=s^3$.
+
+A point of the frame cover carries a frame $v:V\to E_s[12]$. Lift $a$ and
+$d$ by retaining this frame under the identity elliptic identification, and
+lift $b$ by transporting it to $\phi_{s^3}\circ v$. For $h\in G$, let $h$
+act by reparameterizing the frame while leaving elliptic points fixed.
+Write $H_-$ for $h=-\mathrm{Id}$ and $C$ for simultaneous inversion of all
+four fibre points, with the frame fixed. Upper-case $A,B,D$ denote the
+pullback correspondences associated to the lower-case maps; $g^*$ is
+represented by the transpose of its graph, with the pullback composition
+convention used throughout.
+
+The coordinate formulas give the following identities, already on the open
+family with frames:
+\[
+\begin{gathered}
+A^3=1,\qquad B^2=D^2=1,\qquad AD=DA,\qquad BAB=A^{-1},\\
+\boxed{BDB=H_-CD.}
+\end{gathered}
+\]
+For the last formula, applying $b,d,b$ sends
+$(s,v,P_1,\ldots,P_4)$ to $(-s,-v,-P_1,\ldots,-P_4)$.
+Omitting the frame sign or asserting $BD=DB$ on the whole space would be an
+error. Both signs will disappear on the precise summand used below.
+
+\textbf{Extension across the cusps.} An isomorphism of the generic elliptic
+curve extends to its minimal regular model by uniqueness \cite{StacksMinimal}. This applies
+also to the translated sections and to base automorphisms permuting cusps.
+The local extensions agree on the dense open set and hence glue. The maps
+then preserve the nodal strata used in the canonical fibre-product resolution,
+so all act as genuine automorphisms of $X$, and their displayed relations
+remain exact there. This uses that specific resolution, not an arbitrary one.
+
+Frame reparameterizations commute with $A,B,D$. They normalize the universal
+translation subgroup. The maps $A,B,D$ transport the frame and fibre points
+together, so they normalize the translations, individual inversions, and
+permutations, preserving the character used in the following construction.
+
+All relevant automorphisms generate a finite group: the translation, inversion,
+permutation and frame groups are finite, and the displayed relations give a
+finite quotient generated by $A,B,D$. We may therefore use their rational
+group algebra and its graph correspondences without a conjectural lifting of
+cohomological idempotents.
+
+
+\subsection{Exact rational Chow projectors}
+Let
+\[
+\Gamma=(V\rtimes\{\pm1\})^4\rtimes\mathfrak S_4.
+\]
+Its character $\epsilon$ is trivial on translations, is the product of the
+four inversion signs, and is $\sgn$ on $\mathfrak S_4$. Define
+\[
+\Pi_\epsilon=\frac1{|\Gamma|}\sum_{\gamma\in\Gamma}
+\epsilon(\gamma)\gamma^*,\qquad
+e_G=\frac1{|G|}\sum_{h\in G}h^*,\qquad q=e_G\Pi_\epsilon.
+\]
+The signed permutation is essential: the Koszul sign from exchanging degree-one
+cohomology factors makes this select $\Sym^4 R^1$, rather than its alternating
+power. The translation average supplies the component condition at the boundary.
+
+The group $G$ normalizes $\Gamma$ and preserves $\epsilon$. Thus $e_G$ and
+$\Pi_\epsilon$ commute, and $q^2=q$. Moreover $q$ commutes with $A,B,D$.
+There are exact identities in the correspondence algebra
+\[
+H_-q=q,\qquad Cq=\epsilon(C)q=(-1)^4q=q.
+\]
+Hence $BDBq=Dq$, and $BDq=DBq$. Define
+\[
+d_+=\frac{1+D}{2},\qquad e_\nt=\frac{2-A-A^2}{3},\qquad
+b_\pm=\frac{1\pm B}{2}
+\]
+Their restrictions $qd_+$, $qe_\nt$, and $qb_\pm$ are commuting idempotents
+in $q\Q[\mathcal G]q$, whose identity is $q$ and where $\mathcal G$ is the
+finite group just constructed. Indeed $B$ conjugates $A$ to $A^{-1}$, so it
+commutes with $e_\nt$; $D$ commutes with $A$; and the remaining commutator
+has just been removed by $q$. Consequently
+\[
+\boxed{p_\pm=q\,\frac{1+D}{2}\,\frac{2-A-A^2}{3}\,\frac{1\pm B}{2}}
+\]
+satisfy $p_\pm^2=p_\pm$, $p_+p_-=p_-p_+=0$, and
+$p_++p_-=qd_+e_\nt$. These are equalities modulo rational equivalence,
+because they already hold for the finite sums of automorphism correspondences.
+
+\textbf{Descent to $\Q$.} The frame torsor, $X$, $B,D$, and $q$ are defined
+over $\Q$. Although $A$ is defined over $\Q(\zeta)$, its Galois conjugate
+is $A^2$. Therefore $A+A^2$, $e_\nt$, and $p_\pm$ are rational algebraic
+correspondences. More formally, restriction and corestriction of rational Chow
+cycles descend these invariant sums; restriction is injective after tensoring
+with $\Q$. Thus the idempotent equalities hold over $\Q$, not only over
+$\Q(\zeta)$.
+
+No standard conjecture is used here. This is a decomposition by actual finite
+automorphisms; it does not assert a Hecke-eigenform Chow decomposition or any
+irreducibility of the resulting rank-four realizations by itself.
+Section~\ref{sec:irreducibility} gives that separate argument for $\ell\ne3$.
+
+
+\subsection{Parabolic realization and comparison}
+Scholl's finite-group construction \cite[Theorem~1.2.1]{SchollMotives}, in the semistable
+setting justified in \cite[Sections~2.7--2.12]{SchollVanishing}, gives for Betti and etale cohomology
+\[
+\Pi_\epsilon H^j(X)=0\quad(j\ne5),\qquad
+\Pi_\epsilon H^5(X)\simeq
+H^1_!(S',\Sym^4 R^1\pi'_*\Q).
+\]
+Here and below the coefficients on the etale side are $\Q_\ell$ and the
+base is geometrically extended. The identification is induced by restriction
+from the compact variety to the open fibre product, then relative Kunneth
+and Leray. It is compatible with every family automorphism above.
+
+There is a useful descent subtlety. Some choices identifying the cusp terms
+in Scholl's boundary ladders become equivariant only after a finite extension.
+We do not use those chosen boundary identifications. The proper-to-open
+restriction, and the assertion that its image is the parabolic image, are
+natural. Their injectivity and image equality may be verified after a finite
+extension, and then hold for the same maps over $\Q$. The resulting
+identification is fully $G_\Q$-equivariant. Nor is it necessary, or correct,
+to say that every boundary cohomology group is killed by $\Pi_\epsilon$.
+
+For a finite etale torsor with a finite group, pullback and trace identify
+rational cohomology downstairs with invariants upstairs. The statement holds
+for both ordinary and compactly supported cohomology, commutes with the
+natural map between them, and therefore holds for its image. First take $G$
+invariants and then $D$ invariants. This gives
+\[
+\begin{aligned}
+qH^5(X)&\simeq H^1_!(S,\Sym^4 R^1\pi_{S*}\Q),\\
+qd_+H^5(X)&\simeq H^1_!(T,\Sym^4 R^1\pi_*\Q).
+\end{aligned}
+\]
+On the latter space $A$ is exactly the manuscript's cubic deck pullback.
+The map $B$ uses $u=s^3$ in $\phi_u$, so its induced map is exactly $I$.
+The discrepancy under $s\mapsto-s$ is simultaneous elliptic inversion,
+already killed on $\Sym^4$. Applying $e_\nt$ and $b_\pm$ proves
+\[
+p_\pm H^5(X)\simeq(e_\nt H^1_!(T,\Sym^4 R^1\pi_*\Q))^{I=\pm1}.
+\]
+This proves the theorem's etale assertion for every $\ell$, in particular
+the required equality with the existing $2$-adic $W_4^\pm$.
+
+All maps used are pullback, trace, algebraic automorphisms, and natural
+cohomological maps. Betti--etale comparison is functorial for these operations,
+so the same formula identifies the rational Betti realization. Since it is a
+projected subspace of $H^5$ of a smooth projective variety, its Hodge structure
+is pure of weight five. Its precise Hodge numbers are computed next.
+
+
+\subsection{Hodge numbers and an independent sign check}
+The Legendre classifying map to the moduli \emph{stack} of elliptic curves is
+etale: it factors as a $C_2$-torsor over the full-level-2 stack followed by an
+$\mathfrak S_3$-torsor \cite[Lemma~4.3 and Proposition~4.5]{AntieauMeier}. This includes the
+elliptic points where the coarse $j$-map ramifies. The maps $s\mapsto s^6$
+and $S'\to S$ are etale on the open bases. Apply Scholl \cite[Section~2.13]{SchollVanishing} on $S'$,
+where all the section hypotheses were verified, then take $G$ invariants.
+The parabolic Hodge types are only $(5,0)$ and $(0,5)$, with
+\[
+H^{5,0}_!(S,\Sym^4 R^1\pi_{S*})
+\simeq H^0(\PP^1_s,\omega^4\otimes\Omega^1_{\PP^1_s}),
+\]
+where $\omega$ is the Hodge line bundle on $\PP^1_s$. To justify this section
+formula after descent, write $r:\overline S'\to\PP^1_s$. Semistable base
+change gives $\omega'=r^*\omega$, and
+$(r_*\Omega^1_{\overline S'})^G=\Omega^1_{\PP^1_s}$; locally this is the
+identity $ds=e u^{e-1}du$ for $s=u^e$ in characteristic zero. The projection
+formula then gives the displayed equality of holomorphic spaces.
+
+The singular-fibre multiplicities sum to $12+12+6\cdot2=36$, giving
+$\deg\omega=3$ and $\omega^4\otimes\Omega^1\simeq\mathcal O(10)$.
+The same degree follows directly from the two minimal charts. Write
+$\omega_s=dx/y$ and $\omega_t=dX/Y$ for relative invariant differentials.
+On their overlap $\omega_s=t^3\omega_t$. Thus
+\[
+\beta_j=s^j\,ds\,\omega_s^4
+       =-t^{10-j}\,dt\,\omega_t^4,\qquad 0\le j\le10,
+\]
+are a basis of holomorphic sections; the exponents show regularity at infinity.
+The fourth power denotes the symmetric coefficient power, not a fourth wedge
+of a one-form on the same elliptic curve.
+
+Since $D^*\beta_j=(-1)^{j+1}\beta_j$, its invariant part has $j=1,3,5,7,9$.
+With $z=s^2$ and $\omega_z=dx/y$ on the open family over $T$, let
+\[
+\alpha_k=z^k\,dz\,\omega_z^4\quad(0\le k\le4);
+\qquad (s\mapsto s^2)^*\alpha_k=2\beta_{2k+1}.
+\]
+These give the five-dimensional $(5,0)$ part on $T$. The literal maps yield
+\[
+A\alpha_k=\zeta^{k+1}\alpha_k,\qquad I\alpha_k=-\alpha_{4-k}.
+\]
+For the second identity, use the target coordinate $s'$: $B^*\omega_{s'}=s^3\omega_s$
+and $B^*(ds')=d(s^{-1})=-s^{-2}ds$, hence $B^*\beta_j=-\beta_{10-j}$.
+This fixes the sign without any appeal to numerical traces.
+
+The projector $e_\nt$ removes precisely $\alpha_2$. On the remaining four
+holomorphic dimensions the two eigenspaces are
+\[
+\begin{array}{c|c}
+I=+1&\alpha_0-\alpha_4,\quad\alpha_1-\alpha_3\\[2pt]
+I=-1&\alpha_0+\alpha_4,\quad\alpha_1+\alpha_3.
+\end{array}
+\]
+Each has dimension two. Rationality of $p_\pm$ and complex conjugation give
+two antiholomorphic dimensions as well. Endpoint Hodge type excludes all
+other $(p,q)$. Each realization therefore has rank four and the asserted
+Hodge numbers, independently confirming the prior rank calculation.
+
+
+The construction and the Hodge calculation complete the proof of
+Theorem~\ref{thm:scholl-realization}.

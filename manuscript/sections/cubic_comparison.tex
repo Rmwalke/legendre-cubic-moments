@@ -1,0 +1,227 @@
+\section{The cubic second moment and its modular comparison}\label{sec:cubic}
+Throughout this section the character has order three. Put
+\[
+ \mathcal G_2=\Sym^2\mathcal V\otimes\mathcal L_\rho,
+ \qquad W_2=H^1_!(U_{\overline K},\mathcal G_2).
+\]
+The preceding geometric construction gives $\dim_EW_2=2$, unramifiedness
+outside the primes above $2,3$, and, for every other prime ideal
+$\mathfrak p$ with $q=N\mathfrak p$,
+\begin{equation}\label{eq:cubic-trace}
+ \Tr(\Frob_{\mathfrak p}\mid W_2)=-M_{3,2}(q)-q-1.
+\end{equation}
+Here Frobenius is geometric, $\tau=E(-1)$ has value $q$, and the Kummer
+normalization is the actual torsor $z^3=\lambda$. We first obtain the
+remaining determinant constraint geometrically. The modular comparison
+then uses the separately recorded finite arithmetic certificate.
+
+\subsection{Arithmetic inversion and the determinant}
+Let $i(\lambda)=\lambda^{-1}$. On the etale cover $u^2=\lambda$, the map
+\[
+ \phi_u:\mathcal E_\lambda\longrightarrow\mathcal E_{1/\lambda},
+ \qquad (x,y)\longmapsto (x/\lambda,y/u^3)
+\]
+is an elliptic-curve isomorphism: substitution gives
+$(y/u^3)^2=(x/\lambda)(x/\lambda-1)(x/\lambda-1/\lambda)$.
+Replacing $u$ by $-u$ composes with $[-1]$, whose action on
+$\Sym^2\mathcal V$ is trivial. Thus the induced isomorphism
+$i^*\Sym^2\mathcal V\simeq\Sym^2\mathcal V$ descends arithmetically.
+The map $z\mapsto z^{-1}$ on the cubic cover inverts the deck group,
+so $i^*\mathcal L_\rho\simeq\mathcal L_\rho^\vee$, $E$-linearly over $K$.
+This step does not conjugate the coefficient field.
+
+The elliptic cup product induces the nondegenerate symmetric pairing
+\[
+ (v_1v_2,w_1w_2)\longmapsto
+ \langle v_1,w_1\rangle\langle v_2,w_2\rangle+
+ \langle v_1,w_2\rangle\langle v_2,w_1\rangle
+ \quad\text{with values in }E(-2).
+\]
+Consequently $i^*\mathcal G_2\simeq\mathcal G_2^\vee(-2)$.
+Poincare duality \cite[Theorem 24.1]{Milne} induces a perfect pairing
+on parabolic images: the kernels of the maps $H_c^1\to H^1$ are the
+annihilators of the corresponding dual images. Hence
+\[
+ H^1_!(U,\mathcal G_2^\vee)\simeq W_2^\vee(-1),
+ \qquad W_2\simeq W_2^\vee(-3).
+\]
+The inversion pullback commutes with $G_K$ and with the compact-support
+map, so these are arithmetic isomorphisms. Taking determinants gives
+\begin{equation}\label{eq:cubic-det-sign}
+ \det W_2=\tau^3\varepsilon,\qquad \varepsilon^2=1,
+\end{equation}
+where $\varepsilon$ is continuous and unramified outside $2,3$.
+In usual cyclotomic notation this is
+$\chi_{\rm cyc}^{-3}\varepsilon$. The assertion
+$\varepsilon=1$ will use the finite comparison below.
+
+\subsection{The modular representation and residual conditions}
+Let $f=f_{36}$ be the weight-four normalized newform of level $36$
+and trivial nebentypus, labelled $36.4.a.a$. Its eta expression is
+\cite[Table 1]{LTYZ}
+\begin{equation}\label{eq:f36-eta}
+ f(z)=\frac{\eta(6z)^{14}}{\eta(2z)^3\eta(18z)^3}
+       -3\eta(2z)^3\eta(6z)^2\eta(18z)^3.
+\end{equation}
+Use the cohomological representation $R_f$ over $E$: it is the dual of
+the conventional Deligne representation normalized at arithmetic
+Frobenius; see the modular-form motive and its etale realization in
+\cite[Theorem~1.2.4(i)]{SchollMotives}.
+Thus geometric Frobenius at $p\ge5$ on $R_f$ has trace
+$a_f(p)$ and determinant $p^3$. Both $W_2$ and $R_f|_{G_K}$ are
+unramified outside primes above $2,3$.
+
+Their compact images admit stable $\mathcal O$-lattices, with
+$\mathcal O/(2)=\F_4$. Full rational $2$-torsion on every smooth
+Legendre fibre over $\F_q$ makes $a_q(\lambda)$ even. Therefore
+$M_{3,2}(q)\in4\mathcal O$, and
+\eqref{eq:cubic-trace}--\eqref{eq:cubic-det-sign} give
+\[
+ \Tr W_2\equiv0\pmod2,\qquad \det W_2\equiv1\pmod2.
+\]
+Initially these congruences hold on good Frobenius classes;
+Chebotarev density and continuity extend them to $G_K$.
+
+The carried certificate records, and the independent calculation described
+below rechecks,
+$f\equiv\eta(3z)^8\pmod2$ through the Sturm bound
+\[
+ \frac4{12}[\operatorname{SL}_2(\Z):\Gamma_0(36)]
+ =\frac4{12}\,72=24.
+\]
+Here $\eta(3z)^8\in S_4(\Gamma_0(9))\subset S_4(\Gamma_0(36))$
+by \cite[Table~1]{LTYZ}. Both sides have integral Fourier coefficients.
+Sturm's theorem \cite[Theorem~1, p.~276]{Sturm} makes this a full
+Fourier-series congruence,
+subject to that recorded finite check. With $Q_z=e^{2\pi iz}$,
+\[
+ \eta(3z)^8\equiv\eta(24z)
+ =\sum_{m\ge1}\chi_{12}(m)Q_z^{m^2}\pmod2.
+\]
+The congruence is the characteristic-two product identity; the equality
+is Euler's pentagonal-number identity, with
+$\chi_{12}(m)=(12/m)$ the Kronecker symbol. Prime-index coefficients of $f$ are therefore
+even. At a split prime of $K$, the restricted modular trace is $a_f(p)$;
+at an inert prime it is $a_f(p)^2-2p^3$, again even. Its determinant
+is $q^3$. Density gives the required global congruences for
+$R_f|_{G_K}$ as well. The residue field $\F_4$ is allowed in the
+comparison criterion used below.
+
+\subsection{The carried finite certificate and its consequence}
+Let $K_S$ be the compositum of the quadratic extensions of $K$
+unramified outside the primes above $2,3$. The Eisenstein integer ring
+has class number one. Removing square factors from an allowed
+squareclass therefore leaves an $S$-unit. Its unit squareclass is
+generated by $-1$, and the primes above $2$ and $3$ can be generated
+by $2$ and $\sqrt{-3}$. Their valuations, together with the nonsquare
+unit $-1$, prove independence. Consequently
+\[
+ K_S=K\bigl(\sqrt{-1},\sqrt2,\sqrt{\sqrt{-3}}\bigr),
+ \qquad\Gal(K_S/K)\simeq\F_2^3.
+\]
+The seven nonzero vectors constitute a non-cubic set: a homogeneous
+cubic polynomial function vanishing on them also vanishes at zero,
+and hence vanishes on the whole vector space.
+
+Table~\ref{tab:cubic-certificate} reproduces the cubic rows of the
+carried exact certificate. A prime ideal is specified by $p$ and the
+image $r$ of $\sqrt{-3}$ modulo it. A bit is $0$ for a square and $1$
+for a nonsquare; the displayed order is
+$(\sqrt{-3},2,-1)$, the reverse of the basis above.
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rrrrr}
+\hline
+$p$ & $r$ & bits & $t=a_f(p)$ & $d$ \\
+\hline
+7  & 2  & 001 & 8    & 343 \\
+7  & 5  & 101 & 8    & 343 \\
+13 & 6  & 110 & $-10$  & 2197 \\
+19 & 4  & 011 & $-100$ & 6859 \\
+19 & 15 & 111 & $-100$ & 6859 \\
+37 & 16 & 010 & $-226$ & 50653 \\
+73 & 17 & 100 & 26   & 389017 \\
+\hline
+\end{tabular}
+\caption{Previously recorded exact cubic comparisons, with $d=p^3$.
+The seven rows and Sturm comparison have also been recomputed by a new
+standalone exact implementation.}
+\label{tab:cubic-certificate}
+\end{table}
+
+The certificate consists of the supplied
+\texttt{V2\_01\_exact\_livne.py}, its exact arithmetic helpers,
+\texttt{V2\_exact\_livne.txt}, and
+\texttt{exact\_livne\_certificate.json}. Static inspection shows direct
+finite-field character sums and integer eta-series arithmetic for the
+cubic comparisons, with no FFT rounding. The certificate uses the
+norm-lifted character over $\F_{p^2}$. Thus, by the geometric trace
+formula,
+\begin{align*}
+ t&=-M_{3,2}(p)-p-1,\\
+ u&=-M_{3,2}(p^2)-p^2-1=\Tr(\Frob_{\mathfrak p}^{2}\mid W_2),\\
+ d&=\frac{t^2-u}{2}.
+\end{align*}
+The inversion identity for even Legendre moments makes the two
+primitive cubic-character choices equivalent here. The recorded
+values satisfy $t=a_f(p)$ and $d=p^3$ at every listed prime; the
+recorded Sturm comparison reaches degree $24$.
+\emph{The archived programs were not rerun.} A new standalone implementation,
+\texttt{independent\_cubic\_exact.py}, independently recomputes the
+displayed cubic comparisons using direct finite-field character sums and
+integer eta-series arithmetic. It uses only the Python standard library;
+the mathematical calculations use arbitrary-precision integers, without
+FFT or floating-point arithmetic. Over $\F_{p^2}=\F_p[s]/(s^2-d)$ it uses
+$\chi_{p^2}(a+bs)=\chi_p(a^2-db^2)$ and the norm-lifted cubic character.
+The new log records agreement at the five rational primes underlying the
+seven rows, all seven square-class vectors, and the congruence through
+degree $24$. Historical expected values are read only after the new
+calculation, for comparison. Checks include every rational-fibre quadratic
+base-change identity and a second direct multiplication calculation over
+$\F_{49}$. Source hashes and the new log are supplied in the release
+supplement. This rechecks the bounded arithmetic; it does not re-prove the
+geometric hypotheses, newform identification, or external comparison
+theorems. The theorem below retains its explicit finite-check dependencies.
+
+\begin{theorem}[Cubic modular comparison using the carried certificate]
+\label{thm:cubic-modular}
+Assuming the finite exact comparisons and the Sturm comparison just
+specified, the representations have isomorphic semisimplifications:
+\[
+ W_2^{\rm ss}\simeq(R_f|_{G_K})^{\rm ss},
+ \qquad \det W_2=\tau^3.
+\]
+For every good prime ideal $\mathfrak p$ of $K$,
+\[
+ M_{3,2}(N\mathfrak p)
+ =-\Tr(\Frob_{\mathfrak p}\mid R_f|_{G_K})-N\mathfrak p-1.
+\]
+In particular, for $p\ge5$ and $p\equiv1\pmod3$,
+$M_{3,2}(p)=-a_f(p)-p-1$; for $p\equiv2\pmod3$,
+\[
+ M_{3,2}(p^2)=-a_f(p)^2+2p^3-p^2-1.
+\]
+\end{theorem}
+\begin{proof}
+Livne's criterion in \cite[Theorem 4.1]{DGP} applies to continuous
+rank-two representations over a finite extension of $\Q_2$.
+The common ramification set, vanishing residual traces, and equal
+residual determinants were established above. The seven rows give
+exact trace and determinant agreement on a non-cubic set in
+$\Gal(K_S/K)$. The criterion gives the asserted semisimplification.
+If it is formulated using the opposite Frobenius convention, invert
+both matrices: $\Tr(A^{-1})=\Tr(A)/\det A$, and the quadratic test
+classes are unchanged under inversion.
+
+Alternatively to taking the determinant of the comparison,
+\eqref{eq:cubic-det-sign} and the table give
+$\varepsilon(\Frob_{\mathfrak p})=d/p^3=1$ on all seven nonzero
+classes. Since $\varepsilon$ factors through $\Gal(K_S/K)$, it is
+trivial. Finally apply \eqref{eq:cubic-trace}; restriction at an inert
+rational prime replaces Frobenius by its square.
+\end{proof}
+
+This section proves the stated cubic second-moment comparison with its
+explicit certificate dependency. It supplies no geometric proof for
+characters of orders four or six, and no bad-prime Euler-factor or
+rank-four modularity assertion.

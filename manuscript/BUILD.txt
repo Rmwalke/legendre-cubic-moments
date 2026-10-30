@@ -1,0 +1,5 @@
+Build the matching manuscript from this directory with a standard TeX Live installation:
+  pdflatex Walke_Legendre_Manuscript_2026-10-30.tex
+Run pdflatex three times to stabilize the contents and references.
+No shell escape is required. Standard article class and the packages named in the source are used.
+The companion PDF has the same basename. The build does not verify the mathematics.
