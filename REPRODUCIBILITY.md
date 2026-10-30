@@ -4,6 +4,28 @@ These instructions reproduce specific small algebra checks in the supplied
 supplement. They do not constitute a full verification of the manuscript.
 The mathematical source files, scripts, and retained reports have not been edited.
 
+## Verify the repository in one command
+
+Use Python 3.8 or later from the repository root:
+
+```sh
+python scripts/verify_repository.py
+```
+
+This standard-library command checks both SHA-256 manifests before running the
+three small algebra scripts. It verifies all 87 results and compares each
+generated JSON report with its retained counterpart. Temporary outputs are
+created under `results/` and removed on completion. It returns a nonzero exit
+status on failure and does not compile LaTeX or run historical experiments.
+
+For file integrity alone, use:
+
+```sh
+python scripts/verify_repository.py --integrity-only
+```
+
+The dated audit results and remaining limits are in [VERIFICATION.md](VERIFICATION.md).
+
 ## Small exact local checks
 
 Use Python 3.8 or later. The three scripts use only Python's standard library;
@@ -26,8 +48,9 @@ Inspect the generated JSON as well as the terminal output.
 | `p2_exact_checks.py` | 41 | `all_checks_passed` | Exact chart identities, counts, and stated conditional determinant obstructions |
 | `p3_exact_checks.py` | 26 | `all_checks_passed` | Exact identities and conditional Weil–Deligne matrix consequences |
 
-The counts and successful results above come from the reports retained in the
-source package. They are not new executions performed for this repository.
+The counts above describe the reports retained in the source package. A later
+repository audit on 30 October 2026 reran the scripts and obtained byte-identical
+reports; the original reports remain unchanged.
 The reports include `scope`, `scope_limit`, or other explanations of the limits.
 In particular, the p=3 matrix calculation assumes its proposed geometric
 identification; the scripts do not prove nearby-cycle theorems or their hypotheses.

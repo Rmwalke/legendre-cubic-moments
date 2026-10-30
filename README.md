@@ -6,6 +6,7 @@ Rushikesh Murlidhar Walke — Independent Researcher, Maharashtra, India
 [Read the Zenodo preprint, version 3](https://doi.org/10.5281/zenodo.23795811) ·
 [Read the manuscript PDF](paper/Walke_Legendre_Manuscript_2026-10-30.pdf) ·
 [Reproduction instructions](REPRODUCIBILITY.md) ·
+[Repository verification](VERIFICATION.md) ·
 [Mathematical claim ledger](review/CURRENT_CLAIM_LEDGER.json)
 
 ## Research overview
@@ -49,6 +50,8 @@ mathematical scope is set out in the manuscript and
 | `paper/` | Unchanged manuscript PDF supplied with the submitted V3 package |
 | `manuscript/` | Matching LaTeX source, all section files, and build instructions |
 | `local_checks/` | Three exact local-algebra scripts and their retained reports |
+| `scripts/verify_repository.py` | One command to verify both manifests and reproduce all 87 small checks |
+| `VERIFICATION.md` | Dated repository verification results and their limits |
 | `review/` | Retained claim/dependency ledger and internal review snapshots |
 | `historical/` | Unchanged earlier source/supplement archive, including the bounded cubic certificate |
 | `SHA256SUMS.txt` | Original supplement's integrity manifest, preserved unchanged |
@@ -62,11 +65,25 @@ to the mathematical manuscript or the existing scripts and reports.
 
 ## Reproducing the retained checks
 
+With Python 3.8 or later, run from the repository root:
+
+```sh
+python scripts/verify_repository.py
+```
+
+This verifies both checksum manifests, runs the three small scripts, and checks
+that all 87 results and the generated JSON match the retained reports. It needs
+only Python's standard library. A failed verification exits with a nonzero status.
+Use `--integrity-only` to check file integrity without executing the algebra.
+
 See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for the three short commands and their
 precise scope. The scripts use Python's standard library and write fresh outputs
 to `results/` in the documented commands, leaving the retained reports intact.
 No large prime scan or numerical L-function experiment is needed to inspect this
-repository. No mathematical scripts were rerun during this packaging step.
+repository. No mathematical scripts were rerun during the original packaging
+step. A later repository audit on 30 October 2026 reran all 87 checks successfully
+and verified the supplied package against GitHub; see [VERIFICATION.md](VERIFICATION.md)
+for the results and remaining verification limits.
 
 **A passing algebra script does not certify the geometric constructions,
 nearby-cycle hypotheses, or identification of the actual local representation.**
